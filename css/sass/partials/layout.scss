@@ -1,0 +1,12 @@
+/**
+ * partials/layout
+ * ---
+ * Layout
+ */
+
+$susy: (
+  'columns': susy-repeat(12, 70px),
+  'gutters': 30px,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);

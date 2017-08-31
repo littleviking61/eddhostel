@@ -10,10 +10,8 @@
 	height: 100px;
 
 	.container{
-		display: grid;
-		grid-template-columns: 270px 1fr;
-		grid-gap: $horizontalGap;
-		padding-top: $gutterMedium;
+		@include flexbox();
+		padding-top: $gutterLarge;
 	}
 
 	&:before{
@@ -63,6 +61,7 @@
 	img{
 		opacity: 0;
 	}
+	width: span(3 wide);
 }
 
 .logo-img {}

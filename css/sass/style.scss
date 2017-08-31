@@ -8,15 +8,16 @@
 @import "modules/variables";
 @import "modules/mixins";
 @import "modules/fonts";
+@import 'susy';
 
 // Partials
 @import "partials/reset";
 @import "partials/wordpress";
 @import "partials/utils";
+@import "partials/layout";
 @import "partials/wrapper";
 @import "partials/header";
 @import "partials/content";
-// @import "partials/nav";
 // @import "partials/sidebar";
 @import "partials/footer";
 @import "partials/print";

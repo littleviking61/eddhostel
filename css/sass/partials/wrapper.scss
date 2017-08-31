@@ -6,10 +6,13 @@
 
 .wrapper {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
   height: 100%;
+	@include flexbox();
+	@include flex-direction(column);
+}
+
+main{
+	@include flex(1);
 }
 
 .container{

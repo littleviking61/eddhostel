@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                 compass: true,
                 //quiet: true,
                 style: 'nested',
-                require: ['susy', 'sass-flexbox']
+                require: [ 'susy']
             }
         },
 
