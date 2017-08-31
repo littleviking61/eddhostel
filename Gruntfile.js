@@ -1,0 +1,72 @@
+module.exports = function(grunt) {
+
+
+    require('load-grunt-tasks')(grunt);
+
+    grunt.initConfig({
+
+        watch: {
+
+            sass: {
+                files: ['css/sass/**/*.{scss,sass}'],
+                tasks: ['sass:dist', 'rsync'],
+            },
+
+            js : {
+                files: ['js/**/*.js'],
+                tasks: ['jshint'],
+                options: {
+                    livereload: true,
+                    livereloadOnError: false,
+                    spawn: false
+                }
+            },
+
+            other: {
+                files: ['**/*.php', 'css/*.css'],
+                options: {
+                    livereload: true,
+                    livereloadOnError: false,
+                    spawn: false
+                }
+            }
+        },
+
+        jshint: {
+            all: ['js/**/*.js', '!js/foundation/**/*.js', '!js/vendor/**/*.js']
+        },
+
+        sass: {
+            dist: {
+                files: {
+                    'css/style.css': 'css/sass/style.scss'
+                }
+            },
+            options: {
+                compass: true,
+                //quiet: true,
+                style: 'nested',
+                require: ['susy', 'sass-flexbox']
+            }
+        },
+
+        rsync: {
+            options: {
+                // args: ["-q"],
+                //exclude: [".git*","assets/less","node_modules"],
+                recursive: true
+            },
+            dist: {
+                options: {
+                    src: ["./css/"],
+                    //src: "./css",
+                    dest: "/var/www/html/client/eddhostel/wp-content/themes/eddhostel/css/",
+                    host: "laventurier@onlinet",
+                }
+            }
+        },
+
+    });
+
+    grunt.registerTask('default', ['watch']);
+};

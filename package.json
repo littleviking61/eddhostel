@@ -1,0 +1,29 @@
+{
+  "name": "eddhostel",
+  "version": "2.0.0",
+  "description": "eddhostel v2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/littleviking61/eddhostel.git"
+  },
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-sass": "~1.0.0",
+    "grunt-contrib-uglify": "~3.0.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-livereload": "~0.1.3",
+    "grunt-rsync": "~2.0.1",
+    "load-grunt-tasks": "~3.5.2"
+  },
+  "author": "",
+  "license": "nuagegraphik",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "sass-flexbox": "^2.0.0",
+    "susy": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
