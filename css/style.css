@@ -39,6 +39,36 @@
   font-style: normal;
 }
 */
+@font-face {
+  font-family: "Norwester";
+  src: url("../fonts/norwester-webfont.eot");
+  src: url("../fonts/norwester-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/norwester-webfont.woff") format("woff"), url("../fonts/norwester-webfont.ttf") format("truetype"), url("../fonts/norwester-webfont.svg#Norwester") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoCondensed-Regular-webfont.eot");
+  src: url("../fonts/RobotoCondensed-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Regular-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Regular-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Regular-webfont.svg#Roboto") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoCondensed-Italic-webfont.eot");
+  src: url("../fonts/RobotoCondensed-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Italic-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Italic-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Italic-webfont.svg#Roboto") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: "Roboto";
+  src: url("../RobotoCondensed-Bold-webfont.eot");
+  src: url("../RobotoCondensed-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../RobotoCondensed-Bold-webfont.woff") format("woff"), url("../RobotoCondensed-Bold-webfont.ttf") format("truetype"), url("../RobotoCondensed-Bold-webfont.svg#Roboto") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Roboto";
+  src: url("../RobotoCondensed-BoldItalic-webfont.eot");
+  src: url("../RobotoCondensed-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../RobotoCondensed-BoldItalic-webfont.woff") format("woff"), url("../RobotoCondensed-BoldItalic-webfont.ttf") format("truetype"), url("../RobotoCondensed-BoldItalic-webfont.svg#Roboto") format("svg");
+  font-weight: bold;
+  font-style: italic; }
 /**
  * partials/reset
  * ---
@@ -56,7 +86,7 @@ html {
   height: 100%; }
 
 body {
-  font-family: "Roboto", Helvetica, Arial, "Open Sans", sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 140%;
   line-height: 1.5;
   color: #444;
@@ -188,6 +218,8 @@ main {
 .header {
   width: 100%;
   height: 100px; }
+  .home .header {
+    height: 800px; }
   .header .container {
     display: -webkit-box;
     display: -moz-box;
@@ -195,15 +227,44 @@ main {
     display: -webkit-flex;
     display: flex;
     padding-top: 20px; }
-  .header:before {
-    width: 100%;
+  .header .background-image {
     position: absolute;
-    height: 370px;
+    top: 0;
+    z-index: -1;
+    height: 800px;
+    overflow: hidden; }
+    .header .background-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .header .background-image .intro-text {
+      position: absolute;
+      top: 50%;
+      color: white;
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-family: "Norwester", Helvetica, Arial, sans-serif;
+      font-size: 50px;
+      letter-spacing: 18px;
+      line-height: 1.1; }
+      .header .background-image .intro-text h2 {
+        margin-bottom: 30px;
+        margin-top: -80px; }
+      .header .background-image .intro-text i {
+        font-size: 56px; }
+  .header:before {
     background-color: #d4a012;
-    z-index: -1; }
+    height: 370px;
+    position: absolute;
+    z-index: -1;
+    width: 100%; }
   .header .nav {
     padding: 30px 0;
-    font-size: 19px; }
+    font-size: 19px;
+    font-weight: 100; }
+    .home .header .nav a, .home .header .nav select, .home .header .nav .switcher:after {
+      color: white; }
     .header .nav ul {
       padding: 0;
       margin: 0 30px 0 0;
@@ -218,7 +279,20 @@ main {
     display: inline-block; }
     .header .switcher select {
       background: transparent;
-      border: none; }
+      border: none;
+      display: inline-block;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 60px; }
+    .header .switcher .qtranxs_widget_end {
+      display: none; }
+    .header .switcher:after {
+      font-family: 'edd-hostel';
+      font-size: 20px;
+      content: "c";
+      display: inline-block;
+      margin-left: -25px; }
 
 .logo {
   background-image: url(../img/logo.svg);
@@ -230,7 +304,17 @@ main {
       .no-svg .logo {
         background-image: url(../img/logo@2x.png); } }
   .logo img {
-    opacity: 0; }
+    opacity: 0;
+    width: 100%;
+    height: 100%; }
+  .home .logo {
+    background-image: url(../img/logo-home.svg);
+    height: 185px; }
+    .no-svg .home .logo {
+      background-image: url(../img/logo-home.png); }
+      @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+        .no-svg .home .logo {
+          background-image: url(../img/logo-home@2x.png); } }
 
 .page-title {
   display: none; }

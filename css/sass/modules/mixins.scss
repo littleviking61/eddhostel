@@ -9,6 +9,34 @@
   margin: 0;
 }
 
+@mixin x-appearance ($value) {
+  -webkit-appearance: $value;
+     -moz-appearance: $value;
+          appearance: $value;
+}
+
+// eddicon mixin
+@mixin icon($value){
+  font-family: 'edd-hostel';
+  font-size: 20px;
+  content: $value;
+  display: inline-block;
+}
+
+// Bourbon Mixin for top notch webfont support: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-face.scss
+@mixin font-face-bb($font-family, $file-path, $weight: normal, $style: normal, $svg-name: $font-family ) {
+  @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$svg-name}') format('svg');
+      font-weight: $weight;
+      font-style: $style;
+  }
+}
+
 /* background-image */
 $image-path: '../img' !default;
 $fallback-extension: 'png' !default;

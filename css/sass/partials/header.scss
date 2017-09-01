@@ -9,23 +9,74 @@
 	width: 100%;
 	height: 100px;
 
+	.home &{
+		height: $homeHeight;
+	}
+
 	.container{
 		@include flexbox();
 		padding-top: $gutterLarge;
 	}
 
-	&:before{
-		width: 100%;
+	.background-image{
 		position: absolute;
-		height: $headerBackgroundHeight;
+		top: 0;
+    z-index: -1;
+		height: $homeHeight;
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: 100%;
+		  object-fit: cover;
+		}
+
+		.intro-text{
+			position: absolute;
+			top: 50%;
+			color: white;
+			width: 100%;
+			display: block;
+			text-align: center;
+			font-family: $font-family-title;
+			font-size: 50px;
+			letter-spacing: 18px;
+			line-height: 1.1;
+
+			h2{
+				margin-bottom: $gap;
+				margin-top: -80px;
+			}
+
+			i{
+				font-size: 56px;
+			}
+		}
+	}
+
+	&:before{
 		background-color: $hostelColor;
+		height: $headerBackgroundHeight;
+		position: absolute;
 		z-index: -1;
+		width: 100%;
+
+		// .home &{
+		// 	height:$homeHeight; 
+		// }
 	}
 	
 	.nav{
 		
 		padding: $horizontalGap 0;
 		font-size: 19px;
+		font-weight: 100;
+
+		.home &{
+			a, select, .switcher:after{
+				color: white;
+			}
+		}
 
 		ul{
 			padding: 0;
@@ -50,7 +101,19 @@
 		select{
 	  	background: transparent;
     	border: none;
+    	display: inline-block;
+    	@include x-appearance(none);
+    	width: 60px;
 		}
+
+		.qtranxs_widget_end{
+			display: none;
+		}
+
+  	&:after{
+  		@include icon('c');
+  		margin-left: -25px;
+  	}
 	}
 }
 
@@ -58,10 +121,18 @@
 .logo {
 	@include background-image('logo');
 	background-repeat: no-repeat;
+	width: span(3 wide);
+
 	img{
 		opacity: 0;
+		width: 100%;
+		height: 100%;
 	}
-	width: span(3 wide);
+
+	.home &{
+		@include background-image('logo-home');
+		height: 185px;
+	}
 }
 
 .logo-img {}
