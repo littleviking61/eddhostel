@@ -182,13 +182,9 @@ input[type="search"] {
  * ---
  * Layout
  */
-/**
- * partials/wrapper
- * ---
- */
 .wrapper {
   position: relative;
-  height: 100%;
+  min-height: 100%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -210,6 +206,29 @@ main {
   max-width: 1170px;
   padding: 0 0;
   margin: 0 auto; }
+
+.row {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
+  .row > * {
+    margin-right: 30px; }
+    .row > *:last-child {
+      margin-right: 0; }
+
+/* booking bar */
+.booking {
+  height: 110px;
+  margin-top: -110px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65); }
 
 /**
  * partials/header
@@ -316,8 +335,42 @@ main {
         .no-svg .home .logo {
           background-image: url(../img/logo-home@2x.png); } }
 
+/**
+ * partials/content
+ * ---
+ */
+/*  Basics */
+h1, h2, h3, h4 {
+  font-family: "Norwester", Helvetica, Arial, sans-serif;
+  letter-spacing: 18px;
+  margin: 10px 0; }
+
+.big {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.color {
+  color: #d4a012; }
+
 .page-title {
   display: none; }
+
+/* home */
+.introduction .accroche {
+  text-transform: uppercase;
+  text-align: center;
+  width: 370px;
+  font-size: 24px; }
+.introduction .texte {
+  width: 770px;
+  font-size: 33px; }
+  .introduction .texte p {
+    margin: 0; }
+  .introduction .texte span {
+    font-family: "Norwester", Helvetica, Arial, sans-serif;
+    display: inline;
+    line-height: 1;
+    letter-spacing: 13px; }
 
 /**
  * partials/footer

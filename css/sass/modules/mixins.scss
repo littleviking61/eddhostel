@@ -23,6 +23,17 @@
   display: inline-block;
 }
 
+
+@mixin col($span){
+  width: span($span);
+  float: left;
+  margin-right: gutter();
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 // Bourbon Mixin for top notch webfont support: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-face.scss
 @mixin font-face-bb($font-family, $file-path, $weight: normal, $style: normal, $svg-name: $font-family ) {
   @font-face {

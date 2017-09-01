@@ -10,3 +10,43 @@ $susy: (
   'spread': 'narrow',
   'container-spread': 'narrow',
 );
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+	@include flexbox();
+	@include flex-direction(column);
+}
+
+main{
+	@include flex(1);
+}
+
+.container{
+	max-width: $wrapper-width;
+  padding: 0 $margin-horizontal-large;
+  margin: 0 auto;
+}
+
+.row{
+	padding: 50px 0;
+	@include flexbox();
+	@include align-items(center);
+
+	> *{
+	  margin-right: gutter();
+
+	  &:last-child {
+	    margin-right: 0;
+	  }
+	}
+}
+
+/* booking bar */
+
+.booking{
+	height: $bookingHeight;
+	margin-top: - $bookingHeight;
+	width: 100%;
+	background-color: rgba(black, 0.65);
+}
