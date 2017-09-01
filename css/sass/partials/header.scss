@@ -124,6 +124,7 @@
 	@include background-image('logo');
 	background-repeat: no-repeat;
 	width: span(3 wide);
+	position: relative;
 
 	img{
 		opacity: 0;

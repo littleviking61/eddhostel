@@ -23,6 +23,30 @@
 					</div>
 				</div>
 
+				<?php if( have_rows('pages_link') ): ?>
+
+					<ul class="pages-links">
+
+					<?php while( have_rows('pages_link') ): the_row(); 
+
+						$page_link = get_sub_field('link');?>
+
+						<li class="link row">
+							<a href="<?= get_permalink( $page_link ); ?>">
+
+								<p><?= get_field('introduction_texte', $page_link) ?></p>
+								<h3><?= get_field('appelation', $page_link) ?></h3>
+								<p><i><?= get_field('description', $page_link) ?></i></p>
+								
+							</a>
+						</li>
+
+					<?php endwhile; ?>
+
+					</ul>
+
+				<?php endif; ?>
+
 			<?php endwhile; endif; ?>
 
 		</section>
