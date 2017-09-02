@@ -38,7 +38,7 @@
 							<a href="<?= home_url(); ?>">
 								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 								<img src="<?= get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-								<?php edit_post_link(); ?>
+								<?php edit_post_link('<i class="icon-edit"></i>'); ?>
 							</a>
 						</div>
 						<!-- /logo -->

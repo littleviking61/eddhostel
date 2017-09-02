@@ -173,19 +173,14 @@ nav li {
   line-height: 1.5; }
 
 .post-edit-link {
-  border: solid black thin;
-  padding: 5px 8px;
   position: absolute;
-  top: 30px;
-  left: 100px;
-  opacity: 0.4; }
+  top: 33px;
+  left: 250px;
+  font-size: 2rem; }
   .post-edit-link:hover {
     opacity: 1; }
   .home .post-edit-link {
-    border: solid white thin;
-    color: white;
-    right: 30px;
-    left: auto; }
+    color: white; }
 
 /**
  * partials/utils
