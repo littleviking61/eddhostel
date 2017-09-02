@@ -223,7 +223,7 @@ main {
   margin: 0 auto; }
 
 .row {
-  padding: 50px 0;
+  padding: 60px 0;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -288,11 +288,18 @@ main {
       .header .background-image .intro-text i {
         font-size: 56px; }
   .header:before {
-    background-color: #d4a012;
     height: 370px;
     position: absolute;
     z-index: -1;
     width: 100%; }
+    .header:before {
+      background-color: #dcab25; }
+    .page-id-16 .header:before {
+      background-color: #ff7459; }
+    .page-id-18 .header:before {
+      background-color: #4de8b3; }
+    .page-id-20 .header:before {
+      background-color: #8ae3f1; }
   .header .nav {
     padding: 30px 0;
     font-size: 19px;
@@ -370,7 +377,13 @@ h1, h1 .big, h2, h2 .big, h3, h3 .big, h4, h4 .big {
   letter-spacing: 13px; }
 
 .color {
-  color: #d4a012; }
+  color: #d5a522; }
+.page-id-16 .color {
+  color: #ff6b4f; }
+.page-id-18 .color {
+  color: #44e7af; }
+.page-id-20 .color {
+  color: #81e1f0; }
 
 .page-title {
   display: none; }
@@ -391,10 +404,30 @@ h1, h1 .big, h2, h2 .big, h3, h3 .big, h4, h4 .big {
 
 .pages-links {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  margin-left: -15px; }
   .pages-links li {
     list-style: none;
-    width: 370px; }
+    margin-right: 0; }
+    .pages-links li a {
+      display: block;
+      width: 400px;
+      height: 370px;
+      padding: 40px;
+      text-align: center;
+      font-size: 20px; }
+      .pages-links li a {
+        background-color: #dcab25; }
+      .pages-links li.page-id-16 a {
+        background-color: #ff7459; }
+      .pages-links li.page-id-18 a {
+        background-color: #4de8b3; }
+      .pages-links li.page-id-20 a {
+        background-color: #8ae3f1; }
+      .pages-links li a p {
+        line-height: 1.2; }
+      .pages-links li a h3 {
+        letter-spacing: 12px; }
 
 /**
  * partials/footer

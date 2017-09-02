@@ -23,14 +23,50 @@
   display: inline-block;
 }
 
+// color by page
 
-@mixin col($span){
-  width: span($span);
-  float: left;
-  margin-right: gutter();
+@mixin colors(){
+  &{  
+    color: darken($hostelColor, 2%);
+  }
+  .page-id-16 &{
+    color: darken($facilitiesColor, 2%);
+  }
+  .page-id-18 &{
+    color: darken($aroundColor, 2%);
+  }
+  .page-id-20 &{
+    color: darken($howtoColor, 2%);
+  }
+}
 
-  &:last-child {
-    margin-right: 0;
+@mixin bg-colors($colorselec : false, $element : &){
+  @if $colorselec == false {
+    &{  
+      background-color: $hostelColor;
+    }
+    .page-id-16 &{
+      background-color: $facilitiesColor;
+    }
+    .page-id-18 &{
+      background-color: $aroundColor;
+    }
+    .page-id-20 &{
+      background-color: $howtoColor;
+    }
+  } @else {
+    &{  
+      background-color: $hostelColor;
+    }
+    @at-root #{$colorselec}.page-id-16 #{$element}{
+      background-color: $facilitiesColor;
+    }
+    @at-root #{$colorselec}.page-id-18 #{$element}{
+      background-color: $aroundColor;
+    }
+    @at-root #{$colorselec}.page-id-20 #{$element}{
+      background-color: $howtoColor;
+    }
   }
 }
 

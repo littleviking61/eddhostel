@@ -57,7 +57,7 @@
 	
 	// color header background
 	&:before{
-		background-color: $hostelColor;
+		@include bg-colors();
 		height: $headerBackgroundHeight;
 		position: absolute;
 		z-index: -1;

@@ -29,7 +29,7 @@ main{
 }
 
 .row{
-	padding: 50px 0;
+	padding: 60px 0;
 	@include flexbox();
 	@include align-items(center);
 
