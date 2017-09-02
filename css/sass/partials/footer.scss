@@ -13,6 +13,7 @@
 
 	a{
 		color: $grey;
+    @include transition(color .3s ease);
 
 		&:hover, &:focus{
 			color: lighten($grey, 10%);

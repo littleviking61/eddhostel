@@ -428,6 +428,11 @@ h1, h1 .big, h2, h2 .big, h3, h3 .big, h4, h4 .big {
     list-style: none;
     margin-right: 0; }
     .pages-links li a {
+      -webkit-transition: background-color 0.3s ease;
+      -moz-transition: background-color 0.3s ease;
+      -ms-transition: background-color 0.3s ease;
+      -o-transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
       display: block;
       width: 400px;
       padding: 40px;
@@ -435,6 +440,8 @@ h1, h1 .big, h2, h2 .big, h3, h3 .big, h4, h4 .big {
       font-size: 2rem; }
       .pages-links li a {
         background-color: #dcab25; }
+        .pages-links li a:hover {
+          background-color: #e3bc51; }
       .pages-links li.page-id-16 a {
         background-color: #ff7459; }
         .pages-links li.page-id-16 a:hover {
@@ -491,7 +498,12 @@ h1, h1 .big, h2, h2 .big, h3, h3 .big, h4, h4 .big {
   padding: 30px 0 8px;
   font-size: 1.8rem; }
   .footer a {
-    color: #9f9f9f; }
+    color: #9f9f9f;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
     .footer a:hover, .footer a:focus {
       color: #b9b9b9; }
   .footer .logo {

@@ -15,6 +15,14 @@
           appearance: $value;
 }
 
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
 // eddicon mixin
 @mixin icon($value){
   font-family: 'edd-hostel';
@@ -25,38 +33,55 @@
 
 // color by page
 
-@mixin colors(){
+@mixin colors($hover : false){
+  @if $hover == true{
+    @include transition(color .3s ease);
+  }
+
   &{  
     color: darken($hostelColor, 2%);
+    @if $hover == true{ &:hover{ color: lighten($hostelColor, 10%); } }
   }
   .page-id-16 &{
     color: darken($facilitiesColor, 2%);
+    @if $hover == true{ &:hover{ color: lighten($facilitiesColor, 10%); } }
   }
   .page-id-18 &{
     color: darken($aroundColor, 2%);
+    @if $hover == true{ &:hover{ color: lighten($aroundColor, 10%); } }
   }
   .page-id-20 &{
     color: darken($howtoColor, 2%);
+    @if $hover == true{ &:hover{ color: lighten($howtoColor, 10%); } }
   }
 }
 
 @mixin bg-colors($colorselec : false, $element : &, $hover : false){
+  @if $hover == true{
+    @include transition(background-color .3s ease);
+  }
+
   @if $colorselec == false {
     &{  
       background-color: $hostelColor;
+      @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 10%); } }
     }
     .page-id-16 &{
       background-color: $facilitiesColor;
+      @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 10%); } }
     }
     .page-id-18 &{
       background-color: $aroundColor;
+      @if $hover == true{ &:hover{ background-color: lighten($aroundColor, 10%); } }
     }
     .page-id-20 &{
       background-color: $howtoColor;
+      @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 10%); } }
     }
   } @else {
     &{  
       background-color: $hostelColor;
+      @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 10%); } }
     }
     @at-root #{$colorselec}.page-id-16 #{$element}{
       background-color: $facilitiesColor;
