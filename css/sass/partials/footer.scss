@@ -4,4 +4,78 @@
  */
 
 
-.footer {}
+.footer {
+	background-color: black;
+	color: $grey;
+	margin-top: 60px;
+	padding: $gap 0 8px;
+	font-size: 1.8rem;
+
+	a{
+		color: $grey;
+
+		&:hover, &:focus{
+			color: lighten($grey, 10%);
+		}
+	}
+	
+	.logo{
+		@include background-image('logo-footer');
+		width: span(2);
+		background-position: center top;
+	}
+
+	.vcard{
+		width: span(3);
+	}
+
+	.quick-menu{
+		width: span(4);
+
+		ul{
+			max-height: 160px;
+			@include flexbox();
+			@include flex-direction(column);
+			@include flex-wrap(wrap);
+		}
+
+		li{
+			width: 50%;
+
+			&:nth-child(even){
+				margin-bottom: 20px;
+			}
+		}
+	}
+	
+	.social{
+		width: span(3);
+
+		.social-menu{
+			margin-left: -10px;
+			height: 100px;
+		}
+
+		li{
+			display: inline-block;
+			a{
+				display: block;
+				width: 40px;
+				text-align: center;
+				color: white;
+				margin-right: 26px;
+				opacity: 0.9;
+
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+
+		.copyright{
+			font-size: 1.1rem;
+			opacity: 0.6;
+		}
+	}
+
+}

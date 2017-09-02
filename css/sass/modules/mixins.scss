@@ -18,7 +18,7 @@
 // eddicon mixin
 @mixin icon($value){
   font-family: 'edd-hostel';
-  font-size: 20px;
+  font-size: 2rem;
   content: $value;
   display: inline-block;
 }
@@ -40,7 +40,7 @@
   }
 }
 
-@mixin bg-colors($colorselec : false, $element : &){
+@mixin bg-colors($colorselec : false, $element : &, $hover : false){
   @if $colorselec == false {
     &{  
       background-color: $hostelColor;
@@ -60,12 +60,15 @@
     }
     @at-root #{$colorselec}.page-id-16 #{$element}{
       background-color: $facilitiesColor;
+      @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 10%); } }
     }
     @at-root #{$colorselec}.page-id-18 #{$element}{
       background-color: $aroundColor;
+      @if $hover == true{ &:hover{ background-color: lighten($aroundColor, 10%); } }
     }
     @at-root #{$colorselec}.page-id-20 #{$element}{
       background-color: $howtoColor;
+      @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 10%); } }
     }
   }
 }

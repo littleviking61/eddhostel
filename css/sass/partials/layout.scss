@@ -29,11 +29,18 @@ main{
 }
 
 .row{
-	padding: 60px 0;
+	@at-root section#{&}{
+		padding: 60px 0;
+	}
+
 	@include flexbox();
-	@include align-items(center);
+
+	&.vcenter{
+		@include align-items(center);
+	}
 
 	> *{
+		@include flex-shrink(0);
 	  margin-right: gutter();
 
 	  &:last-child {

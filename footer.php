@@ -1,13 +1,41 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
-				<div class="container">
-					<!-- copyright -->
-					<p class="copyright">
-						&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-						<a href="//wordpress.org">WordPress</a> &amp; <a href="//html5blank.com">HTML5 Blank</a>.
-					</p>
-					<!-- /copyright -->
+				<div class="container row">
+
+					<div class="logo">
+						<a href="<?= home_url(); ?>">
+							<img src="<?= get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+						</a>
+					</div>
+
+					<div class="vcard">
+						<p class="adr">
+							<span class="street-address">18 Rue Pierre Semard</span><br>
+							<span class="postal-code">35120</span> <span class="City">Dol-de-Bretagne</span><br>
+						</p>
+						<p>
+							<span class="mail"><a href="mailto:adressemail@gmail.com">adressemail@gmail.com</a></span><br>
+							<span class="tel">02 33 56 56 56</span>
+						</p>
+					</div>
+
+					<nav class="quick-menu">
+						<?php html5blank_nav('footer-menu'); ?>
+					</nav>
+
+					<div class="social">
+						<nav>
+							<?php html5blank_nav('social-menu'); ?>
+						</nav>
+
+						<!-- copyright -->
+						<p class="copyright">
+							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> -
+							<a href="//wordpress.org">WordPress</a> - <a href="//nuagegraphik.com">Nuagegraphik</a>
+						</p>
+						<!-- /copyright -->
+					</div>
 				</div>
 				
 			</footer>
