@@ -43,6 +43,12 @@
 											<h4><?= get_sub_field('titre') ?></h4>
 											<div><i class="eddicon-croix-big"></i></div>
 											<p><?= get_sub_field('texte') ?></p>
+											<a href="<?= get_sub_field('lien') ?>" target="new">
+												<i class="eddicon-link"></i>
+											</a>
+											<a href="#">
+												<i class="eddicon-map"></i>
+											</a>
 										</div>
 									</div>
 
@@ -63,6 +69,12 @@
 										<h4><?= get_sub_field('titre') ?></h4>
 										<div><i class="eddicon-croix-big"></i></div>
 										<p><?= get_sub_field('texte') ?></p>
+										<a href="<?= get_sub_field('lien') ?>" target="new">
+											<i class="eddicon-link"></i>
+										</a>
+										<a href="#">
+											<i class="eddicon-map"></i>
+										</a>
 									</div>
 								</div>
 
