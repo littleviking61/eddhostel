@@ -26,62 +26,48 @@ h1, h2, h3, h4{
   @include colors();
 }
 
+/* title */
+
 .page-title{
 	display: none;
 }
 
-/* home */
+.title{
+	font-size: 2.6rem;
+  text-transform: uppercase;
+  @include colors();
 
-.introduction{
+  h2{
+		font-family: $font-family-base;
+  	letter-spacing: initial;
+  	margin-top: 0;
+  }
+}
 
-	.accroche{
-		text-transform: uppercase;
-		text-align: center;
-		width: span(4);
-		font-size: 2.4rem;
+/* slideshow */
 
-		i{
-			margin-left: -18px;
-		}
+.slideshow{
+	height: $slideshowHeight;
+	widows: 100%;
+}
+
+/* accroche */
+
+.accroche{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.6rem;
+
+	&,p,h2{
+		font-family: $font-family-title;
 	}
 
-	.texte{
-		width: span(8);
-		font-size: 3.3rem;
-			
-		p{
-			margin: 0;
-		}
+	strong, b{
+		@include colors();
 	}
 }
 
-.pages-links{
-	@include reset-box();
-	margin-left: -15px;
-
-	li{
-		list-style: none;
-		margin-right: 0;
-		$this: &;	
-
-		a{
-			@include bg-colors($this, 'a', true);
-			display: block;
-			width: span(4 wide);
-			padding: 40px;
-			text-align: center;
-			font-size: 2rem;
-
-			p{
-				line-height: 1.2;
-			}
-
-			h3{
-				letter-spacing: 12px;
-			}
-		}
-	}
-}
+/* miss and mister */
 
 .miss{
 	width: 100%;
@@ -100,4 +86,3 @@ h1, h2, h3, h4{
 		@include background-image('howto');
 	}
 }
-

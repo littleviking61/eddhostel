@@ -49,6 +49,16 @@ main{
 	}
 }
 
+article{
+	> section{
+		margin-bottom: $gap;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
 /* booking bar */
 
 .booking{

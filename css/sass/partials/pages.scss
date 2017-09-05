@@ -1,0 +1,99 @@
+/**
+ * partials/pages
+ * ---
+ */
+
+/* home */
+
+.introduction{
+
+	.accroche{
+		width: span(4);
+
+		i{
+			margin-left: -18px;
+		}
+	}
+
+	.texte{
+		width: span(8);
+		font-size: 3.3rem;
+			
+		p{
+			margin: 0;
+		}
+	}
+}
+
+.pages-links{
+	@include reset-box();
+	margin-left: -15px;
+
+	li{
+		list-style: none;
+		margin-right: 0;
+		$this: &;	
+
+		a{
+			@include bg-colors($this, 'a', true);
+			display: block;
+			width: span(4 wide);
+			padding: 40px;
+			text-align: center;
+			font-size: 2rem;
+
+			p{
+				line-height: 1.2;
+			}
+
+			h3{
+				letter-spacing: 12px;
+			}
+		}
+	}
+}
+
+/* Hostel */
+
+.history{
+	.accroche{
+		width: span(6);
+	}
+	.texte{
+		width: span(6);
+	}
+}
+
+.team{
+
+	ul{
+		@include reset-box-ul;
+	}
+	.members{
+		@include flexbox();
+	}
+
+	.member{
+		padding-top: $gap;
+		text-align: center;
+		width: span(3);
+
+		h3{
+			letter-spacing: 0.4rem;
+			font-size: 2.2rem;
+			margin-bottom: 0;
+
+			+ p{
+				margin-top: 0;
+			}
+		}
+
+		[class*='eddicon-']{
+			font-size: 1.2rem;
+		}
+
+		.avatar{
+			@include border-radius(50%);
+		}
+	}
+}

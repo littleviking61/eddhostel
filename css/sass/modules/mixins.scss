@@ -9,6 +9,22 @@
   margin: 0;
 }
 
+@mixin reset-box-ul {
+  padding: 0;
+  margin: 0;
+
+  li{
+    list-style: none;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 @mixin x-appearance ($value) {
   -webkit-appearance: $value;
      -moz-appearance: $value;
