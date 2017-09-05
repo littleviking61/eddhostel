@@ -39,6 +39,11 @@
   transition: $args;
 }
 
+@mixin object-fit($fit: fill){
+  -o-object-fit: $fit;
+     object-fit: $fit;
+ }
+
 // eddicon mixin
 @mixin icon($value){
   font-family: 'edd-hostel';
@@ -134,6 +139,7 @@ $fallback-extension: 'png' !default;
 $retina-suffix: '@2x';
 @mixin background-image($name, $size:false){
     background-image: url(#{$image-path}/#{$name}.svg);
+    background-repeat: no-repeat;
     @if($size){
         background-size: $size;
     }

@@ -10,7 +10,28 @@ h1, h2, h3, h4{
 		font-family: $font-family-title;
 		letter-spacing: 1.8rem;
 		margin: $gutter 0;
+		text-transform: uppercase;
 	}
+}
+
+h3{
+	font-size: 2.6rem;
+	letter-spacing: 1rem;
+}
+
+h4{
+	font-size: 2.2rem;
+	letter-spacing: 0.6rem;
+}
+
+.button{
+	@include bg-colors(false,&,true);
+	font-family: $font-family-title;
+	display: inline-block;
+	padding: 4px $gap;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 0.4rem;
 }
 
 .big{
@@ -35,6 +56,7 @@ h1, h2, h3, h4{
 .title{
 	font-size: 2.6rem;
   text-transform: uppercase;
+  margin-bottom: $gap;
   @include colors();
 
   h2{
@@ -44,11 +66,115 @@ h1, h2, h3, h4{
   }
 }
 
+[class*="eddicon-"]{
+	&.bigger{
+		@include colors();
+	}
+}
+
 /* slideshow */
 
 .slideshow{
 	height: $slideshowHeight;
-	widows: 100%;
+	position: relative;
+	overflow: hidden;
+
+	header{
+		@include flexbox();
+		@include flex-direction(column);
+		@include justify-content(flex-end);
+
+		background-color: white;
+		width: span(5);
+		height: span(5);
+		overflow: hidden;
+		position: relative;
+		margin-top: 40px;
+		z-index: 2;
+
+		text-align: center;
+
+		.logo-color{
+			width: 100%;
+			height: 100%;
+			background-position: center center;
+			@include background-image('logo-color');
+			img{
+				opacity:0;
+			}
+		}
+
+		p{
+			margin: 0;
+		}
+
+		.miss{
+			height: 160px;
+			background-size: contain;
+			margin: 20px 0 30px;
+		}
+
+		.detail{
+			height: 160px;
+			background-color: $lightGrey;
+
+			[class*="eddicon-"]{
+				margin-top: -1rem;
+		    display: block;
+		    margin-bottom: 30px;
+			}
+
+			p > i{
+				opacity: 0.7;
+			}
+		}
+	}
+
+	.slides{
+		@include reset-box-ul();
+		width: span(9);
+		position: absolute;
+    top: 0;
+    left: span(3 wide);
+    height: 100%;
+    z-index: 1;
+
+    .slide{
+    	height: 100%;
+    	width: 100%;
+
+    	img{
+	    	height: 100%;
+				width: 100%;
+				@include object-fit(cover);
+
+				@include bg-colors();
+    	}
+
+    	.titre{
+    		position: absolute;
+    		width: span(7 wide);
+    		height: 100%;
+    		top: 0;
+    		right: 0;
+    		padding: $gap;
+
+    		@include flexbox();
+    		@include align-items(center);
+    	}
+
+    	h3{
+    		width: 100%;
+    		text-align: center;
+    		color: white;
+    		display: block;
+    		font-family: $font-family-title;
+    		font-size: 6rem;
+    		letter-spacing: 18px;
+    		line-height: 1.1;
+    	}
+    }
+	}
 }
 
 /* accroche */
@@ -57,6 +183,7 @@ h1, h2, h3, h4{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 2.6rem;
+	width: span(4);
 
 	&,p,h2{
 		font-family: $font-family-title;

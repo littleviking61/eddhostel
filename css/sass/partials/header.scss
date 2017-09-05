@@ -7,7 +7,7 @@
 // Header container
 .header {
 	width: 100%;
-	height: 100px;
+	height: $headerHeight;
 
 	.home &{
 		height: $homeHeight;
@@ -15,7 +15,7 @@
 
 	.container{
 		@include flexbox();
-		padding-top: $gutterLarge;
+		padding-top: $gutterMedium;
 	}
 	
 	//home image background

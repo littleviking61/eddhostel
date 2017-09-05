@@ -33,6 +33,10 @@ main{
 		padding: 60px 0;
 	}
 
+	@at-root ul#{&}{
+		@include reset-box-ul();
+	}
+
 	@include flexbox();
 
 	&.vcenter{

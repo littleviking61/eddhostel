@@ -13,9 +13,7 @@
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
-				<section class="slideshow">
-					Slideshow
-				</section>
+				<?php get_template_part('slideshow' ); ?>
 
 				<section class="history">
 					<div class="title">
@@ -41,8 +39,12 @@
 					  <?php while( have_rows('team') ): the_row();?>
 
   						<li class="member page-id-<?= get_sub_field('categorie') ?>">
-
-								<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'small' )); ?>">
+								<?php $photo = get_sub_field('photo'); 
+								if (!empty($photo)) : ?>
+									<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'small' )); ?>">
+								<?php else: ?>
+									<div class="miss miss-id-<?= get_sub_field('categorie') ?>"></div>
+								<?php endif; ?>
 								<p><i class="eddicon-croix-big"></i></p>
 								<h3><?= get_sub_field('appelation') ?></h3>
 								<p class="color"><i><?= get_sub_field('titre') ?></i></p>
@@ -58,16 +60,6 @@
 			<!-- /article -->
 
 		<?php endwhile; ?>
-
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
 
 		<?php endif; ?>
 

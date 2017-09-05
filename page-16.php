@@ -12,22 +12,54 @@
 
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			
+				<?php get_template_part('slideshow' ); ?>
+				
+				<section class="rooms">
+					<div class="title">
+						<i class="eddicon-line"></i>
+						<h2><?= get_field('titre_room') ?></h2>
+					</div>
 
-				Facilities
+					<ul class="rooms row">
+					  <?php while( have_rows('rooms') ): the_row();?>
+
+  						<li class="room">
+								<div class="detail">
+									<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
+									<h4><?= get_sub_field('appelation') ?></h4>
+									<p><i class="eddicon-croix-big"></i></p>
+									<p><?= get_sub_field('description') ?></p>
+								</div>
+								<a href="#book" class="button"><?= __('Book now', 'html5blank') ?></a>
+  								
+  						</li>
+
+  					<?php endwhile; ?>
+					</ul>
+				</section>
+
+				<section class="row vcenter">
+
+					<div class="accomodation">
+						<?php while( have_rows('accomodation') ): the_row();?>
+							<div>
+								<i class="eddicon-<?= get_sub_field('icon') ?> big-icon"></i>
+								<h4><?= get_sub_field('titre') ?></h4>
+							</div>
+						<?php endwhile; ?>
+					</div>
+
+					<div class="accroche">
+						<p><?= get_field('texte_accroche') ?></p>
+					</div>
+
+				</section>
+
 			</article>
 			<!-- /article -->
 
 		<?php endwhile; ?>
-
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
 
 		<?php endif; ?>
 

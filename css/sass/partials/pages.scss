@@ -97,3 +97,63 @@
 		}
 	}
 }
+
+/* Facilities */
+
+.rooms{
+	.room{
+		width: span(3);
+		text-align: center;
+		@include flexbox();
+		@include flex-direction(column);
+		@include align-items(center);
+
+		.detail{
+			@include flex(1);
+			padding-bottom: $gutterLarge;
+		}
+
+		img{
+			height: 190px;
+			width: 100%;
+			@include object-fit(cover);
+			margin-bottom: $gap;
+		}
+
+		h3{
+			letter-spacing: 1rem;
+		}
+
+		p{
+			padding-left: $gutter;
+			padding-right: $gutter;
+		}
+
+		[class*="eddicon-"]{
+			font-size: 1.4rem;
+		}
+
+	}
+}
+
+.accomodation{
+	width: span(8 wide);
+	margin-left: - $gap;
+
+	div{
+		display: inline-block;
+		float: left;
+		width: span(4);
+		background-color: $lightGrey;
+		border-right: thin solid white;
+		padding: 40px;
+		border-bottom: thin solid white;
+		text-align: center;
+	}
+
+	.big-icon{
+		font-size: 16rem;
+    line-height: 0;
+    @include colors();
+	}
+}
