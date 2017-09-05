@@ -157,3 +157,46 @@
     @include colors();
 	}
 }
+
+/* around */
+
+.stories{
+
+	.story{
+		background-color: $lightGrey;
+		text-align: center;
+
+		> div{
+			width: $halfWidth;
+			margin-right: 0;
+		}
+
+		&:nth-child(even){
+			@include flex-direction(row-reverse);
+		}
+
+		p{
+			text-align: left;
+		}
+
+		.photo{
+			height: 320px;
+
+			img{
+				@include object-fit(cover);
+			}
+		}
+
+		.detail{
+			padding: $gap;
+
+			[class*="eddicon-"]{
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.accroche{
+		width: $halfWidth;
+	}
+}

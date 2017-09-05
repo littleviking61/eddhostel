@@ -132,7 +132,7 @@ h4{
 
 	.slides{
 		@include reset-box-ul();
-		width: span(9);
+		width: span(9 wide);
 		position: absolute;
     top: 0;
     left: span(3 wide);

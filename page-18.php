@@ -14,7 +14,65 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
 				<?php get_template_part('slideshow' ); ?>
-				Around
+				
+				<section class="story">
+
+					<div class="title">
+						<i class="eddicon-line"></i>
+						<h2><?= get_field('titre_around') ?></h2>
+					</div>
+
+					<div class="map">
+						<img src="<?= esc_url( wp_get_attachment_image_url( get_field('map'), 'large' ) ); ?>" srcset="<?= esc_attr( wp_get_attachment_image_srcset( get_field('map'), 'medium' ) ); ?>">
+					</div>
+					
+					<div class="stories">
+						<?php while( have_rows('lieux') ): the_row();?>
+								
+							<?php $acccroche = get_sub_field('accroche'); ?>
+							
+							<?php if ($acccroche): ?>
+								<div class="mixstory row vcenter">
+
+									<div class="story">
+										<div class="photo">
+											<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
+										</div>
+
+										<div class="detail">
+											<h4><?= get_sub_field('titre') ?></h4>
+											<div><i class="eddicon-croix-big"></i></div>
+											<p><?= get_sub_field('texte') ?></p>
+										</div>
+									</div>
+
+									<div class="accroche">
+											<p><?= get_sub_field('texte_accroche') ?></p>
+									</div>
+
+								</div>
+
+							<?php else: ?>
+
+								<div class="story row vcenter">
+									<div class="photo">
+										<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
+									</div>
+
+									<div class="detail">
+										<h4><?= get_sub_field('titre') ?></h4>
+										<div><i class="eddicon-croix-big"></i></div>
+										<p><?= get_sub_field('texte') ?></p>
+									</div>
+								</div>
+
+							<?php endif ?>
+							
+  								
+						<?php endwhile; ?>
+					</div>
+
+				</section>
 			</article>
 			<!-- /article -->
 
