@@ -431,6 +431,20 @@ h4 {
     background-color: #8ae3f1; }
     .page-id-20 .button:hover {
       background-color: #b8eef6; }
+  .button.circle {
+    width: 140px;
+    height: 140px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    padding: 40px 0 0 5px; }
+    .button.circle h2, .button.circle p {
+      margin: 0; }
+    .button.circle h2 {
+      letter-spacing: 0.8rem; }
 
 .big {
   font-family: "Norwester", Helvetica, Arial, sans-serif;
@@ -793,6 +807,13 @@ h4 {
       color: #81e1f0; }
 
 /* around */
+.map {
+  position: relative; }
+  .map .button {
+    position: absolute;
+    top: 30px;
+    right: 30px; }
+
 .stories .story {
   background-color: #f2f1e9;
   text-align: center; }

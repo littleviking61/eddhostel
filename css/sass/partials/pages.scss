@@ -160,6 +160,15 @@
 
 /* around */
 
+.map{
+	position: relative;
+	.button{
+		position: absolute;
+    top: 30px;
+    right: 30px;
+	}
+}
+
 .stories{
 
 	.story{

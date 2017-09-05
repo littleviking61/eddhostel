@@ -32,6 +32,23 @@ h4{
 	color: white;
 	text-transform: uppercase;
 	letter-spacing: 0.4rem;
+
+	&.circle{
+		width: 140px;
+		height: 140px;
+		@include border-radius(50%);
+		text-align: center;
+		color: black;
+		padding: 40px 0 0 5px;
+
+		h2, p{
+			margin:0;
+		}
+
+		h2{
+			letter-spacing: 0.8rem;
+		}
+	}
 }
 
 .big{

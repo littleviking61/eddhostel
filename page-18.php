@@ -24,6 +24,7 @@
 
 					<div class="map">
 						<img src="<?= esc_url( wp_get_attachment_image_url( get_field('map'), 'large' ) ); ?>" srcset="<?= esc_attr( wp_get_attachment_image_srcset( get_field('map'), 'medium' ) ); ?>">
+						<a class="button circle" href="/blog"><?= get_field('texte_blog') ?></a>
 					</div>
 					
 					<div class="stories">
