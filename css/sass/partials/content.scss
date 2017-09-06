@@ -64,6 +64,16 @@ h4{
   @include colors();
 }
 
+.logo-color{
+
+	height: 100%;
+	background-position: center center;
+	@include background-image('logo-color');
+	img{
+		opacity:0;
+	}
+}
+
 /* title */
 
 .page-title{
@@ -89,6 +99,12 @@ h4{
 	}
 }
 
+.big-icon{
+	font-size: 16rem;
+  line-height: 0;
+  @include colors();
+}
+
 /* slideshow */
 
 .slideshow{
@@ -111,15 +127,6 @@ h4{
 
 		text-align: center;
 
-		.logo-color{
-			width: 100%;
-			height: 100%;
-			background-position: center center;
-			@include background-image('logo-color');
-			img{
-				opacity:0;
-			}
-		}
 
 		p{
 			margin: 0;
@@ -228,5 +235,21 @@ h4{
 	}
 	&.miss-id-20{
 		@include background-image('howto');
+	}
+}
+
+/* map ling */
+
+.get-to{
+
+	a{
+		float: left;
+		@include colors();
+		width: 60px;
+		padding: $gutter $gutter $gutter 0;
+
+		[class*="eddicon-"]{
+			font-size: 3rem;
+		}
 	}
 }

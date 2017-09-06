@@ -500,22 +500,22 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 /* ACF */
 
-// if( function_exists('acf_add_options_page') ) {
-//     // Page principale
-//     acf_add_options_page(array(
-//         'page_title'    => 'Edd Hostel',
-//         'menu_title'    => 'Edd Hostel',
-//         'menu_slug'     => 'options-generales',
-//         'capability'    => 'edit_posts',
-//         'redirect'      => true
-//     ));
+if( function_exists('acf_add_options_page') ) {
+    // Page principale
+    acf_add_options_page(array(
+        'page_title'    => 'Edd Hostel',
+        'menu_title'    => 'Edd Hostel',
+        'menu_slug'     => 'options-generales',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
   
-//   // Première sous-page
-//     acf_add_options_sub_page(array(
-//         'page_title'    => 'Options',
-//         'menu_title'    => 'Options',
-//         'parent_slug'   => 'options-generales',
-//     ));
-//   // Deuxième sous-page
+  // Première sous-page
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Options',
+        'menu_title'    => 'Options',
+        'parent_slug'   => 'options-generales',
+    ));
+  // Deuxième sous-page
     
-// }
+}

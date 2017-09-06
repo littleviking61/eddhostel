@@ -140,21 +140,27 @@
 	width: span(8 wide);
 	margin-left: - $gap;
 
-	div{
+	div, > a{
 		display: inline-block;
 		float: left;
 		width: span(4);
+		height: 280px;
 		background-color: $lightGrey;
 		border-right: thin solid white;
 		padding: 40px;
 		border-bottom: thin solid white;
 		text-align: center;
+
+		img{
+			@include object-fit(cover);
+		}
 	}
 
-	.big-icon{
-		font-size: 16rem;
-    line-height: 0;
-    @include colors();
+	> a{
+		@include transition(background-color .3s ease);
+		&:hover{
+			background-color: lighten($lightGrey, 2%);
+		}
 	}
 }
 
@@ -217,17 +223,6 @@
 			}
 		}
 
-		a{
-			float: left;
-			@include colors();
-			width: 60px;
-			padding: $gutter $gutter $gutter 0;
-
-			[class*="eddicon-"]{
-				font-size: 3rem;
-			}
-		}
-
 		.detail{
 			padding: $gap;
 
@@ -254,5 +249,85 @@
 
 	.accroche{
 		width: $halfWidth;
+	}
+}
+
+/* how to */
+
+.quick-links{
+	@extend .accomodation;
+
+	.photo{
+		padding: 0;
+	}
+}
+
+.parcours{
+
+	.type{
+		width: span(3);
+		text-align: center;
+
+		h3{
+			letter-spacing: 1rem;
+		}
+
+		p{
+			padding-left: $gutter;
+			padding-right: $gutter;
+		}
+
+		.eddicon-croix-big{
+			font-size: 1.4rem;
+		}
+
+		>i{
+			margin-top: -40px;
+			display: block;
+		}
+
+	}
+
+	.circle{
+		padding-top: 45px;
+	}
+}
+
+.location{
+
+	height: 550px;
+	overflow: hidden;
+
+	.map{
+		width: span(9);
+		height: 100%;
+
+		margin: 0;
+
+		img{
+			@include object-fit(cover);
+		}
+	}
+
+	.information{
+		@include flexbox();
+		@include flex-direction(column);
+
+		width: span(3);
+		@include bg-colors();
+
+		.logo-color{
+			height: 270px;
+    	background-size: 70%;
+			background-color: $lighterGrey;
+		}
+
+		.adress{
+			padding: 50px $gap;
+
+			.get-to a{
+				color: white;
+			}
+		}
 	}
 }

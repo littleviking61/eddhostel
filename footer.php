@@ -9,16 +9,7 @@
 						</a>
 					</div>
 
-					<div class="vcard">
-						<p class="adr">
-							<span class="street-address">18 Rue Pierre Semard</span><br>
-							<span class="postal-code">35120</span> <span class="City">Dol-de-Bretagne</span><br>
-						</p>
-						<p>
-							<span class="mail"><a href="mailto:adressemail@gmail.com">adressemail@gmail.com</a></span><br>
-							<span class="tel">02 33 56 56 56</span>
-						</p>
-					</div>
+					<?php get_template_part('adresse'); ?>
 
 					<nav class="quick-menu">
 						<?php html5blank_nav('footer-menu'); ?>

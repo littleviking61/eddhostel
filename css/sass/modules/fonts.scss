@@ -22,5 +22,5 @@
 
 @include font-face-bb('Roboto', '../fonts/RobotoCondensed-Regular-webfont', normal);
 @include font-face-bb('Roboto', '../fonts/RobotoCondensed-Italic-webfont', normal, italic);
-@include font-face-bb('Roboto', '../RobotoCondensed-Bold-webfont', bold);
-@include font-face-bb('Roboto', '../RobotoCondensed-BoldItalic-webfont', bold, italic);
+@include font-face-bb('Roboto', '../fonts/RobotoCondensed-Bold-webfont', bold);
+@include font-face-bb('Roboto', '../fonts/RobotoCondensed-BoldItalic-webfont', bold, italic);
