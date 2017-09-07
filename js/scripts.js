@@ -37,6 +37,9 @@ function initMap(){
 		// google map
 		var geocoder;
 		var map;
+	 	var abcd = 'abcd';
+	 	var bcde = 'abcd';
+
 		function initMap() {
 			var lat = 48.5442012;
 			var lng = -1.7492409;
@@ -64,8 +67,6 @@ function initMap(){
 		 	// 
 		 	var markers = [];
 		 	var i = 0;
-		 	var abcd = 'abcd';
-		 	var bcde = 'abcd';
 		 	$('.story[data-lat]:not([data-lat=""])').each(function() {
 		 		i++;
 		 		var latlng = new google.maps.LatLng($(this).data('lat'), $(this).data('lng'));
