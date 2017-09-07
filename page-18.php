@@ -15,7 +15,7 @@
 				
 				<?php get_template_part('slideshow' ); ?>
 				
-				<section class="story">
+				<section class="around" id="maps">
 
 					<div class="title">
 						<i class="eddicon-line"></i>
@@ -29,14 +29,19 @@
 					</div>
 					
 					<div class="stories">
+						<?php $i = 0; ?>
 						<?php while( have_rows('lieux') ): the_row();?>
 								
-							<?php $acccroche = get_sub_field('accroche'); ?>
+							<?php
+								$i++;
+								$acccroche = get_sub_field('accroche');
+								$location = get_sub_field('point_gps');
+							?>
 							
 							<?php if ($acccroche): ?>
 								<div class="mixstory row vcenter">
 
-									<div class="story">
+									<div class="story" data-lat="<?= $location['lat'] ?>" data-lng="<?= $location['lng'] ?>" id="story-<?= $i ?>">
 										<div class="photo">
 											<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
 										</div>
@@ -49,7 +54,7 @@
 												<a href="<?= get_sub_field('lien') ?>" target="new">
 													<i class="eddicon-link"></i>
 												</a>
-												<a href="#">
+												<a href="#maps" data-lat="<?= $location['lat'] ?>" data-lng="<?= $location['lng'] ?>" >
 													<i class="eddicon-map"></i>
 												</a>
 											</div>
@@ -64,7 +69,7 @@
 
 							<?php else: ?>
 
-								<div class="story row vcenter">
+								<div class="story row vcenter" data-lat="<?= $location['lat'] ?>" data-lng="<?= $location['lng'] ?>" id="story-<?= $i ?>">
 									<div class="photo">
 										<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
 									</div>
@@ -77,7 +82,7 @@
 												<a href="<?= get_sub_field('lien') ?>" target="new">
 													<i class="eddicon-link"></i>
 												</a>
-												<a href="#">
+												<a href="#maps" data-lat="<?= $location['lat'] ?>" data-lng="<?= $location['lng'] ?>" >
 													<i class="eddicon-map"></i>
 												</a>
 											</div>
@@ -113,7 +118,7 @@
 	</main>
 
 <script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwK9XxcgcYEmsrK_msSgAnYYbCkcC-jI0&callback=initMap">
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwK9XxcgcYEmsrK_msSgAnYYbCkcC-jI0">
 </script>
 
 <?php get_footer(); ?>
