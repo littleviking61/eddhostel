@@ -23,7 +23,8 @@
 					</div>
 
 					<div class="map">
-						<img src="<?= esc_url( wp_get_attachment_image_url( get_field('map'), 'large' ) ); ?>" srcset="<?= esc_attr( wp_get_attachment_image_srcset( get_field('map'), 'medium' ) ); ?>">
+						<div id="map" class="map" data-location="<?= get_field('gps_location', 'option') ?>" data-zoom="9"></div>
+					<!-- 	<img src="<?= esc_url( wp_get_attachment_image_url( get_field('map'), 'large' ) ); ?>" srcset="<?= esc_attr( wp_get_attachment_image_srcset( get_field('map'), 'medium' ) ); ?>"> -->
 						<a class="button circle" href="/blog"><?= get_field('texte_blog') ?></a>
 					</div>
 					
@@ -72,12 +73,14 @@
 										<h4><?= get_sub_field('titre') ?></h4>
 										<div><i class="eddicon-croix-big"></i></div>
 										<p><?= get_sub_field('texte') ?></p>
-										<a href="<?= get_sub_field('lien') ?>" target="new">
-											<i class="eddicon-link"></i>
-										</a>
-										<a href="#">
-											<i class="eddicon-map"></i>
-										</a>
+										<div class="get-to">
+												<a href="<?= get_sub_field('lien') ?>" target="new">
+													<i class="eddicon-link"></i>
+												</a>
+												<a href="#">
+													<i class="eddicon-map"></i>
+												</a>
+											</div>
 									</div>
 								</div>
 
@@ -108,5 +111,9 @@
 		</section>
 		<!-- /section -->
 	</main>
+
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwK9XxcgcYEmsrK_msSgAnYYbCkcC-jI0&callback=initMap">
+</script>
 
 <?php get_footer(); ?>

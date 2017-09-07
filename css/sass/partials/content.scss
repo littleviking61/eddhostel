@@ -105,6 +105,18 @@ h4{
   @include colors();
 }
 
+.map{
+	position: relative;
+	width: 100%;
+  height: $mapHeight;
+
+	.button{
+		position: absolute;
+    top: 30px;
+    right: 30px;
+	}
+}
+
 /* slideshow */
 
 .slideshow{

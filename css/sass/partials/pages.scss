@@ -5,6 +5,14 @@
 
 /* home */
 
+.home .booking.bottom{
+	display: none;
+
+	& + footer{
+		margin-top: 60px;
+	}
+}
+
 //home image background
 .background-image{
 	position: absolute;
@@ -203,15 +211,6 @@
 
 /* around */
 
-.map{
-	position: relative;
-	.button{
-		position: absolute;
-    top: 30px;
-    right: 30px;
-	}
-}
-
 .stories{
 
 	.story{
@@ -332,12 +331,11 @@
 
 .location{
 
-	height: 550px;
+	height: $mapHeight;
 	overflow: hidden;
 
 	.map{
 		width: span(9);
-		height: 100%;
 
 		margin: 0;
 
@@ -360,7 +358,7 @@
 		}
 
 		.adress{
-			padding: 50px $gap;
+			padding: $gap;
 
 			.get-to a{
 				color: white;

@@ -539,6 +539,15 @@ h4 {
   .page-id-20 .big-icon {
     color: #81e1f0; }
 
+.map {
+  position: relative;
+  width: 100%;
+  height: 500px; }
+  .map .button {
+    position: absolute;
+    top: 30px;
+    right: 30px; }
+
 /* slideshow */
 .slideshow {
   height: 550px;
@@ -723,6 +732,11 @@ h4 {
  * ---
  */
 /* home */
+.home .booking.bottom {
+  display: none; }
+  .home .booking.bottom + footer {
+    margin-top: 60px; }
+
 .background-image {
   position: absolute;
   top: 0;
@@ -902,13 +916,6 @@ h4 {
       background-color: #f6f5ef; }
 
 /* around */
-.map {
-  position: relative; }
-  .map .button {
-    position: absolute;
-    top: 30px;
-    right: 30px; }
-
 .stories .story {
   background-color: #f2f1e9;
   text-align: center; }
@@ -985,11 +992,10 @@ h4 {
   padding-top: 45px; }
 
 .location {
-  height: 550px;
+  height: 500px;
   overflow: hidden; }
   .location .map {
     width: 870px;
-    height: 100%;
     margin: 0; }
     .location .map img {
       -o-object-fit: cover;
@@ -1020,7 +1026,7 @@ h4 {
       background-size: 70%;
       background-color: #f9f9f9; }
     .location .information .adress {
-      padding: 50px 30px; }
+      padding: 30px; }
       .location .information .adress .get-to a {
         color: white; }
 
@@ -1031,7 +1037,6 @@ h4 {
 .footer {
   background-color: black;
   color: #9f9f9f;
-  margin-top: 60px;
   padding: 30px 0 8px;
   font-size: 1.8rem; }
   .footer a {
@@ -1095,6 +1100,9 @@ h4 {
     .footer .social .copyright {
       font-size: 1.1rem;
       opacity: 0.6; }
+
+.booking.bottom {
+  margin-top: 60px; }
 
 /**
  * partials/print

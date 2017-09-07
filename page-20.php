@@ -23,7 +23,8 @@
 
 					<div class="location row	">
 						<div class="map">
-							<img src="<?= esc_url( wp_get_attachment_image_url( get_field('map'), 'large' ) ); ?>" srcset="<?= esc_attr( wp_get_attachment_image_srcset( get_field('map'), 'medium' ) ); ?>">
+							<div id="map" class="map" data-location="<?= get_field('gps_location', 'option') ?>" data-zoom="10"></div>
+							<!-- <img src="<?= esc_url( wp_get_attachment_image_url( get_field('map'), 'large' ) ); ?>" srcset="<?= esc_attr( wp_get_attachment_image_srcset( get_field('map'), 'medium' ) ); ?>"> -->
 						</div>
 
 						<div class="information">
@@ -114,20 +115,14 @@
 
 		<?php endwhile; ?>
 
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
 		<?php endif; ?>
 
 		</section>
 		<!-- /section -->
 	</main>
+
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwK9XxcgcYEmsrK_msSgAnYYbCkcC-jI0&callback=initMap">
+</script>
 
 <?php get_footer(); ?>

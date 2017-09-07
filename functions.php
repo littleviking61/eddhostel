@@ -527,3 +527,10 @@ if( function_exists('acf_add_options_page') ) {
   // Deuxième sous-page
     
 }
+
+function my_acf_init() {
+    
+    acf_update_setting('google_api_key', 'AIzaSyBwK9XxcgcYEmsrK_msSgAnYYbCkcC-jI0');
+}
+
+add_action('acf/init', 'my_acf_init');

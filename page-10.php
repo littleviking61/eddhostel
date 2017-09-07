@@ -6,7 +6,9 @@
 	<main role="main" aria-label="Content">
 
 		<!-- booking -->
-		<div class="booking top"></div>
+		<div class="booking top">
+			<?php get_template_part('booking' ); ?>
+		</div>
 		
 		<!-- section -->
 		<div class="container">

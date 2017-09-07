@@ -12,24 +12,24 @@ module.exports = function(grunt) {
                 tasks: ['sass:dist', 'rsync'],
             },
 
-            js : {
-                files: ['js/**/*.js'],
-                tasks: ['jshint'],
-                options: {
-                    livereload: true,
-                    livereloadOnError: false,
-                    spawn: false
-                }
-            },
+            // js : {
+            //     files: ['js/**/*.js'],
+            //     tasks: ['jshint'],
+            //     options: {
+            //         livereload: true,
+            //         livereloadOnError: false,
+            //         spawn: false
+            //     }
+            // },
 
-            other: {
-                files: ['**/*.php', 'css/*.css'],
-                options: {
-                    livereload: true,
-                    livereloadOnError: false,
-                    spawn: false
-                }
-            }
+            // other: {
+            //     files: ['**/*.php', 'css/*.css'],
+            //     options: {
+            //         livereload: true,
+            //         livereloadOnError: false,
+            //         spawn: false
+            //     }
+            // }
         },
 
         jshint: {

@@ -1,3 +1,8 @@
+			<!-- booking -->
+			<div class="booking bottom">
+				<?php get_template_part('booking' ); ?>
+			</div>
+
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
