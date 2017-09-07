@@ -115,6 +115,9 @@ function html5blank_header_scripts()
             // Slidr
             wp_register_script('slidr', get_template_directory_uri() . '/js/lib/slidr.min.js', array(), '0.5.0');
 
+            // Headeroom
+            wp_register_script('headroom', get_template_directory_uri() . '/js/lib/headroom.js', array(), '0.9.4');
+
             // Custom scripts
             wp_register_script(
                 'html5blankscripts',
@@ -123,7 +126,8 @@ function html5blank_header_scripts()
                     'conditionizr',
                     'modernizr',
                     'jquery',
-                    'slidr'),
+                    'slidr',
+                    'headroom'),
                 '1.0.0');
 
             // Enqueue Scripts

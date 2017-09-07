@@ -180,7 +180,7 @@ nav li {
   font-size: 2rem; }
   .post-edit-link:hover {
     opacity: 1; }
-  .home .post-edit-link {
+  .home .header:not(.headroom) .post-edit-link {
     color: white; }
 
 /**
@@ -272,10 +272,20 @@ article > section {
  * ---
  */
 .header {
+  position: relative;
   width: 100%;
   height: 115px; }
-  .home .header {
-    height: 800px; }
+  .header {
+    background-color: #dcab25; }
+  .page-id-16 .header {
+    background-color: #ff7459; }
+  .page-id-18 .header {
+    background-color: #4de8b3; }
+  .page-id-20 .header {
+    background-color: #8ae3f1; }
+  .home .header:not(.headroom) {
+    height: 800px;
+    background-color: transparent; }
   .header .container {
     display: -webkit-box;
     display: -moz-box;
@@ -283,50 +293,11 @@ article > section {
     display: -webkit-flex;
     display: flex;
     padding-top: 15px; }
-  .header .background-image {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    height: 800px;
-    overflow: hidden; }
-    .header .background-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-    .header .background-image .intro-text {
-      position: absolute;
-      top: 50%;
-      color: white;
-      width: 100%;
-      display: block;
-      text-align: center;
-      font-family: "Norwester", Helvetica, Arial, sans-serif;
-      font-size: 5rem;
-      letter-spacing: 18px;
-      line-height: 1.1; }
-      .header .background-image .intro-text h2 {
-        margin-bottom: 30px;
-        margin-top: -80px; }
-      .header .background-image .intro-text i {
-        font-size: 5.6rem; }
-  .header:before {
-    height: 370px;
-    position: absolute;
-    z-index: -1;
-    width: 100%; }
-    .header:before {
-      background-color: #dcab25; }
-    .page-id-16 .header:before {
-      background-color: #ff7459; }
-    .page-id-18 .header:before {
-      background-color: #4de8b3; }
-    .page-id-20 .header:before {
-      background-color: #8ae3f1; }
   .header .nav {
     padding: 30px 0;
     font-size: 1.9rem;
     font-weight: 100; }
-    .home .header .nav a, .home .header .nav select, .home .header .nav .switcher:after {
+    .home .header:not(.headroom) .nav a, .home .header:not(.headroom) .nav select, .home .header:not(.headroom) .nav .switcher:after {
       color: white; }
     .header .nav ul {
       padding: 0;
@@ -357,6 +328,21 @@ article > section {
       display: inline-block;
       margin-left: -25px; }
 
+.wrapper:before {
+  height: 370px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  content: ''; }
+  .wrapper:before {
+    background-color: #dcab25; }
+  .page-id-16 .wrapper:before {
+    background-color: #ff7459; }
+  .page-id-18 .wrapper:before {
+    background-color: #4de8b3; }
+  .page-id-20 .wrapper:before {
+    background-color: #8ae3f1; }
+
 .logo {
   background-image: url(../img/logo.svg);
   background-repeat: no-repeat;
@@ -374,15 +360,50 @@ article > section {
     height: 100%; }
   .logo img {
     opacity: 0; }
-  .home .header .logo {
+  .home .header:not(.headroom) .logo {
     background-image: url(../img/logo-home.svg);
     background-repeat: no-repeat;
     height: 185px; }
-    .no-svg .home .header .logo {
+    .no-svg .home .header:not(.headroom) .logo {
       background-image: url(../img/logo-home.png); }
       @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-        .no-svg .home .header .logo {
+        .no-svg .home .header:not(.headroom) .logo {
           background-image: url(../img/logo-home@2x.png); } }
+
+/* headroom */
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+.headroom {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  will-change: transform;
+  -webkit-transition: transform 200ms linear;
+  -moz-transition: transform 200ms linear;
+  -ms-transition: transform 200ms linear;
+  -o-transition: transform 200ms linear;
+  transition: transform 200ms linear;
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%); }
+
+.headroom--pinned {
+  -moz-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%); }
+
+.headroom--unpinned, .headroom--top {
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%); }
 
 /**
  * partials/content
@@ -615,6 +636,22 @@ h4 {
         font-size: 6rem;
         letter-spacing: 18px;
         line-height: 1.1; }
+    .slideshow .slides .slidr-breadcrumbs {
+      padding: 0 20px 10px 0; }
+      .slideshow .slides .slidr-breadcrumbs li {
+        margin-left: 10px !important;
+        border: none !important;
+        background-color: white;
+        width: 15px !important;
+        height: 15px !important; }
+        .slideshow .slides .slidr-breadcrumbs li.active {
+          background-color: #dcab25; }
+        .page-id-16 .slideshow .slides .slidr-breadcrumbs li.active {
+          background-color: #ff7459; }
+        .page-id-18 .slideshow .slides .slidr-breadcrumbs li.active {
+          background-color: #4de8b3; }
+        .page-id-20 .slideshow .slides .slidr-breadcrumbs li.active {
+          background-color: #8ae3f1; }
 
 /* accroche */
 .accroche {
@@ -686,6 +723,33 @@ h4 {
  * ---
  */
 /* home */
+.background-image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 800px;
+  overflow: hidden; }
+  .background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .background-image .intro-text {
+    position: absolute;
+    top: 50%;
+    color: white;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: "Norwester", Helvetica, Arial, sans-serif;
+    font-size: 5rem;
+    letter-spacing: 18px;
+    line-height: 1.1; }
+    .background-image .intro-text h2 {
+      margin-bottom: 30px;
+      margin-top: -80px; }
+    .background-image .intro-text i {
+      font-size: 5.6rem; }
+
 .introduction .accroche {
   width: 370px; }
   .introduction .accroche i {

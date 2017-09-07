@@ -5,11 +5,15 @@
 
 // Header container
 .header {
+	position: relative;
+	// z-index: 30;
 	width: 100%;
 	height: $headerHeight;
+	@include bg-colors();
 
-	.home &{
+	.home &:not(.headroom){
 		height: $homeHeight;
+		background-color: transparent;
 	}
 
 	.container{
@@ -17,62 +21,12 @@
 		padding-top: $gutterMedium;
 	}
 	
-	//home image background
-	.background-image{
-		position: absolute;
-		top: 0;
-    z-index: -1;
-		height: $homeHeight;
-		overflow: hidden;
-
-		img{
-			width: 100%;
-			height: 100%;
-		  object-fit: cover;
-		}
-
-		.intro-text{
-			position: absolute;
-			top: 50%;
-			color: white;
-			width: 100%;
-			display: block;
-			text-align: center;
-			font-family: $font-family-title;
-			font-size: 5rem;
-			letter-spacing: 18px;
-			line-height: 1.1;
-
-			h2{
-				margin-bottom: $gap;
-				margin-top: -80px;
-			}
-
-			i{
-				font-size: 5.6rem;
-			}
-		}
-	}
-	
-	// color header background
-	&:before{
-		@include bg-colors();
-		height: $headerBackgroundHeight;
-		position: absolute;
-		z-index: -1;
-		width: 100%;
-
-		// .home &{
-		// 	height:$homeHeight; 
-		// }
-	}
-	
 	.nav{
 		padding: $horizontalGap 0;
 		font-size: 1.9rem;
 		font-weight: 100;
 
-		.home &{
+		@at-root .home .header:not(.headroom) .nav{
 			a, select, .switcher:after{
 				color: white;
 			}
@@ -117,6 +71,16 @@
 	}
 }
 
+// color header background
+.wrapper:before{
+	@include bg-colors();
+	height: $headerBackgroundHeight;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	content: '';
+}
+
 // Logo
 .logo {
 	@include background-image('logo');
@@ -134,8 +98,32 @@
 		opacity: 0;
 	}
 
-	.home .header &{
+	.home .header:not(.headroom) &{
 		@include background-image('logo-home');
 		height: 185px;
 	}
+}
+
+/* headroom */
+
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+
+.headroom{
+	position: fixed;
+	top: 0;
+	z-index: 20;
+	will-change: transform;
+	@include transition(transform 200ms linear);
+	@include transform(translateY(-100%));
+}
+
+.headroom--pinned {
+  @include transform(translateY(0%));
+}
+
+.headroom--unpinned, .headroom--top {
+  @include transform(translateY(-100%));
 }

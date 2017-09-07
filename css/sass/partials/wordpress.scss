@@ -72,7 +72,7 @@
     opacity: 1;
   }
 
-  .home &{
+  .home .header:not(.headroom) &{
     color: white;
   }
 }

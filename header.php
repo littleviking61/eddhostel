@@ -30,7 +30,7 @@
 		<div class="wrapper">
 			
 			<!-- header -->
-			<header class="header clear" role="banner">
+			<header class="header clear" role="banner" >
 
 					<!-- logo -->
 					<div class="container">

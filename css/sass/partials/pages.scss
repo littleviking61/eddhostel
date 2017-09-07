@@ -5,6 +5,43 @@
 
 /* home */
 
+//home image background
+.background-image{
+	position: absolute;
+	top: 0;
+  z-index: -1;
+	height: $homeHeight;
+	overflow: hidden;
+
+	img{
+		width: 100%;
+		height: 100%;
+	  object-fit: cover;
+	}
+
+	.intro-text{
+		position: absolute;
+		top: 50%;
+		color: white;
+		width: 100%;
+		display: block;
+		text-align: center;
+		font-family: $font-family-title;
+		font-size: 5rem;
+		letter-spacing: 18px;
+		line-height: 1.1;
+
+		h2{
+			margin-bottom: $gap;
+			margin-top: -80px;
+		}
+
+		i{
+			font-size: 5.6rem;
+		}
+	}
+}
+
 .introduction{
 
 	.accroche{
