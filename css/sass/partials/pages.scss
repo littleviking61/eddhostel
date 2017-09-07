@@ -114,9 +114,9 @@
 		}
 
 		img{
+			@include object-fit(cover);
 			height: 190px;
 			width: 100%;
-			@include object-fit(cover);
 			margin-bottom: $gap;
 		}
 

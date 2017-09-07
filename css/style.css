@@ -564,7 +564,7 @@ h4 {
   .slideshow .slides {
     padding: 0;
     margin: 0;
-    width: 900px;
+    width: 870px;
     position: absolute;
     top: 0;
     left: 300px;
@@ -795,12 +795,12 @@ h4 {
     flex: 1;
     padding-bottom: 20px; }
   .rooms .room img {
-    height: 190px;
-    width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     width: 100%;
     height: 100%;
+    height: 190px;
+    width: 100%;
     margin-bottom: 30px; }
   .rooms .room h3 {
     letter-spacing: 1rem; }

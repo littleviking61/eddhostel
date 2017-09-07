@@ -30,11 +30,11 @@
 
 	</header>
 
-	<ul class="slides">
-		<?php $i = 0;  ?>
+	<ul <?= count(get_field('slides'))> 1 ? 'id="slidr-top"' : '' ;?> class="slides">
+		<?php $i = 1;  ?>
 		<?php while( have_rows('slides') ): the_row();?>
 
-			<li class="slide slide-<?= $i ?>">
+			<li class="slide" data-slidr="<?= $i ?>">
 
 				<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('image'), 'medium' )); ?>" srcset="<?= esc_attr( wp_get_attachment_image_srcset( get_sub_field('image'), 'small') ); ?>" />
 				<div class="titre">

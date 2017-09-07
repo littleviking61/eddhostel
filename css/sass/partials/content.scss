@@ -156,7 +156,7 @@ h4{
 
 	.slides{
 		@include reset-box-ul();
-		width: span(9 wide);
+		width: span(9);
 		position: absolute;
     top: 0;
     left: span(3 wide);
