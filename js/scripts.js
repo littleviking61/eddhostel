@@ -100,8 +100,7 @@ var points = [];
 	    }
 		}
 
-
-		initMap();
+		if($('#map').length >0 ) initMap();
 
 	});
 

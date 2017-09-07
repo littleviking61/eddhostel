@@ -24,7 +24,6 @@
 	.nav{
 		padding: $horizontalGap 0;
 		font-size: 1.9rem;
-		font-weight: 100;
 
 		@at-root .home .header:not(.headroom) .nav{
 			a, select, .switcher:after{
