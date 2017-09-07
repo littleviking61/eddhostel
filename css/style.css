@@ -988,6 +988,9 @@ h4 {
   .parcours .type > i {
     margin-top: -40px;
     display: block; }
+.parcours .circles {
+  width: 270px;
+  text-align: center; }
 .parcours .circle {
   padding-top: 45px; }
 
