@@ -1,4 +1,9 @@
 var points = [];
+var mapLoaded = false;
+
+function initMap(){
+	mapLoaded = true;
+}
 
 (function( root, $, undefined ) {
 	"use strict";
@@ -60,6 +65,7 @@ var points = [];
 		 	var markers = [];
 		 	var i = 0;
 		 	var abcd = 'abcd';
+		 	var bcde = 'abcd';
 		 	$('.story[data-lat]:not([data-lat=""])').each(function() {
 		 		i++;
 		 		var latlng = new google.maps.LatLng($(this).data('lat'), $(this).data('lng'));
@@ -100,7 +106,16 @@ var points = [];
 	    }
 		}
 
-		if($('#map').length >0 ) initMap();
+		function checkInit() {
+			if(mapLoaded) {
+				if($('#map').length >0 ) initMap();
+			}else{
+				if(bcde !== 'abcd') clearTimeout(bcde);
+				bcde = setTimeout(checkInit, 500);
+			}
+		}
+
+		checkInit();
 
 	});
 

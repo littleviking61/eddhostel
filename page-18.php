@@ -118,7 +118,7 @@
 	</main>
 
 <script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwK9XxcgcYEmsrK_msSgAnYYbCkcC-jI0">
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwK9XxcgcYEmsrK_msSgAnYYbCkcC-jI0&callback=initMap">
 </script>
 
 <?php get_footer(); ?>
