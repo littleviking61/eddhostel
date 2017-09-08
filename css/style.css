@@ -727,6 +727,37 @@ h4 {
   .get-to a [class*="eddicon-"] {
     font-size: 3rem; }
 
+/* policies and faq */
+.footer-informations {
+  background-color: #7d7d7d;
+  padding: 30px 0;
+  margin-top: 60px; }
+  .footer-informations, .footer-informations .title {
+    color: white; }
+  .footer-informations + footer, .footer-informations + .booking.bottom {
+    margin-top: 0; }
+
+.policies, .faq {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: decimal-leading-zero;
+  padding: 0; }
+  .policies li, .faq li {
+    width: 570px;
+    list-style-position: inside;
+    padding: 10px 0;
+    border-top: thin white solid; }
+    .policies li p, .faq li p {
+      display: inline; }
+      .policies li p.answer, .faq li p.answer {
+        color: #9f9f9f; }
+    .policies li:nth-child(even), .faq li:nth-child(even) {
+      margin-right: 0; }
+    .policies li:last-child, .policies li:nth-last-child(2), .faq li:last-child, .faq li:nth-last-child(2) {
+      border-bottom: thin white solid; }
+
 /**
  * partials/pages
  * ---
@@ -889,8 +920,7 @@ h4 {
     font-size: 1.4rem; }
 
 .accomodation, .quick-links {
-  width: 800px;
-  margin-left: -30px; }
+  width: 770px; }
   .accomodation div, .quick-links div, .accomodation > a, .quick-links > a {
     display: inline-block;
     float: left;

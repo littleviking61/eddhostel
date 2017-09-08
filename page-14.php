@@ -67,4 +67,27 @@
 		<!-- /section -->
 	</main>
 
+	<section class="footer-informations" id="policies">
+
+		<div class="container">
+			<div class="title">
+				<i class="eddicon-line"></i>
+				<h2><?= get_field('titre_policies', 'option') ?></h2>
+			</div>
+
+			<ol class="policies row">
+			  <?php while( have_rows('hostel_policies', 'option') ): the_row();?>
+
+					<li class="rule">
+						<p><?= get_sub_field('rule') ?></p>
+							
+					</li>
+
+				<?php endwhile; ?>
+			</ol>
+
+		</div>
+
+	</section>
+
 <?php get_footer(); ?>

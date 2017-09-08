@@ -282,3 +282,46 @@ h4{
 		}
 	}
 }
+
+/* policies and faq */
+
+.footer-informations{
+	background-color: $greyExtra;
+	&, .title{
+		color: white;
+	}
+	padding: $gap 0;
+	margin-top: 60px;
+
+	& + footer, & + .booking.bottom{
+		margin-top: 0;
+	}
+}
+
+.policies, .faq{
+	@include flex-wrap(wrap);
+	list-style: decimal-leading-zero;
+	padding: 0;
+
+	li{
+		width: span(6);
+		list-style-position: inside;
+		padding: $gutter 0;
+		border-top: thin white solid;
+
+		p{
+			display: inline;
+			&.answer{
+				color: $grey;
+			}
+		}
+
+		&:nth-child(even){
+			margin-right: 0;
+		}
+
+		&:last-child, &:nth-last-child(2){
+			border-bottom: thin white solid;
+		}
+	}
+}

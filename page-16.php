@@ -64,7 +64,31 @@
 		<?php endif; ?>
 
 		</section>
+
 		<!-- /section -->
 	</main>
 
+<section class="footer-informations" id="faq">
+
+	<div class="container">
+		<div class="title">
+			<i class="eddicon-line"></i>
+			<h2><?= get_field('titre_faq', 'option') ?></h2>
+		</div>
+
+		<ol class="faq row">
+		  <?php while( have_rows('faq', 'option') ): the_row();?>
+
+				<li class="question">
+					<p><?= get_sub_field('question') ?></p>
+					<p class="answer"><i><?= get_sub_field('answer') ?></i></p>
+				</li>
+
+			<?php endwhile; ?>
+		</ol>
+
+	</div>
+
+</section>
+	
 <?php get_footer(); ?>
