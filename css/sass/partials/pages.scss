@@ -482,22 +482,6 @@
 			h4{
 				@include flex(1);
 			}
-
-			>p{
-				span{
-					display: inline;
-					text-transform: uppercase;
-
-					&:after{
-						content: ' | ';
-						padding: 0 $gutter;
-					}
-
-					&:last-child:after{
-						display: none;
-					}
-				}
-			}
 		}
 	}
 
@@ -517,6 +501,50 @@
 	}
 }
 
-.sidebar{
-	width: span(3);
+.entry-meta{
+	span{
+		display: inline;
+		text-transform: uppercase;
+
+		&:after{
+			content: ' | ';
+			padding: 0 $gutter;
+		}
+
+		&:last-child:after{
+			display: none;
+		}
+	}
+}
+
+/* single post */
+
+.single{
+
+	.post{
+		width: span(8);
+
+		.single-header{
+			text-align: center;
+			margin: 40px 0;
+
+			h1{
+				letter-spacing: 1rem;
+				margin: $gap 0;
+			}
+		}
+
+		img{
+			@include object-fit(cover);
+			height: auto;
+		}
+	}
+
+	.ssba-wrap{
+		display: none;
+	}
+
+	.social .ssba-wrap{
+		display: block;
+	}
 }

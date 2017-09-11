@@ -76,3 +76,128 @@
     color: white;
   }
 }
+
+/* comment */
+
+.comments{
+  border-top: solid thin $grey;
+  margin-top: 40px;
+  padding-top: 40px;
+
+  header{
+    @include flexbox();
+    text-align: left;
+    margin: 0;
+
+    > p{
+      @include flex(1);
+    }
+
+    a{
+      text-transform: uppercase;
+    }
+  }
+
+  > ul{
+    padding-left: 0;
+    
+    li{
+      list-style: none;
+    }
+  }
+
+  .comment.depth-1{
+    border-top: solid thin $grey;
+    margin-top: 20px;
+    padding-top: 20px;
+
+    &:first-child{
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .comment-body{
+    padding: $gutterLarge $gutterMedium $gutterLarge 0;
+    header{
+      text-transform: uppercase;
+      margin: $gutter 0;
+
+      .vcard{
+        font-weight: bold;
+
+        cite{
+          font-style: normal;
+        }
+      }
+    }
+    margin-bottom: $gutter;
+  }
+
+  .reply{
+    text-align: right;
+    padding-right: $gutterLarge;
+    padding-bottom: $gutter;
+  }
+
+  .comment-reply-title{
+    font-family: $font-family-base;
+    letter-spacing: 0;
+
+    small{
+      display: block;
+      text-transform: initial;
+      letter-spacing: initial;
+    }
+  }
+
+  .children{
+    background-color: $lightGrey;
+  }
+  
+  .comment-respond{
+    border-top: solid thin $grey;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  & + .comment-respond{
+    border-top: 0;
+  }
+
+  .comment-form{
+    label{
+      text-transform: uppercase;
+      width: 100%;
+      padding-bottom: $gutter;
+    }
+    textarea, input{
+      width: 100%;
+    }
+  }
+
+  .form-submit{
+    text-align: center;
+  }
+
+  input[type="submit"]{
+    @include bg-colors();
+    font-family: $font-family-title;
+    display: inline-block;
+    padding: $gutter $gap;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    border: none;
+    width: auto;
+  }
+
+  .comment-form-author, .comment-form-email{
+    width: span(4);
+    display: inline-block;
+  }
+  .comment-form-author{
+    margin-right: 25px;
+  }
+}

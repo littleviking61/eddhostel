@@ -1,69 +1,75 @@
 <?php get_header(); ?>
 
 	<main role="main" aria-label="Content">
-	<!-- section -->
-	<section>
+		<!-- section -->
+		<div class="container ">
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+			<?php get_template_part('slideshow', 'single' ); ?>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="row hcenter">
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+					<!-- article -->
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							
+						<header class="single-header">
+							<!-- categorie -->
+							<ul class="main-tags">
+								<?php $main_tags = get_field('main_tag'); ?>
+								<?php foreach ($main_tags as $main_tag): $main_tag = get_term($main_tag); ?>
+									<li><a href="<?= get_term_link($main_tag->term_id); ?>"><?= $main_tag->name; ?></a></li>
+								<?php endforeach ?>
+							</ul>
+							<!-- /categorie -->
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+							<!-- post title -->
+							<h1>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+							</h1>
+							<!-- /post title -->
 
-			<!-- post details -->
-			<span class="date">
-				<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
-					<?php the_date(); ?> <?php the_time(); ?>
-				</time>
-			</span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
+							<!-- post details -->
+							<div class="entry-meta">
+								<span class="date">
+									<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
+										<?php the_time('d/m/y'); ?>
+									</time>
+								</span>
+								<span class="author"><?php the_author(); ?></span>
+							</div>
 
-			<?php the_content(); // Dynamic Content ?>
+						</header>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+						<?php the_content(); // Dynamic Content ?>
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+						<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+						<p><?php _e( 'In: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+						
+						<div class="social">
+							<?= show_share_buttons() ?>
+						</div>
+						<?php comments_template(); ?>
 
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+					</article>
+					<!-- /article -->
 
-			<?php comments_template(); ?>
+				<?php endwhile; ?>
 
-		</article>
-		<!-- /article -->
+				<?php else: ?>
 
-	<?php endwhile; ?>
+					<!-- article -->
+					<article>
 
-	<?php else: ?>
+						<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 
-		<!-- article -->
-		<article>
+					</article>
+					<!-- /article -->
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+				<?php endif; ?>
+			</div>
 
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
+		</div>
+		<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

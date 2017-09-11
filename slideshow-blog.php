@@ -24,14 +24,14 @@
 				<!-- /post title -->
 
 				<!-- post details -->
-				<p>
+				<div class="entry-meta">
 					<span class="date">
 						<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
 							<?php the_time('d/m/y'); ?>
 						</time>
 					</span>
 					<span class="author"><?php the_author(); ?></span>
-				</p>
+				</div>
 
 				<div class="detail">
 					<p><?php html5wp_excerpt('html5wp_index') ?></p>

@@ -43,6 +43,10 @@ main{
 		@include align-items(center);
 	}
 
+	&.hcenter{
+		@include justify-content(center);
+	}
+
 	> *{
 		@include flex-shrink(0);
 	  margin-right: gutter();
