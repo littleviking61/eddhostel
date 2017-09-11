@@ -24,8 +24,8 @@
         </script>
 
 	</head>
-	<body <?php body_class(); ?>>
-
+	<?php $extra_class = (is_home() || is_single() || is_category() || is_archive()) ? 'blog' : '' ?>
+	<body <?php body_class($extra_class); ?>>
 		<!-- wrapper -->
 		<div class="wrapper">
 			

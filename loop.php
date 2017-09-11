@@ -1,47 +1,60 @@
+<?php 
+
+global $wp_query;
+$args = array_merge( $wp_query->query_vars, array( 'post__not_in' => array(get_field('feature_article_in_blog', 'option')->ID) ) );
+query_posts( $args ); ?>
+
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+		
+		<!-- article -->
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<!-- article -->
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<!-- post thumbnail -->
+			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php the_post_thumbnail('medium'); // Declare pixel size you need inside the array ?>
+				</a>
+			<?php endif; ?>
+			<!-- /post thumbnail -->
 
-		<!-- post thumbnail -->
-		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-			</a>
-		<?php endif; ?>
-		<!-- /post thumbnail -->
+			<div class="content">
+				<!-- categorie -->
+				<ul class="main-tags">
+					<?php $main_tags = get_field('main_tag'); ?>
+					<?php foreach ($main_tags as $main_tag): $main_tag = get_term($main_tag); ?>
+						<li><a href="<?= get_term_link($main_tag->term_id); ?>"><?= $main_tag->name; ?></a></li>
+					<?php endforeach ?>
+				</ul>
+				<!-- /categorie -->
 
-		<!-- post title -->
-		<h2>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-		</h2>
-		<!-- /post title -->
+				<!-- post title -->
+				<h4>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+				</h4>
+				<!-- /post title -->
 
-		<!-- post details -->
-		<span class="date">
-			<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
-				<?php the_date(); ?> <?php the_time(); ?>
-			</time>
-		</span>
-		<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-		<!-- /post details -->
+				<!-- post details -->
+				<p>
+					<span class="date">
+						<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
+							<?php the_time('d/m/y'); ?>
+						</time>
+					</span>
+					<span class="author"><?php the_author(); ?></span>
+				</p>
+			</div>
 
-		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
-
-		<?php edit_post_link(); ?>
-
-	</article>
-	<!-- /article -->
+		</article>
+		<!-- /article -->
 
 <?php endwhile; ?>
 
 <?php else: ?>
 
 	<!-- article -->
-	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-	</article>
+	<div class="nothing">
+		<p><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></p>
+	</div>
 	<!-- /article -->
 
 <?php endif; ?>

@@ -73,6 +73,10 @@
     color: darken($hostelColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($hostelColor, 10%); } }
   }
+  .blog &{  
+    color: darken($blogColor, 2%);
+    @if $hover == true{ &:hover{ color: lighten($blogColor, 10%); } }
+  }
   .page-id-16 &{
     color: darken($facilitiesColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($facilitiesColor, 10%); } }
@@ -97,6 +101,10 @@
       background-color: $hostelColor;
       @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 10%); } }
     }
+    .blog &{  
+      background-color: $blogColor;
+      @if $hover == true{ &:hover{ background-color: lighten($blogColor, 10%); } }
+    }
     .page-id-16 &{
       background-color: $facilitiesColor;
       @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 10%); } }
@@ -113,6 +121,10 @@
     &{  
       background-color: $hostelColor;
       @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 10%); } }
+    }
+    @at-root #{$colorselec}.blog #{$element}{
+      background-color: $blogColor;
+      @if $hover == true{ &:hover{ background-color: lighten($blogColor, 10%); } }
     }
     @at-root #{$colorselec}.page-id-16 #{$element}{
       background-color: $facilitiesColor;

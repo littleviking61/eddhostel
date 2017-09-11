@@ -93,6 +93,11 @@ h4{
   }
 }
 
+.tag-title, .nothing{
+	width: 100%;
+	padding-bottom: $gap;
+}
+
 [class*="eddicon-"]{
 	&.bigger{
 		@include colors();
@@ -164,6 +169,19 @@ h4{
 			p > i{
 				opacity: 0.7;
 			}
+		}
+	}
+
+	.thumbnail{
+		width: span(9);
+		position: absolute;
+		top: 0;
+		left: span(3 wide);
+		height: 100%;
+		z-index: 1;
+
+		img{
+			@include object-fit(cover);
 		}
 	}
 

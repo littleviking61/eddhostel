@@ -371,3 +371,152 @@
 		}
 	}
 }
+
+/* blog */
+
+.main-tags{
+	@include reset-box-ul();
+	
+	li{
+		display: inline-block;
+		text-transform: uppercase;
+
+		&:after{
+			content: ' / ';
+			padding: 0 $gutter;
+		}
+
+		&:last-child:after{
+			display: none;
+		}
+	}
+}
+
+.blog .slideshow{
+	h2{
+		letter-spacing: 1rem;
+	}
+
+	header{
+		@include justify-content(space-between);
+		padding-top: $gap;
+		>p{
+			text-transform: uppercase;
+			span:after{
+				content: ' | ';
+				padding: 0 $gutter;
+			}
+			span:last-child:after{
+				display: none;
+			}
+		}
+	}
+
+	.detail{
+		padding: $gap 40px;
+		text-align: left;
+
+		a{
+			display: block;
+			width: 100%;
+			text-align: right;
+			text-transform: uppercase;
+			padding-top: $gutter;
+			font-weight: bold;
+
+			&:after{
+				content: ' >';
+			}
+		}
+	}
+}
+
+.categories{
+	margin-top: 60px;
+
+	.row{
+		@include justify-content(center);
+	}
+	.current-cat, .cat-item-all, li[class*='cat-item']:hover{
+		&:after{
+			content: '';
+			@include bg-colors();
+			width: 100%;
+			height: 2px;
+			display: block;
+
+			@at-root .category .cat-item-all:after{
+				display: none; // hide category all if one selected
+			}
+		}
+	}
+	.cat-item-15{ /* 16 et 17*/
+	}
+}
+
+.articles{
+	width: span(9);
+	@include flex-wrap(wrap);
+
+	article{
+		width: span(3);
+		@include flexbox();
+		@include flex-direction(column);
+		background-color: $lighterGrey;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+
+		img{
+			@include object-fit(cover);
+			height: 145px;
+		}
+
+		.content{
+			@include flex(1);
+			@include flexbox();
+			@include flex-direction(column);
+			padding: $gutterLarge;
+
+			h4{
+				@include flex(1);
+			}
+
+			>p{
+				span{
+					display: inline;
+					text-transform: uppercase;
+
+					&:after{
+						content: ' | ';
+						padding: 0 $gutter;
+					}
+
+					&:last-child:after{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.pagination{
+		width: 100%;
+		text-align: right;
+		margin-top: $gap;
+
+		.page-numbers{
+			display: inline-block;
+			padding: 5px $gutterLarge 0 0;
+
+			&.current{
+				@include colors();
+			}
+		}
+	}
+}
+
+.sidebar{
+	width: span(3);
+}

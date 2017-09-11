@@ -2,15 +2,34 @@
 
 	<main role="main">
 		<!-- section -->
-		<section class="container">
+		<div class="container">
 
-			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
+			<?php get_template_part('slideshow', 'blog' ); ?>
+			
+			<nav class="categories">
+				<ul class="row">
+				  <?php wp_list_categories( array(
+				      'orderby' => 'name',
+				      'title_li' => '',
+				      'show_option_all' => 'All'
+				  ) ); ?> 
+				</ul>	
+			</nav>
 
-			<?php get_template_part('loop'); ?>
+			<section class="row">
+				<div class="articles row">
 
-			<?php get_template_part('pagination'); ?>
+					<?php if (is_archive()): ?>
+						<h2 class="tag-title">Tag : <?= single_tag_title('', false); ?></h2>
+					<?php endif ?>
+					<?php get_template_part('loop'); ?>
+				
+					<?php get_template_part('pagination'); ?>
+				</div>
 
-		</section>
+				<?php get_sidebar( ); ?>
+			</section>
+		</div>
 		<!-- /section -->
 	</main>
 
