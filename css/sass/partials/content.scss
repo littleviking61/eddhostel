@@ -343,3 +343,38 @@ h4{
 		}
 	}
 }
+
+.sidebar{
+
+	h3{
+		font-family: $font-family-base;
+		border-bottom: thin solid black;
+		text-transform: initial;
+		letter-spacing: initial;
+		font-weight: normal;
+		font-size: 3rem;
+		margin-bottom: $gutterLarge;
+	}
+
+	.tagcloud a{
+		font-size: 1.6rem !important;
+		&:after{
+			content: ' / ';
+		}
+		&:last-child:after{
+			display: none;
+		}
+	}
+
+	> div{
+		margin-bottom: 60px;
+	}
+
+	.button.circle{
+		margin-top: $gutter;
+		i{
+			font-size: 6rem;
+			color: white;
+		}
+	}
+}

@@ -798,6 +798,28 @@ h4 {
     .policies li:last-child, .policies li:nth-last-child(2), .faq li:last-child, .faq li:nth-last-child(2) {
       border-bottom: thin white solid; }
 
+.sidebar h3 {
+  font-family: "Robotoo", Helvetica, Arial, sans-serif;
+  border-bottom: thin solid black;
+  text-transform: initial;
+  letter-spacing: initial;
+  font-weight: normal;
+  font-size: 3rem;
+  margin-bottom: 20px; }
+.sidebar .tagcloud a {
+  font-size: 1.6rem !important; }
+  .sidebar .tagcloud a:after {
+    content: ' / '; }
+  .sidebar .tagcloud a:last-child:after {
+    display: none; }
+.sidebar > div {
+  margin-bottom: 60px; }
+.sidebar .button.circle {
+  margin-top: 10px; }
+  .sidebar .button.circle i {
+    font-size: 6rem;
+    color: white; }
+
 /**
  * partials/pages
  * ---
