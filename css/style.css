@@ -243,8 +243,10 @@ nav li {
     border-top: solid thin #9f9f9f;
     margin-top: 20px;
     padding-top: 20px; }
-  .comments + .comment-respond {
-    border-top: 0; }
+  .comments .comment-respond:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0; }
   .comments .comment-form label {
     text-transform: uppercase;
     width: 100%;
@@ -1390,6 +1392,9 @@ h4 {
     display: none; }
 
 /* single post */
+.single .slideshow .slides {
+  width: 100%;
+  left: 0; }
 .single .post {
   width: 770px; }
   .single .post .single-header {
