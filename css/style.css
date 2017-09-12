@@ -1456,6 +1456,16 @@ h4 {
     transition: color 0.3s ease; }
     .footer a:hover, .footer a:focus {
       color: #b9b9b9; }
+  .footer .detail {
+    width: 470px;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap; }
   .footer .logo {
     background-image: url(../img/logo-footer.svg);
     background-repeat: no-repeat;
@@ -1631,6 +1641,26 @@ h4 {
       .row > *:last-child {
         margin-right: 30px; }
 
+  .footer .row > * {
+    margin-right: 0; }
+  .footer .detail {
+    margin-bottom: 0; }
+  .footer .quick-menu {
+    width: 100%;
+    margin-bottom: 60px; }
+    .footer .quick-menu ul {
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      justify-content: center; }
+      .footer .quick-menu ul li {
+        margin-bottom: 0 !important;
+        width: auto;
+        margin-right: 30px; }
+  .footer .social .social-menu {
+    height: 80px; }
+
   .slideshow header {
     margin-right: auto;
     margin-left: auto; }
@@ -1646,8 +1676,17 @@ h4 {
     -ms-flex-order: 2;
     -webkit-order: 2;
     order: 2; }
-  .page-id-10 .pages-links li {
-    margin-right: initial; }
+  .page-id-10 .pages-links {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
+    .page-id-10 .pages-links li {
+      margin-right: initial; }
 
   .page-id-14 .accroche {
     -webkit-box-ordinal-group: 2;

@@ -8,13 +8,15 @@
 
 				<div class="container row">
 
-					<div class="logo">
-						<a href="<?= home_url(); ?>">
-							<img src="<?= get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
+					<div class="detail row">
+						<div class="logo">
+							<a href="<?= home_url(); ?>">
+								<img src="<?= get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							</a>
+						</div>
 
-					<?php get_template_part('adresse'); ?>
+						<?php get_template_part('adresse'); ?>
+					</div>
 
 					<nav class="quick-menu">
 						<?php html5blank_nav('footer-menu'); ?>

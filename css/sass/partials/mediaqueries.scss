@@ -91,6 +91,34 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 	}
 
+	.footer{
+		.row > *{
+			margin-right: 0;
+		}
+		.detail{
+			margin-bottom: 0;
+		}
+		.quick-menu{
+			width: 100%;
+			margin-bottom: 60px;
+
+			ul{
+				@include flex-direction(row);
+				justify-content: center;
+
+				li{
+					margin-bottom: 0 !important;
+					width: auto;
+					margin-right: $gap;
+
+				}
+			}
+		}
+		.social .social-menu{
+			height: 80px;
+		}
+	}
+
 	.slideshow{
 		header{
 			margin-right: auto;
@@ -110,8 +138,12 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		.accroche{
 			@include order(2);
 		}
-		.pages-links li{
-			margin-right: initial;
+		.pages-links{
+			@include flex-direction(column);
+			@include align-items(center); 
+			li{
+				margin-right: initial;
+			}
 		}
 	}
 
@@ -181,7 +213,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			margin-right: 0;
 		}
 	}
-	
+
 	.slideshow{
 		height: auto;
 

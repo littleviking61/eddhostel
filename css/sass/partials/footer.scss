@@ -18,6 +18,12 @@
 			color: lighten($grey, 10%);
 		}
 	}
+
+	.detail{
+		width: span(5);
+		@include flex-direction(row);
+    @include flex-wrap( nowrap);
+	}
 	
 	.logo{
 		@include background-image('logo-footer');
