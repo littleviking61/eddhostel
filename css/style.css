@@ -991,12 +991,13 @@ h4 {
     font-family: "Norwester", Helvetica, Arial, sans-serif;
     font-size: 5rem;
     letter-spacing: 18px;
-    line-height: 1.1; }
+    line-height: 1.1;
+    padding: 0 30px; }
     .background-image .intro-text h2 {
       margin-bottom: 30px;
       margin-top: -80px; }
     .background-image .intro-text i {
-      font-size: 5.6rem; }
+      font-size: 1.5em; }
 
 .introduction .accroche {
   width: 370px; }
@@ -1592,11 +1593,19 @@ h4 {
 
 @media only screen and (max-width: 1170px) {
   .header .logo {
-    width: 170px; }
+    width: 170px;
+    background-size: contain; }
   .header .post-edit-link {
     left: 135px; }
   .header .nav li, .header .nav ul {
     margin-right: 20px; }
+
+  .home .header .logo {
+    width: 150px;
+    margin-right: 20px; }
+
+  .background-image .intro-text {
+    font-size: 4rem; }
 
   .container {
     padding-left: 30px;
@@ -1676,6 +1685,17 @@ h4 {
     margin-bottom: 10px !important; }
   .header .post-edit-link {
     display: none; }
+
+  .home .header .logo {
+    width: 80px;
+    height: auto !important; }
+  .home .header:not(.headroom) {
+    height: 550px; }
+
+  .background-image {
+    height: 550px; }
+    .background-image .intro-text {
+      font-size: 3rem; }
 
   .headroom > .container {
     padding-top: 0;
@@ -1820,6 +1840,15 @@ h4 {
         margin: 0;
         text-align: center;
         margin-top: 15px; }
+
+  .home .header:not(.headroom) {
+    height: 370px;
+    margin-bottom: 0; }
+
+  .background-image {
+    height: 370px; }
+    .background-image .intro-text {
+      display: none; }
 
   .slideshow {
     height: auto; }

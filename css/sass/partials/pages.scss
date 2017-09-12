@@ -38,6 +38,7 @@
 		font-size: 5rem;
 		letter-spacing: 18px;
 		line-height: 1.1;
+		padding: 0 $gap;
 
 		h2{
 			margin-bottom: $gap;
@@ -45,7 +46,7 @@
 		}
 
 		i{
-			font-size: 5.6rem;
+			font-size: 1.5em;
 		}
 	}
 }

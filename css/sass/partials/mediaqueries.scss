@@ -26,6 +26,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 	.header{
 		.logo{
 			width: span(2);
+			background-size: contain;
 		}
 
 		.post-edit-link{
@@ -35,7 +36,17 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		.nav li, .nav ul{
 	    margin-right: 20px;
 		}
+	}
 
+	.home{
+		.header .logo{
+			width: 150px;
+			margin-right: 20px;
+		}
+	}
+
+	.background-image .intro-text{
+		font-size: 4rem;
 	}
 
 	.container{
@@ -127,6 +138,25 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 	}
 
+	.home{
+		.header .logo{
+			width: 80px;
+			height: auto !important;
+		}
+
+		.header:not(.headroom){
+			height: 550px;
+		}
+	}
+	
+	.background-image{
+		height: 550px;
+
+		.intro-text{
+			font-size: 3rem;
+		}
+	}
+
 	.headroom{
 
 		> .container{
@@ -142,6 +172,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			display: none !important;
 		}
 	}
+
 
 	.footer{
 		.row > *{
@@ -299,6 +330,17 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 	}
 
+	.home .header:not(.headroom){
+		height: 370px;
+		margin-bottom: 0;
+	}
+	
+	.background-image{
+		height: 370px;
+		.intro-text{
+			display: none;
+		}
+	}
 
 	.slideshow{
 		height: auto;
