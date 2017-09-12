@@ -4,7 +4,7 @@
 // media querie
 // 
 $screen: "only screen";
-$break-small: 660px;
+$break-small: 675px;
 $break-medium: 950px;
 $break-large: 1170px;
 // $break-extra-large: 930rem;
@@ -22,6 +22,21 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 // en dessous de 1170
 @media #{$large-down}{
+
+	.header{
+		.logo{
+			width: span(2);
+		}
+
+		.post-edit-link{
+			left: 135px;
+		}
+
+		.nav li, .nav ul{
+	    margin-right: 20px;
+		}
+
+	}
 
 	.container{
 		padding-left: $gap;
@@ -86,8 +101,45 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			//width: 100% !important;
 			//
 			&:last-child{
-				margin-right: $gap;
+				//margin-right: $gap;
 			}
+		}
+	}
+
+	.header{
+		.logo{
+			width: 80px;
+		  margin-right: 20px;
+		}
+		.nav{
+			@include flex-wrap(wrap);
+	    @include justify-content(center);
+	    padding: 10px;
+		}
+		.header-menu{
+			width: 100%;
+			text-align: center;
+			@include flex-shrink(0);
+	    margin-bottom: 10px !important;
+		}
+		.post-edit-link{
+			display: none;
+		}
+	}
+
+	.headroom{
+
+		> .container{
+			padding-top: 0;
+			@include flex-direction(row);
+		}
+
+		.logo{
+			margin-right: $gutter;
+		}
+
+		.social-menu, .switcher{
+			display: none !important;
 		}
 	}
 
@@ -213,6 +265,40 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			margin-right: 0;
 		}
 	}
+
+	.container{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.header{
+    height: auto;
+    margin-bottom: 15px;
+
+    .logo{
+    	width: 40px;
+    	background-size: contain;
+    }
+
+		> *{
+	    @include flex-direction(column);
+	    @include flex-wrap(wrap);
+	    @include align-items(center);
+	    margin-right: 0;
+		}
+		
+		.nav{
+			padding: 0;
+
+			>ul, .switcher{
+				width: 100%;
+				margin: 0;
+				text-align: center;
+				margin-top: 15px;
+			}
+		}
+	}
+
 
 	.slideshow{
 		height: auto;

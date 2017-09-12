@@ -45,13 +45,17 @@
 			list-style: none;
 			display: inline-block;
 			margin-right: 35px;
+			
+			&:after{
+				content: '';
+				width: 100%;
+				height: 2px;
+				display: block;
+				background-color: transparent;
+			}
 
 			&:hover, &.current_page_item{
 				&:after{
-					content: '';
-					width: 100%;
-					height: 2px;
-					display: block;
 					background-color: black;
 
 					@at-root .home &{
@@ -71,11 +75,14 @@
 		display: inline-block;
 
 		select{
+			font-family: $font-family-base;
 	  	background: transparent;
     	border: none;
     	display: inline-block;
     	@include x-appearance(none);
-    	width: 60px;
+    	width: 45px;
+    	vertical-align: text-top;
+    	color : $text-color;
 		}
 
 		.qtranxs_widget_end{

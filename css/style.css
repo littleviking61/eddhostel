@@ -92,7 +92,7 @@ body {
   font-family: "Robotoo", Helvetica, Arial, sans-serif;
   font-size: 1.8em;
   line-height: 1.4;
-  color: #444;
+  color: black;
   background-color: #fff;
   height: 100%;
   padding: 0;
@@ -103,7 +103,7 @@ img {
   vertical-align: middle; }
 
 a {
-  color: #444;
+  color: black;
   text-decoration: none; }
 
 input[type="text"],
@@ -426,11 +426,13 @@ article > section {
       list-style: none;
       display: inline-block;
       margin-right: 35px; }
-      .header .nav li:hover:after, .header .nav li.current_page_item:after {
+      .header .nav li:after {
         content: '';
         width: 100%;
         height: 2px;
         display: block;
+        background-color: transparent; }
+      .header .nav li:hover:after, .header .nav li.current_page_item:after {
         background-color: black; }
         .home .header .nav li:hover:after, .home .header .nav li.current_page_item:after {
           background-color: white; }
@@ -439,13 +441,16 @@ article > section {
   .header .switcher {
     display: inline-block; }
     .header .switcher select {
+      font-family: "Robotoo", Helvetica, Arial, sans-serif;
       background: transparent;
       border: none;
       display: inline-block;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      width: 60px; }
+      width: 45px;
+      vertical-align: text-top;
+      color: black; }
     .header .switcher .qtranxs_widget_end {
       display: none; }
     .header .switcher:after {
@@ -1357,7 +1362,8 @@ h4 {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: #f9f9f9; }
+    background-color: #f9f9f9;
+    margin-bottom: 30px; }
     .articles article:nth-child(3n) {
       margin-right: 0; }
     .articles article img {
@@ -1585,6 +1591,13 @@ h4 {
   display: none; }
 
 @media only screen and (max-width: 1170px) {
+  .header .logo {
+    width: 170px; }
+  .header .post-edit-link {
+    left: 135px; }
+  .header .nav li, .header .nav ul {
+    margin-right: 20px; }
+
   .container {
     padding-left: 30px;
     padding-right: 30px; }
@@ -1638,8 +1651,42 @@ h4 {
     -ms-flex-pack: center; }
     .row > * {
       margin-bottom: 30px; }
-      .row > *:last-child {
-        margin-right: 30px; }
+
+  .header .logo {
+    width: 80px;
+    margin-right: 20px; }
+  .header .nav {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 10px; }
+  .header .header-menu {
+    width: 100%;
+    text-align: center;
+    -webkit-flex-shrink: 0;
+    -moz-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+    margin-bottom: 10px !important; }
+  .header .post-edit-link {
+    display: none; }
+
+  .headroom > .container {
+    padding-top: 0;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .headroom .logo {
+    margin-right: 10px; }
+  .headroom .social-menu, .headroom .switcher {
+    display: none !important; }
 
   .footer .row > * {
     margin-right: 0; }
@@ -1738,9 +1785,41 @@ h4 {
 
   .policies li, .faq li {
     margin-bottom: 0; } }
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 675px) {
   .row > * {
     margin-right: 0; }
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px; }
+
+  .header {
+    height: auto;
+    margin-bottom: 15px; }
+    .header .logo {
+      width: 40px;
+      background-size: contain; }
+    .header > * {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      margin-right: 0; }
+    .header .nav {
+      padding: 0; }
+      .header .nav > ul, .header .nav .switcher {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        margin-top: 15px; }
 
   .slideshow {
     height: auto; }
