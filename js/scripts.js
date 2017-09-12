@@ -24,6 +24,32 @@ function initMap(){
 		// initialise
 		headroom.init();
 
+		var el2 = document.querySelector(".booking > .bar");
+		var el2h = $(el2).offset().top - $(window).height() - $(el2).height();
+		// construct an instance of Headroom, passing the element
+		var headroom2  = new Headroom(el2, {
+			"offset": el2h,	
+		  "tolerance": 5,
+		  "classes" : {
+		          // when element is initialised
+		          "initial" : "topbar",
+		          // when scrolling up
+		          "pinned" : "topbar--pinned",
+		          // when scrolling down
+		          "unpinned" : "topbar--unpinned",
+		          // when above offset
+		          "top" : "topbar--top",
+		          // when below offset
+		          "notTop" : "topbar--not-top",
+		          // when at bottom of scoll area
+		          "bottom" : "topbar--bottom",
+		          // when not at bottom of scroll area
+		          "notBottom" : "topbar--not-bottom"
+		      },
+		});
+		// initialise
+		headroom2.init();
+
 		if($('#slidr-top').length > 0) {
 			slidr.create('slidr-top', {
 				breadcrumbs: true,

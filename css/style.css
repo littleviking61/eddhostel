@@ -448,13 +448,6 @@ article > section {
   article > section:last-child {
     margin-bottom: 0; }
 
-/* booking bar */
-.booking {
-  height: 110px;
-  margin-top: -110px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.65); }
-
 /**
  * partials/header
  * ---
@@ -1669,8 +1662,37 @@ h4 {
       font-size: 1.1rem;
       opacity: 0.6; }
 
+/* booking bar */
+.booking {
+  position: relative;
+  height: 110px;
+  margin-top: -110px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65); }
+
 .booking.bottom {
   margin-top: 60px; }
+  .booking.bottom a.book {
+    position: absolute;
+    left: 770px;
+    top: 0;
+    height: 100%;
+    width: 170px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
+  .booking.bottom .bar {
+    width: 100%; }
+    .booking.bottom .bar.topbar--top {
+      height: 110px;
+      position: fixed;
+      bottom: 0; }
 
 /**
  * partials/print
