@@ -30,7 +30,7 @@
 					</div>
 				</section>
 
-				<section class="team">
+				<section class="team" id="team">
 					<div class="title">
 						<i class="eddicon-line"></i>
 						<h2><?= get_field('titre_team') ?></h2>
