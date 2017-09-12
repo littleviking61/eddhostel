@@ -78,15 +78,15 @@
 		list-style: none;
 		margin-right: 0;
 		$this: &;	
+		width: span(4 wide);
 
 		a{
 			@include bg-colors($this, 'a', true);
 			display: block;
-			width: span(4 wide);
 			padding: 40px;
 			text-align: center;
 			font-size: 2rem;
-
+			height: 100%;
 			p{
 				line-height: 1.2;
 			}
@@ -188,7 +188,7 @@
 	div, > a{
 		display: inline-block;
 		float: left;
-		width: span(4);
+		width: 50%;
 		height: 280px;
 		background-color: $lightGrey;
 		border-right: thin solid white;

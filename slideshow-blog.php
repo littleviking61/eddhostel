@@ -1,18 +1,21 @@
 <section class="slideshow">
 	<?php 
 
-		$highlight = get_field('feature_article_in_blog', 'option');
-
-
-		if( $highlight ): foreach( $highlight as $post): setup_postdata($post); ?>
-
+	$highlight = get_field('feature_article_in_blog', 'option');
+	if( $highlight ): 
+		// override $post
+		$post = $highlight;
+		setup_postdata( $post ); ?>
+		
 			<header>
 
 				<!-- categorie -->
 				<ul class="main-tags">
 					<?php $main_tags = get_field('main_tag'); ?>
 					<?php foreach ($main_tags as $main_tag): $main_tag = get_term($main_tag); ?>
-						<li><a href="<?= get_term_link($main_tag->term_id); ?>"><?= $main_tag->name; ?></a></li>
+						<li>
+							<a href="<?= get_term_link($main_tag->term_id); ?>"><?= $main_tag->name; ?></a>
+						</li>
 					<?php endforeach ?>
 				</ul>
 				<!-- /categorie -->
@@ -41,18 +44,13 @@
 
 			<div class="thumbnail">
 				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-						<?php the_post_thumbnail('medium'); // Declare pixel size you need inside the array ?>
-					</a>
-				<?php endif; ?>
+				<?php if ( has_post_thumbnail()) : 
+					the_post_thumbnail('medium');
+				endif; ?>
 				<!-- /post thumbnail -->
 			</div>
 
-			<?php endforeach; ?>
-
-			<?php wp_reset_postdata();  ?>
-
-		<?php endif; ?>
+		<?php wp_reset_postdata();  ?>
+	<?php endif; ?>
 
 </section>

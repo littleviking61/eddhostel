@@ -53,6 +53,10 @@
 					height: 2px;
 					display: block;
 					background-color: black;
+
+					@at-root .home &{
+						background-color: white;
+					}
 				}
 			}
 
