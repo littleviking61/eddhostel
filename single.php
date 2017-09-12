@@ -38,6 +38,11 @@
 								<span class="author"><?php the_author(); ?></span>
 							</div>
 
+							<div class="interact">
+								<span class="likes"><?= get_simple_likes_button( get_the_ID() ); ?></span>
+								<a href="#respond"><i class="eddicon-comment"></i> <?php comments_number('%','%','%'); ?></a>
+							</div>
+
 						</header>
 
 						<?php the_content(); // Dynamic Content ?>

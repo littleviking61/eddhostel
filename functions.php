@@ -6,6 +6,7 @@
  */
 
 require_once "modules/is-debug.php";
+require_once "modules/post-like.php";
 
 /*------------------------------------*\
     External Modules/Files
