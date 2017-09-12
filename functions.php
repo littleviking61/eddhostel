@@ -370,7 +370,7 @@ function html5blankcomments($comment, $args, $depth)
     }
 ?>
     <!-- heads up: starting < for the html tag (li or div) in the next line: -->
-    <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+    <<?= $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
     <?php if ( 'div' != $args['style'] ) : ?>
     <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
     <?php endif; ?>
@@ -380,7 +380,7 @@ function html5blankcomments($comment, $args, $depth)
             <?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
         </span>&nbsp;-&nbsp; 
 
-        <span class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+        <span class="comment-meta commentmetadata"><a href="<?= htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
             <?= get_comment_date('d/m/y') ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
             ?>
         </span>

@@ -31,7 +31,7 @@
 									<p><i class="eddicon-croix-big"></i></p>
 									<p><?= get_sub_field('description') ?></p>
 								</div>
-								<a href="#book" class="button"><?= __('Book now', 'html5blank') ?></a>
+								<a href="#book" class="button"><?= __('Book Now', 'html5blank') ?></a>
   								
   						</li>
 

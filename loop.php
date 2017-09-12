@@ -53,7 +53,7 @@ query_posts( $args ); ?>
 
 	<!-- article -->
 	<div class="nothing">
-		<p><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></p>
+		<p><?php __( 'Sorry, nothing to display.', 'html5blank' ); ?></p>
 	</div>
 	<!-- /article -->
 
