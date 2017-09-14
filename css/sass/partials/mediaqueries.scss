@@ -126,6 +126,10 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			@include flex-wrap(wrap);
 	    @include justify-content(center);
 	    padding: 10px;
+
+	    >ul, .switcher{
+		    margin-top: $gutter;
+		  }
 		}
 		.header-menu{
 			width: 100%;
@@ -325,7 +329,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 				width: 100%;
 				margin: 0;
 				text-align: center;
-				margin-top: 15px;
+				margin-top: $gutter;
 			}
 		}
 	}

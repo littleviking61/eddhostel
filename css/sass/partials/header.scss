@@ -57,14 +57,17 @@
 			&:hover, &.current_page_item{
 				&:after{
 					background-color: black;
-
-					@at-root .home &{
-						background-color: white;
-					}
 				}
 			}
-
 		}
+		@at-root .home .header:not(.headroom) .nav li{
+			&:hover, &.current_page_item{
+				&:after{
+					background-color: white;
+				}
+			}
+		}
+
 	}
 
 	.social-menu{
@@ -83,6 +86,7 @@
     	width: 45px;
     	vertical-align: text-top;
     	color : $text-color;
+    	font-size: 1.6rem;
 		}
 
 		.qtranxs_widget_end{
@@ -110,6 +114,7 @@
 .logo {
 	@include background-image('logo');
 	background-repeat: no-repeat;
+	background-size: contain;
 	width: span(3 wide);
 	position: relative;
 	
@@ -138,11 +143,30 @@
 
 .headroom{
 	position: fixed;
+	height: $headroomHeight;	
 	top: 0;
 	z-index: 20;
 	will-change: transform;
 	@include transition(transform 200ms linear);
 	@include transform(translateY(-100%));
+
+	.container{
+		padding-top: $gutter;
+	}
+
+	.nav{
+		padding: $gutter;
+	}
+
+	.post-edit-link{
+		left: 150px;
+		top: 10px;
+	}
+
+	.logo{
+		height: 50px;
+		width: span(2);
+	}
 }
 
 .headroom--pinned {

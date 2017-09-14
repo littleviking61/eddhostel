@@ -1,15 +1,9 @@
 <?php get_header(); ?>
 
-
 <?php /* HOME */ ?>
 
 	<main role="main" aria-label="Content">
 
-		<!-- booking -->
-		<div class="booking top">
-			<?php get_template_part('booking' ); ?>
-		</div>
-		
 		<!-- section -->
 		<div class="container">
 

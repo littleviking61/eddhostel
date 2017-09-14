@@ -71,23 +71,27 @@
 
   &{  
     color: darken($hostelColor, 2%);
-    @if $hover == true{ &:hover{ color: lighten($hostelColor, 10%); } }
+    @if $hover == true{ &:hover{ color: lighten($hostelColor, 15%); } }
   }
   .blog &{  
     color: darken($blogColor, 2%);
-    @if $hover == true{ &:hover{ color: lighten($blogColor, 10%); } }
+    @if $hover == true{ &:hover{ color: lighten($blogColor, 15%); } }
   }
   .page-id-16 &{
     color: darken($facilitiesColor, 2%);
-    @if $hover == true{ &:hover{ color: lighten($facilitiesColor, 10%); } }
+    @if $hover == true{ &:hover{ color: lighten($facilitiesColor, 15%); } }
   }
   .page-id-18 &{
     color: darken($aroundColor, 2%);
-    @if $hover == true{ &:hover{ color: lighten($aroundColor, 10%); } }
+    @if $hover == true{ &:hover{ color: lighten($aroundColor, 15%); } }
   }
   .page-id-20 &{
     color: darken($howtoColor, 2%);
-    @if $hover == true{ &:hover{ color: lighten($howtoColor, 10%); } }
+    @if $hover == true{ &:hover{ color: lighten($howtoColor, 15%); } }
+  }
+  .page-id-278 &{
+    color: darken($policiesColor, 2%);
+    @if $hover == true{ &:hover{ color: lighten($policiesColor, 15%); } }
   }
 }
 
@@ -99,44 +103,52 @@
   @if $colorselec == false {
     &{  
       background-color: $hostelColor;
-      @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 15%); } }
     }
     .blog &{  
       background-color: $blogColor;
-      @if $hover == true{ &:hover{ background-color: lighten($blogColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($blogColor, 15%); } }
     }
     .page-id-16 &{
       background-color: $facilitiesColor;
-      @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 15%); } }
     }
     .page-id-18 &{
       background-color: $aroundColor;
-      @if $hover == true{ &:hover{ background-color: lighten($aroundColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($aroundColor, 15%); } }
     }
     .page-id-20 &{
       background-color: $howtoColor;
-      @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 15%); } }
+    }
+    .page-id-278 &{
+      background-color: $policiesColor;
+      @if $hover == true{ &:hover{ background-color: lighten($policiesColor, 15%); } }
     }
   } @else {
     &{  
       background-color: $hostelColor;
-      @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 15%); } }
     }
     @at-root #{$colorselec}.blog #{$element}{
       background-color: $blogColor;
-      @if $hover == true{ &:hover{ background-color: lighten($blogColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($blogColor, 15%); } }
     }
     @at-root #{$colorselec}.page-id-16 #{$element}{
       background-color: $facilitiesColor;
-      @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 15%); } }
     }
     @at-root #{$colorselec}.page-id-18 #{$element}{
       background-color: $aroundColor;
-      @if $hover == true{ &:hover{ background-color: lighten($aroundColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($aroundColor, 15%); } }
     }
     @at-root #{$colorselec}.page-id-20 #{$element}{
       background-color: $howtoColor;
-      @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 10%); } }
+      @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 15%); } }
+    }
+    @at-root #{$colorselec}.page-id-278 #{$element}{
+      background-color: $policiesColor;
+      @if $hover == true{ &:hover{ background-color: lighten($policiesColor, 15%); } }
     }
   }
 }

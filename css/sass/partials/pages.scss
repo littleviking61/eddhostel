@@ -5,13 +5,13 @@
 
 /* home */
 
-.home .booking.bottom{
-	display: none;
+// .home .booking.bottom{
+// 	display: none;
 
-	& + footer{
-		margin-top: 60px;
-	}
-}
+// 	& + footer{
+// 		margin-top: 60px;
+// 	}
+// }
 
 //home image background
 .background-image{
@@ -63,7 +63,7 @@
 
 	.texte{
 		width: span(8);
-		font-size: 3.3rem;
+		font-size: 3rem;
 			
 		p{
 			margin: 0;
@@ -82,12 +82,17 @@
 		width: span(4 wide);
 
 		a{
-			@include bg-colors($this, 'a', true);
+			@include bg-colors($this, 'a');
 			display: block;
 			padding: 40px;
 			text-align: center;
 			font-size: 2rem;
 			height: 100%;
+			@include transition(background-color .3s ease);
+
+			&:hover{
+				background-color: $hostelColor;
+			}
 			p{
 				line-height: 1.2;
 			}
@@ -146,24 +151,57 @@
 
 /* Facilities */
 
+.page-id-16, .page-id-20{
+	.accroche{
+		width: span(6);
+	}
+}
+
 .rooms{
-	.room{
-		width: span(3);
-		text-align: center;
+	.room a{
 		@include flexbox();
 		@include flex-direction(column);
 		@include align-items(center);
+		@include transition(background-color .3s ease);
+		width: span(3);
+		height: 100%;
+		text-align: center;
+		padding-bottom: $gutterLarge;
+		overflow: hidden;
 
 		.detail{
 			@include flex(1);
 			padding-bottom: $gutterLarge;
 		}
 
-		img{
-			@include object-fit(cover);
+		.thumbnail{
 			height: 190px;
 			width: 100%;
 			margin-bottom: $gap;
+			position: relative;
+			overflow: hidden;
+
+			img{
+				@include object-fit(cover);
+				@include transition(all .2s ease-in-out);
+			}
+
+			&:after{
+				content: 'u';
+				font-size: 2.4rem;
+				font-family: 'edd-hostel';
+		    background-color: #dcab25;
+		    height: 100%;
+		    width: 100%;
+		    display: block;
+		    position: absolute;
+		    top: 0;
+		    opacity: 0;
+		    line-height: 180px;
+
+		    color: white;
+		    @include transition(opacity .3s ease);
+			}
 		}
 
 		h3{
@@ -179,11 +217,27 @@
 			font-size: 1.4rem;
 		}
 
+		&:hover{
+
+			.thumbnail:after{
+				opacity: 0.4;
+			}
+
+			img{
+				@include transform(scale(1.2));
+			}
+
+			.button{
+				background-color: $hostelColor;
+			}
+		}
+
+
 	}
 }
 
 .accomodation{
-	width: span(8);
+	width: span(6);
 	// margin-left: - $gap;
 
 	div, > a{
@@ -469,6 +523,7 @@
 			height: 2px;
 			color: transparent;
 			display: block;
+			margin-top: -2px;
 		}
 
 		&:last-child{
@@ -485,7 +540,10 @@
 			}
 		}
 	}
-	
+	.cat-item-all{
+		padding-top: 4px;
+	}
+
 	.cat-item-15 a{ /* 16 et 17*/
 		&:before{
 			@include icon('s');
@@ -506,11 +564,12 @@
 
 	li[class*='cat-item']{
 		a:before{
-			line-height: 0;
-			padding-right: $gutter;
+			padding-right: 10px;
 			display: inline-block;
-	    vertical-align: middle;
-	    font-size: 2.6rem;
+			vertical-align: middle;
+			font-size: 2.6rem;
+			height: 36px;
+			background-color: white;
 		}
 	}
 }
@@ -567,6 +626,7 @@
 	span{
 		display: inline;
 		text-transform: uppercase;
+		font-size: 1.4rem;
 
 		&:after{
 			content: ' | ';

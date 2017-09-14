@@ -4,24 +4,124 @@
 		"selected_items":
 		[
 			[
-				"padd",
-				"padding"
+				"pos",
+				"position"
 			],
 			[
-				"var",
-				"var_dump"
+				"pad",
+				"padding-right"
 			],
 			[
-				"tex",
-				"text-decoration"
+				"hea",
+				"header"
 			],
 			[
-				"acf",
-				"acfPoints"
+				"flex",
+				"flex-direction"
 			],
 			[
 				"mar",
 				"margin-top"
+			],
+			[
+				"ipo",
+				"important"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"bord",
+				"border-top"
+			],
+			[
+				"gutter",
+				"gutterLarge"
+			],
+			[
+				"li",
+				"lightGrey"
+			],
+			[
+				"textr",
+				"text-transform"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"lig",
+				"lighterGrey"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"blo",
+				"block"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"nth",
+				"nth-child"
+			],
+			[
+				"clear",
+				"clearTimeout〔function〕"
+			],
+			[
+				"data",
+				"data-lat"
+			],
+			[
+				"get_templ",
+				"get_template_part"
+			],
+			[
+				"transpa",
+				"transparent"
+			],
+			[
+				"head",
+				"headroom"
+			],
+			[
+				"imor",
+				"important"
+			],
+			[
+				"import",
+				"important"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"light",
+				"lightGrey"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"acf",
+				"acfPoints"
 			],
 			[
 				"rbg",
@@ -40,19 +140,11 @@
 				"rgba\trgba()"
 			],
 			[
-				"gutter",
-				"gutter-big"
-			],
-			[
 				"min",
 				"min-height"
 			],
 			[
 				"border",
-				"border"
-			],
-			[
-				"bord",
 				"border"
 			],
 			[
@@ -62,14 +154,6 @@
 			[
 				"cur",
 				"cursor"
-			],
-			[
-				"pad",
-				"padding"
-			],
-			[
-				"margin",
-				"margin-left"
 			],
 			[
 				"gut",
@@ -94,10 +178,6 @@
 			[
 				"off",
 				"offset"
-			],
-			[
-				"bac",
-				"background"
 			],
 			[
 				"is",
@@ -202,10 +282,6 @@
 			[
 				"bakc",
 				"background-color"
-			],
-			[
-				"text",
-				"text-color-light"
 			],
 			[
 				"back",
@@ -364,10 +440,6 @@
 				"toggleClass〔function〕"
 			],
 			[
-				"flex",
-				"flex-basis"
-			],
-			[
 				"tr",
 				"transparent"
 			],
@@ -440,117 +512,45 @@
 				"the_excerpt"
 			],
 			[
-				"hea",
-				"header\tTag"
-			],
-			[
 				"flex-column",
 				"flex-column-wrap"
-			],
-			[
-				"vi",
-				"videos"
-			],
-			[
-				"ca",
-				"caption"
-			],
-			[
-				"parse",
-				"parseInt〔function〕"
-			],
-			[
-				"max",
-				"max-width"
-			],
-			[
-				"he",
-				"height"
-			],
-			[
-				"pos",
-				"position"
-			],
-			[
-				"gallerie",
-				"gallerieId"
-			],
-			[
-				"ga",
-				"$gallery〔variable〕"
-			],
-			[
-				"galel",
-				"gallerie_id"
-			],
-			[
-				"catego",
-				"categorie"
-			],
-			[
-				"n",
-				"none"
-			],
-			[
-				"h",
-				"hidden"
-			],
-			[
-				"add",
-				"addClass〔function〕"
-			],
-			[
-				"border-left",
-				"border-left-color: 〔property〕"
-			],
-			[
-				"lig",
-				"lighter〔value〕"
-			],
-			[
-				"background-",
-				"background-color: 〔property〕"
-			],
-			[
-				"wid",
-				"width:   (property)"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "css/sass/partials/header.scss",
+			"file": "comments.php",
 			"settings":
 			{
-				"buffer_size": 138,
+				"buffer_size": 1391,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/sass/partials/wrapper.scss",
+			"file": "page-14.php",
 			"settings":
 			{
-				"buffer_size": 273,
+				"buffer_size": 2305,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "functions.php",
+			"file": "booking.php",
 			"settings":
 			{
-				"buffer_size": 19232,
+				"buffer_size": 112,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/sass/partials/reset.scss",
+			"file": "js/scripts.js",
 			"settings":
 			{
-				"buffer_size": 1033,
+				"buffer_size": 3952,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -559,17 +559,25 @@
 			"file": "css/sass/partials/footer.scss",
 			"settings":
 			{
-				"buffer_size": 73,
+				"buffer_size": 1544,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/sass/partials/nav.scss",
+			"file": "css/sass/partials/layout.scss",
 			"settings":
 			{
-				"buffer_size": 115,
+				"buffer_size": 831,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/sass/modules/variables.scss",
+			"settings":
+			{
+				"buffer_size": 1044,
 				"line_ending": "Unix"
 			}
 		}
@@ -668,17 +676,63 @@
 	"expanded_folders":
 	[
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/lib"
 	],
 	"file_history":
 	[
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/index.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-16.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/404.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/comments.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/search.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/footer.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/loop.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/searchform.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/author.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/mediaqueries.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/style.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/content.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/mixins.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/variables.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/pages.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/likes.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/modules/post-like.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/utils.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/index.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow-single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow-blog.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/reset.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/header.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/layout.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/footer.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/.sass-cache/464f839651947841b348cf56d5dcd1158a6fae79/layout.scssc",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/wordpress.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/header.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/sidebar.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/.sass-cache/464f839651947841b348cf56d5dcd1158a6fae79/utils.scssc",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/tag.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/pagination.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-18.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-14.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1504856818/mapped/var/www/html/client/eddhostel/wp-config.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/scripts.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/fonts.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-20.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/Gruntfile.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-10.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/booking.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/.sass-cache/c88e58df36ee98653ef1e750c722469ff5a9b68a/mixins.scssc",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/lib/jQuery.headroom.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/lib/Headroom.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/adresse.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/nav.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/wrapper.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/style.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/sftp-config.json",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/Gruntfile.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/package.json",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/style.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/single.php",
@@ -754,58 +808,11 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.po",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/templates/comments.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/templates/comment.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/modules/comments.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/maps/map-eurasie.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/.sass-cache/6d00ae1f521ae6bd89137c7dab70ae1fdf7d80c6/variables.scssc",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/Gruntfile.js",
-		"/private/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/fz3temp-1/spot.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/header.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/style.css",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/ajax-category.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/scss/style.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/ajax-index.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/mediaqueries.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/Gruntfile.js",
-		"/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/page.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/ajax-single.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/header-projet.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/single.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/footer.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/header.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/sftp-config.json",
-		"/Users/nuagegraphik/Sites/vikingDiaries/modules/post-like.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/simple-likes-public.js",
-		"/Users/nuagegraphik/Sites/vikingDiaries/content-tools.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/app.min.js",
-		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/post-like.js",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/style.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/shame.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/layout.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
-		"/Users/nuagegraphik/Sites/theme/dwlaventurier/Gruntfile.js",
-		"/Users/nuagegraphik/Sites/theme/dwlaventurier/assets/js/scripts.js",
-		"/Users/nuagegraphik/Sites/vikingDiaries/page.php",
-		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454498034/mapped/var/www/html/laventurierviking-dev/wp-config.php",
-		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454451490/mapped/var/www/html/laventurierviking-dev/wp-config.php",
-		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454356963/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/social-count-plus/includes/abstracts/abstract-social-count-plus-counter.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/.sass-cache/6d00ae1f521ae6bd89137c7dab70ae1fdf7d80c6/variables.scssc",
-		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/nav.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/reset.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/comments.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/mixins.scss"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/templates/comment.php"
 	],
 	"find":
 	{
-		"height": 49.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
@@ -831,6 +838,62 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			":",
+			"headroom",
+			"d",
+			"__(",
+			"php echo",
+			"_e",
+			"php echo",
+			"_e",
+			"p",
+			"h1",
+			"get_sub_field",
+			".intro-text",
+			"intro-text",
+			";",
+			":",
+			";",
+			":",
+			";",
+			":",
+			"20px",
+			"comments",
+			"wp_list_comments",
+			"p",
+			"vcenter",
+			"sidebar",
+			"h2",
+			"article",
+			"html5wp_pagination",
+			"h2",
+			"more_callback",
+			"html5wp_index",
+			"html5wp_excerpt",
+			"edit_post_link",
+			"defaultColor",
+			"accroche",
+			".accomodation",
+			".accomodation\n",
+			"type",
+			"circle",
+			"points",
+			"Roboto",
+			"markers",
+			"10",
+			"transform",
+			"jquery",
+			"initialised",
+			"scroller",
+			"Scroller",
+			"scroller",
+			"Scroller",
+			"scroller",
+			"Scroller",
+			"scroller",
+			"http://oniris.nuagegraphik.fr",
+			"http://www.galerie-oniris.fr",
+			"logo-color",
 			"bower_components",
 			"^",
 			"Oniris",
@@ -902,63 +965,7 @@
 			"Social_Count_Plus_Shortcodes",
 			"add_image",
 			"page",
-			"Page:",
-			"Page",
-			"Page Voyages",
-			"__(",
-			"       '<input placeholder=\"' . __( 'Website', 'html5blank' ) . '\" id=\"url\" name=\"url\" type=\"text\" value=\"' . esc_attr( $commenter['comment_author_url'] ) .\n",
-			"__(",
-			"_e(",
-			"_e",
-			"Comments are closed here.",
-			"__",
-			" __(",
-			"__(",
-			" __(",
-			"__(",
-			"__",
-			"html5blank",
-			"__",
-			"__('",
-			"1000px",
-			"100%",
-			"data-icon=\"<?= get_template_directory_uri(); ?>/img/icons/",
-			"/img/",
-			"carte",
-			"console.",
-			"scrollTo",
-			"comments_template(\n\n:not(.no-current));",
-			"DW_Timeline_Walker_Comment",
-			"comment",
-			"'/templates/comments.php'",
-			"comment",
-			"'content'",
-			"entry-meta",
-			"tools",
-			"console.log",
-			"$wrapper-width",
-			"rem-calc(800)",
-			"extend",
-			"scrollTo",
-			"button ",
-			"button",
-			"init_share",
-			"share",
-			"toolsInit",
-			"jm",
-			"console.log",
-			"&nbsp;",
-			"8",
-			"share",
-			"40px",
-			"notify",
-			"i",
-			"toolsInit",
-			"dairies",
-			"init_actions",
-			"dairies",
-			"tools",
-			"div"
+			"Page:"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -990,86 +997,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "css/sass/partials/header.scss",
+					"file": "comments.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 138,
+						"buffer_size": 1391,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								103,
-								103
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "css/sass/partials/wrapper.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								75,
-								61
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "functions.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 19232,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4791,
-								4791
+								1128,
+								1128
 							]
 						],
 						"settings":
@@ -1079,11 +1024,75 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4066.0,
+						"translation.y": 508.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "page-14.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								768,
+								768
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 799.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "booking.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1091,32 +1100,32 @@
 				},
 				{
 					"buffer": 3,
-					"file": "css/sass/partials/reset.scss",
+					"file": "js/scripts.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1033,
+						"buffer_size": 3952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								489,
-								489
+								1058,
+								1103
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1128,15 +1137,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 73,
+						"buffer_size": 1544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								70,
-								70
+								1340,
+								1341
 							]
 						],
 						"settings":
@@ -1144,30 +1153,63 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 316.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "css/sass/partials/nav.scss",
+					"file": "css/sass/partials/layout.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 115,
+						"buffer_size": 831,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								73,
-								73
+								831,
+								831
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1244.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "css/sass/modules/variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								685,
+								671
 							]
 						],
 						"settings":
@@ -1178,10 +1220,10 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1116.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1189,7 +1231,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 37.0
+		"height": 40.0
 	},
 	"input":
 	{
@@ -1234,7 +1276,7 @@
 	"project": "eddhostel.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 76.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1244,8 +1286,164 @@
 		"selected_items":
 		[
 			[
+				"lay",
+				"css/sass/partials/layout.scss"
+			],
+			[
+				"var",
+				"css/sass/modules/variables.scss"
+			],
+			[
+				"boo",
+				"booking.php"
+			],
+			[
+				"foot",
+				"css/sass/partials/footer.scss"
+			],
+			[
+				"scri",
+				"js/scripts.js"
+			],
+			[
+				"lik",
+				"css/sass/partials/likes.scss"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"sin",
+				"single.php"
+			],
+			[
+				"loop",
+				"loop.php"
+			],
+			[
+				"mixi",
+				"css/sass/modules/mixins.scss"
+			],
+			[
+				"reset",
+				"css/sass/partials/reset.scss"
+			],
+			[
+				"he",
+				"css/sass/partials/header.scss"
+			],
+			[
+				"footer",
+				"footer.php"
+			],
+			[
+				"slide",
+				"slideshow-blog.php"
+			],
+			[
+				"la",
+				"css/sass/partials/layout.scss"
+			],
+			[
+				"header",
+				"css/sass/partials/header.scss"
+			],
+			[
+				"cont",
+				"css/sass/partials/content.scss"
+			],
+			[
+				"comm",
+				"comments.php"
+			],
+			[
+				"singl",
+				"single.php"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"side",
+				"sidebar.php"
+			],
+			[
 				"hea",
-				"header-projet.php"
+				"header.php"
+			],
+			[
+				"pagina",
+				"pagination.php"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"loo",
+				"loop.php"
+			],
+			[
+				"page14",
+				"page-14.php"
+			],
+			[
+				"heade",
+				"css/sass/partials/header.scss"
+			],
+			[
+				"scr",
+				"js/scripts.js"
+			],
+			[
+				"font",
+				"css/sass/modules/fonts.scss"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"foo",
+				"css/sass/partials/footer.scss"
+			],
+			[
+				"wor",
+				"css/sass/partials/wordpress.scss"
+			],
+			[
+				"page",
+				"page-10.php"
+			],
+			[
+				"mi",
+				"css/sass/modules/mixins.scss"
+			],
+			[
+				"pages",
+				"css/sass/partials/pages.scss"
+			],
+			[
+				"p",
+				"page-10.php"
+			],
+			[
+				"headr",
+				"js/lib/jQuery.headroom.js"
+			],
+			[
+				"slid",
+				"slideshow.php"
+			],
+			[
+				"mix",
+				"css/sass/modules/mixins.scss"
+			],
+			[
+				"adre",
+				"adresse.php"
 			],
 			[
 				"pro",
@@ -1254,10 +1452,6 @@
 			[
 				"proj",
 				"templates/projet.php"
-			],
-			[
-				"comm",
-				"templates/comments.php"
 			],
 			[
 				"commen",
@@ -1272,10 +1466,6 @@
 				"templates/comment.php"
 			],
 			[
-				"var",
-				"scss/modules/variables.scss"
-			],
-			[
 				"vari",
 				".sass-cache/6d00ae1f521ae6bd89137c7dab70ae1fdf7d80c6/variables.scssc"
 			],
@@ -1284,24 +1474,8 @@
 				"Gruntfile.js"
 			],
 			[
-				"func",
-				"functions.php"
-			],
-			[
-				"fun",
-				"functions.php"
-			],
-			[
-				"scri",
-				"vikingDiaries/js/scripts.js"
-			],
-			[
 				"scrip",
 				"dwlaventurier/assets/js/scripts.js"
-			],
-			[
-				"sin",
-				"vikingDiaries/single.php"
 			],
 			[
 				"nav",
@@ -1310,10 +1484,6 @@
 			[
 				"ajax",
 				"vikingDiaries/ajax-single.php"
-			],
-			[
-				"singl",
-				"vikingDiaries/single.php"
 			],
 			[
 				"mapeur",
@@ -1326,14 +1496,6 @@
 			[
 				"aj",
 				"vikingDiaries/ajax-single.php"
-			],
-			[
-				"heade",
-				"vikingDiaries/header-projet.php"
-			],
-			[
-				"page",
-				"vikingDiaries/page.php"
 			],
 			[
 				"head",
@@ -1352,24 +1514,12 @@
 				"vikingDiaries/js/lib/post-like.js"
 			],
 			[
-				"header",
-				"vikingDiaries/header-projet.php"
-			],
-			[
 				"shame",
 				"vikingDiaries/scss/partials/shame.scss"
 			],
 			[
 				"layou",
 				"vikingDiaries/scss/partials/layout.scss"
-			],
-			[
-				"loop",
-				"vikingDiaries/loop.php"
-			],
-			[
-				"scr",
-				"vikingDiaries/js/scripts.js"
 			],
 			[
 				"function",
@@ -1396,10 +1546,6 @@
 				"vikingDiaries/archive.php"
 			],
 			[
-				"footer",
-				"vikingDiaries/footer.php"
-			],
-			[
 				"",
 				"vikingDiaries/scss/partials/utils.scss"
 			],
@@ -1410,10 +1556,6 @@
 			[
 				"basi",
 				"vikingDiaries/node_modules/grunt-rsync/tests/basic.js"
-			],
-			[
-				"mix",
-				"vikingDiaries/scss/modules/mixins.scss"
 			],
 			[
 				"medi",
@@ -1432,14 +1574,6 @@
 				"oniris/scss/_element.scss"
 			],
 			[
-				"mi",
-				"oniris/scss/_mixins.scss"
-			],
-			[
-				"foo",
-				"oniris/footer.php"
-			],
-			[
 				"ele",
 				"oniris/scss/_element.scss"
 			],
@@ -1452,16 +1586,8 @@
 				"oniris/scss/_element.scss"
 			],
 			[
-				"mixi",
-				"oniris/scss/_mixins.scss"
-			],
-			[
 				"fo",
 				"oniris/footer.php"
-			],
-			[
-				"lay",
-				"oniris/scss/_layout.scss"
 			],
 			[
 				"foote",
@@ -1478,10 +1604,6 @@
 			[
 				"intro",
 				"oniris/elements/intro-expositions.php"
-			],
-			[
-				"he",
-				"oniris/header.php"
 			],
 			[
 				"se",
@@ -1518,10 +1640,6 @@
 			[
 				"rel",
 				"oniris/templates/relations.php"
-			],
-			[
-				"loo",
-				"oniris/loop-list.php"
 			],
 			[
 				"video",
@@ -1668,10 +1786,6 @@
 				"oniris/loop-list.php"
 			],
 			[
-				"la",
-				"oniris/scss/_layout.scss"
-			],
-			[
 				"lo",
 				"oniris/loop-flex.php"
 			],
@@ -1682,78 +1796,6 @@
 			[
 				"actus",
 				"oniris/templates/actus.php"
-			],
-			[
-				"llo",
-				"oniris/loop-flex.php"
-			],
-			[
-				"index",
-				"oniris/index.php"
-			],
-			[
-				"ctu",
-				"oniris/templates/actu.php"
-			],
-			[
-				"act",
-				"oniris/templates/actu-highlight.php"
-			],
-			[
-				"bloc",
-				"oniris/scss/elements/_bloc.scss"
-			],
-			[
-				"elemen",
-				"oniris/scss/_element.scss"
-			],
-			[
-				"cle",
-				"oniris/lib/clean.php"
-			],
-			[
-				"cl",
-				"oniris/lib/clean.php"
-			],
-			[
-				"bas",
-				"oniris/scss/_basic.scss"
-			],
-			[
-				"pa",
-				"oniris/scss/_page.scss"
-			],
-			[
-				"ind",
-				"oniris/index.php"
-			],
-			[
-				"font",
-				"oniris/scss/_font.scss"
-			],
-			[
-				"fle",
-				"oniris/loop-flex.php"
-			],
-			[
-				"icon.s",
-				"oniris/scss/_icons.scss"
-			],
-			[
-				"sty",
-				"oniris/scss/style.scss"
-			],
-			[
-				"clea",
-				"oniris/lib/clean.php"
-			],
-			[
-				"baic",
-				"oniris/scss/_basic.scss"
-			],
-			[
-				"content",
-				"oniris/content.php"
 			]
 		],
 		"width": 0.0

@@ -25,13 +25,18 @@
 					  <?php while( have_rows('rooms') ): the_row();?>
 
   						<li class="room">
-								<div class="detail">
-									<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
-									<h4><?= get_sub_field('appelation') ?></h4>
-									<p><i class="eddicon-croix-big"></i></p>
-									<p><?= get_sub_field('description') ?></p>
-								</div>
-								<a href="#book" class="button"><?= __('Book Now', 'html5blank') ?></a>
+								<a href="<?= get_sub_field('book_link') ?>">
+									<div class="detail">
+										<div class="thumbnail">
+											<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
+										</div>
+										<h4><?= get_sub_field('appelation') ?></h4>
+										<p><i class="eddicon-croix-big"></i></p>
+										<p><?= get_sub_field('description') ?></p>
+									</div>
+									<span class="button"><?= __('Book Now', 'html5blank') ?></span>
+									
+								</a>
   								
   						</li>
 

@@ -24,7 +24,7 @@ function initMap(){
 		// initialise
 		headroom.init();
 
-		var el2 = document.querySelector(".booking > .bar");
+		var el2 = document.querySelector(".booking");
 		var el2h = $(el2).offset().top - $(window).height() - $(el2).height();
 		// construct an instance of Headroom, passing the element
 		var headroom2  = new Headroom(el2, {

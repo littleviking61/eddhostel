@@ -59,8 +59,8 @@
 					<?php //check if has background defined
 					$background_image = get_field('backgoound_image'); 
 					if(!empty($background_image)) :
-						$background_src = wp_get_attachment_image_url( $background_image, 'large' );
-						$background_srcset = wp_get_attachment_image_srcset( $background_image, 'medium' );
+						$background_src = wp_get_attachment_image_url( $background_image, 'full' );
+						$background_srcset = wp_get_attachment_image_srcset( $background_image, 'full' );
 					?>
 						<div class="background-image">
 							<img src="<?= esc_url( $background_src ); ?>"
