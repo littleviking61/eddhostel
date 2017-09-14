@@ -5,6 +5,10 @@
 
 /*  Basics */
 
+a{
+	@include transition(color .3s ease);
+}
+
 h1, h2, h3, h4{
 	&, & .big{
 		font-family: $font-family-title;
@@ -25,7 +29,7 @@ h4{
 }
 
 .button{
-	@include bg-colors(false,&,true);
+	@include bg-colors();
 	@include transition(background-color .3s ease);
 
 	font-family: $font-family-title;
@@ -42,6 +46,10 @@ h4{
 		text-align: center;
 		color: black;
 		padding: 40px 0 0 5px;
+
+		&:hover{
+			background-color: $hostelColor;
+		}
 
 		h2, p{
 			margin:0;
@@ -122,6 +130,10 @@ h4{
 		position: absolute;
     top: 30px;
     right: 30px;
+
+    &:hover{
+    	background-color: $hostelColor;
+    }
 	}
 }
 
@@ -309,6 +321,10 @@ h4{
 		@include colors();
 		width: 60px;
 		padding: $gutter $gutter $gutter 0;
+		@include transition(color .3s ease);
+		&:hover{
+			color: $hostelColor;
+		}
 
 		[class*="eddicon-"]{
 			font-size: 3rem;
@@ -400,6 +416,10 @@ h4{
 		}
 		&:last-child:after{
 			display: none;
+		}
+
+		&:hover{
+			@include colors();
 		}
 	}
 

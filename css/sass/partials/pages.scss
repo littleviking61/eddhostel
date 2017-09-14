@@ -500,6 +500,10 @@
 			padding-top: $gutter;
 			font-weight: bold;
 
+			&:hover{
+				color: darken($blogColor, 8%);
+			}
+
 			&:after{
 				content: ' >';
 			}
@@ -578,20 +582,48 @@
 	width: span(9);
 	@include flex-wrap(wrap);
 
-	article{
-		width: span(3);
+	article a{
 		@include flexbox();
 		@include flex-direction(column);
+		@include transition(background-color .3s ease);
+		width: span(3);
 		background-color: $lighterGrey;
 		margin-bottom: $gap;
+		overflow: hidden;
+
+
 
 		&:nth-child(3n) {
 			margin-right: 0;
 		}
 
-		img{
-			@include object-fit(cover);
+		.thumbnail{
 			height: 145px;
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+
+			&:after{
+				content: 'u';
+				font-size: 2.4rem;
+				font-family: 'edd-hostel';
+		    background-color: #dcab25;
+		    height: 100%;
+		    width: 100%;
+		    display: block;
+		    position: absolute;
+		    top: 0;
+		    opacity: 0;
+		    line-height: 150px;
+
+		    color: white;
+		    @include transition(opacity .3s ease);
+			}
+
+			img{
+				@include object-fit(cover);
+				@include transition(transform .3s ease);
+			}
 		}
 
 		.content{
@@ -602,6 +634,21 @@
 
 			h4{
 				@include flex(1);
+			}
+		}
+
+		&:hover{
+			color: initial;
+			h4{
+				@include colors();
+			}
+
+			img{
+				@include transform(scale(1.2));
+			}
+
+			.thumbnail:after{
+				opacity: 0.4;
 			}
 		}
 	}

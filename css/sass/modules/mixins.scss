@@ -74,7 +74,7 @@
     @if $hover == true{ &:hover{ color: lighten($hostelColor, 15%); } }
   }
   .blog &{  
-    color: darken($blogColor, 2%);
+    color: darken($blogColor, 8%);
     @if $hover == true{ &:hover{ color: lighten($blogColor, 15%); } }
   }
   .page-id-16 &{
