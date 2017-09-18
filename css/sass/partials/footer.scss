@@ -8,6 +8,8 @@
 	color: $grey;
 	padding: $gap 0 8px;
 	font-size: 1.8rem;
+	overflow: hidden;
+	width: 100%;
 
 	a{
 		color: $grey;
@@ -92,7 +94,7 @@
 	background-color: rgba(black, 0.65);
 	margin-top: 60px;
 	overflow: hidden;
-
+	z-index: 99;
 	.container{
 		position: relative;
 		height: 100%;

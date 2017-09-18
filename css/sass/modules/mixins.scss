@@ -47,6 +47,13 @@
           transform: $transforms;
 }
 
+@mixin backface-visibility($visibility : hidden) {
+    -webkit-backface-visibility: $visibility; /* Chrome, Safari, Opera */
+    backface-visibility: $visibility;
+}
+
+
+
 @mixin object-fit($fit: fill){
   -o-object-fit: $fit;
      object-fit: $fit;
