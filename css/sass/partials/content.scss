@@ -47,7 +47,7 @@ h4{
 		color: black;
 		padding: 40px 0 0 5px;
 
-		&:hover{
+		&:not(.nohover):hover{
 			background-color: $hostelColor;
 		}
 
@@ -168,6 +168,13 @@ h4{
 			height: 160px;
 			background-size: contain;
 			margin: 20px 0 30px;
+
+			&+ .detail{
+
+				h3{
+					text-transform: initial;
+				}
+			}
 		}
 
 		.detail{

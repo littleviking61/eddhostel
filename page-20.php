@@ -57,14 +57,14 @@
 							<?php if (get_sub_field('circle')): ?>
 								<li class="circles">
 									<p>
-										<a href="<?= get_sub_field('first_circle_link') ?>" class="button circle">
+										<div class="button circle nohover">
 											<?= get_sub_field('first_circle') ?>
-										</a>
+										</div>
 									</p>
 									<p>
-										<a href="<?= get_sub_field('second_circle_link') ?>" class="button circle">
+										<div class="button circle nohover">
 											<?= get_sub_field('second_circle') ?>
-										</a>
+										</div>
 									</p>
 
 								</li>
@@ -89,7 +89,7 @@
 					<div class="quick-links">
 						<?php while( have_rows('quick_link') ): the_row();?>
 							<?php if (!empty(get_sub_field('photo'))): ?>
-								<div class="photo">
+								<div class="bloc photo">
 									<img src="<?= esc_url( wp_get_attachment_image_url( get_sub_field('photo'), 'large' ) ); ?>">
 								</div>
 							<?php else: ?>

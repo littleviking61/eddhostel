@@ -114,7 +114,7 @@ function html5blank_header_scripts()
             wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-custom.js', array(), '2.8.3');
 
             // Slidr
-            wp_register_script('slidr', get_template_directory_uri() . '/js/lib/slidr.min.js', array(), '0.5.0');
+            wp_register_script('slidr', get_template_directory_uri() . '/js/lib/slidr.js', array(), '0.5.0');
 
             // Headeroom
             wp_register_script('headroom', get_template_directory_uri() . '/js/lib/headroom.js', array(), '0.9.4');

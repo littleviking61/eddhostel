@@ -158,16 +158,19 @@
 }
 
 .rooms{
+	.room{
+		@include flexbox();
+		@include flex(1);
+	}
 	.room a{
 		@include flexbox();
+		@include flex(1);
 		@include flex-direction(column);
 		@include align-items(center);
 		@include transition(background-color .3s ease);
 		width: span(3);
-		height: 100%;
 		text-align: center;
 		padding-bottom: $gutterLarge;
-		overflow: hidden;
 
 		.detail{
 			@include flex(1);
@@ -187,7 +190,7 @@
 			}
 
 			&:after{
-				content: 'u';
+				content: '';
 				font-size: 2.4rem;
 				font-family: 'edd-hostel';
 		    background-color: #dcab25;
@@ -236,11 +239,11 @@
 	}
 }
 
-.accomodation{
+.accomodations{
 	width: span(6);
 	// margin-left: - $gap;
 
-	div, > a{
+	.bloc, > a{
 		display: inline-block;
 		float: left;
 		width: 50%;
@@ -254,12 +257,37 @@
 		img{
 			@include object-fit(cover);
 		}
+
+		&.flip-container{
+			background-color: transparent;
+			padding: 0;
+			.flipper{
+				background-color: $lightGrey;
+				.front,.back{
+					padding: 40px;
+				}
+			}
+		}
+
+		.big-icon{
+			margin-top: -15px;
+			display: inline-block;
+		}
+
+		.back{
+			@include flexbox();
+			@include flex-direction(column);
+			@include justify-content(center);
+		}
 	}
 
 	> a{
 		@include transition(background-color .3s ease);
 		&:hover{
-			background-color: lighten($lightGrey, 2%);
+			background-color: $hostelColor;
+			&, i{
+				color: white;
+			}
 		}
 	}
 }
@@ -346,7 +374,7 @@
 /* how to */
 
 .quick-links{
-	@extend .accomodation;
+	@extend .accomodations;
 
 	.photo{
 		padding: 0;
@@ -579,78 +607,78 @@
 }
 
 .articles{
-	width: span(9);
+	width: span(9 wide);
 	@include flex-wrap(wrap);
+	margin-right: 0;
+	position: relative;
 
-	article a{
-		@include flexbox();
-		@include flex-direction(column);
-		@include transition(background-color .3s ease);
-		width: span(3);
-		background-color: $lighterGrey;
+	article{
 		margin-bottom: $gap;
-		overflow: hidden;
+		@include flexbox();
+		@include flex(1);
 
-
-
-		&:nth-child(3n) {
-			margin-right: 0;
-		}
-
-		.thumbnail{
-			height: 145px;
-			overflow: hidden;
-			position: relative;
-			text-align: center;
-
-			&:after{
-				content: 'u';
-				font-size: 2.4rem;
-				font-family: 'edd-hostel';
-		    background-color: #dcab25;
-		    height: 100%;
-		    width: 100%;
-		    display: block;
-		    position: absolute;
-		    top: 0;
-		    opacity: 0;
-		    line-height: 150px;
-
-		    color: white;
-		    @include transition(opacity .3s ease);
-			}
-
-			img{
-				@include object-fit(cover);
-				@include transition(transform .3s ease);
-			}
-		}
-
-		.content{
-			@include flex(1);
+		a{
 			@include flexbox();
 			@include flex-direction(column);
-			padding: $gutterLarge;
+			@include transition(background-color .3s ease);
+			@include flex(1);
+			width: span(3);
+			background-color: $lighterGrey;
 
-			h4{
+			.thumbnail{
+				height: 145px;
+				overflow: hidden;
+				position: relative;
+				text-align: center;
+
+				&:after{
+					content: '';
+			    background-color: #dcab25;
+			    height: 100%;
+			    width: 100%;
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    opacity: 0;
+			    @include transition(opacity .3s ease);
+				}
+
+				img{
+					@include object-fit(cover);
+					@include transition(transform .3s ease);
+				}
+			}
+
+			.content{
 				@include flex(1);
+				@include flexbox();
+				@include flex-direction(column);
+				padding: $gutterLarge;
+
+				h4{
+					@include flex(1);
+				}
+			}
+
+			&:hover{
+				color: initial;
+				h4{
+					@include colors();
+				}
+
+				img{
+					@include transform(scale(1.2));
+				}
+
+				.thumbnail:after{
+					opacity: 0.4;
+				}
 			}
 		}
 
-		&:hover{
-			color: initial;
-			h4{
-				@include colors();
-			}
-
-			img{
-				@include transform(scale(1.2));
-			}
-
-			.thumbnail:after{
-				opacity: 0.4;
-			}
-		}
+		// &:nth-child(3n) {
+		// 	margin-right: 0;
+		// }
 	}
 
 	.pagination{

@@ -53,11 +53,11 @@ function initMap(){
 		if($('#slidr-top').length > 0) {
 			slidr.create('slidr-top', {
 				breadcrumbs: true,
-				fade: false,
-				keyboard: true,
+				transition: 'fade',
+				keyboard: false,
 				touch: true,
 				controls: 'none',
-			}).start();
+			}).auto(5000, 'right');
 		}
 
 		// google map

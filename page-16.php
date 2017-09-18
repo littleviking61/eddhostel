@@ -46,12 +46,28 @@
 
 				<section class="row vcenter">
 
-					<div class="accomodation">
+					<div class="accomodations">
 						<?php while( have_rows('accomodation') ): the_row();?>
-							<div>
-								<i class="eddicon-<?= get_sub_field('icon') ?> big-icon"></i>
-								<h4><?= get_sub_field('titre') ?></h4>
-							</div>
+							<?php if (!empty(get_sub_field('info_supplementaire'))): ?>
+								<div class="bloc flip-container">
+									<div class="flipper">
+										<div class="front">
+											<i class="eddicon-<?= get_sub_field('icon') ?> big-icon"></i>
+											<h4><?= get_sub_field('titre') ?></h4>
+										</div>
+										<div class="back">
+											<div class="content">
+												<?= get_sub_field('info_supplementaire') ?>
+											</div>
+										</div>
+									</div>
+								</div>
+							<?php else: ?>
+								<div class="bloc">
+									<i class="eddicon-<?= get_sub_field('icon') ?> big-icon"></i>
+									<h4><?= get_sub_field('titre') ?></h4>
+								</div>
+							<?php endif ?>
 						<?php endwhile; ?>
 					</div>
 
