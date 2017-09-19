@@ -1211,15 +1211,15 @@ h4 {
   .introduction .texte p {
     margin: 0; }
 
-.pages-links {
+ul.pages-links {
   padding: 0;
   margin: 0;
   margin-left: -15px; }
-  .pages-links li {
+  ul.pages-links li {
     list-style: none;
     margin-right: 0;
     width: 400px; }
-    .pages-links li a {
+    ul.pages-links li a {
       display: block;
       padding: 40px;
       text-align: center;
@@ -1230,23 +1230,23 @@ h4 {
       -ms-transition: background-color 0.3s ease;
       -o-transition: background-color 0.3s ease;
       transition: background-color 0.3s ease; }
-      .pages-links li a {
+      ul.pages-links li a {
         background-color: #dcab25; }
-      .pages-links li.blog a {
+      ul.pages-links li.blog a {
         background-color: #ffe721; }
-      .pages-links li.page-id-16 a {
+      ul.pages-links li.page-id-16 a {
         background-color: #ff7459; }
-      .pages-links li.page-id-18 a {
+      ul.pages-links li.page-id-18 a {
         background-color: #4de8b3; }
-      .pages-links li.page-id-20 a {
+      ul.pages-links li.page-id-20 a {
         background-color: #8ae3f1; }
-      .pages-links li.page-id-278 a {
+      ul.pages-links li.page-id-278 a {
         background-color: #b9ae90; }
-      .pages-links li a:hover {
+      ul.pages-links li a:hover {
         background-color: #dcab25; }
-      .pages-links li a p {
+      ul.pages-links li a p {
         line-height: 1.2; }
-      .pages-links li a h3 {
+      ul.pages-links li a h3 {
         letter-spacing: 12px; }
 
 /* Hostel */
@@ -1407,6 +1407,9 @@ h4 {
         background-color: #f2f1e9; }
         .accomodations .bloc.flip-container .flipper .front, .quick-links .bloc.flip-container .flipper .front, .accomodations .bloc.flip-container .flipper .back, .quick-links .bloc.flip-container .flipper .back, .accomodations > a.flip-container .flipper .front, .quick-links > a.flip-container .flipper .front, .accomodations > a.flip-container .flipper .back, .quick-links > a.flip-container .flipper .back {
           padding: 40px; }
+        .accomodations .bloc.flip-container .flipper .back, .quick-links .bloc.flip-container .flipper .back, .accomodations > a.flip-container .flipper .back, .quick-links > a.flip-container .flipper .back {
+          background-color: #dcab25;
+          color: white; }
     .accomodations .bloc .big-icon, .quick-links .bloc .big-icon, .accomodations > a .big-icon, .quick-links > a .big-icon {
       margin-top: -15px;
       display: inline-block; }

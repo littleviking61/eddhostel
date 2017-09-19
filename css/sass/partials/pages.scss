@@ -71,7 +71,7 @@
 	}
 }
 
-.pages-links{
+ul.pages-links{
 	@include reset-box();
 	margin-left: -15px;
 
@@ -265,6 +265,11 @@
 				background-color: $lightGrey;
 				.front,.back{
 					padding: 40px;
+				}
+
+				.back{
+					background-color: $hostelColor;
+					color: white;
 				}
 			}
 		}

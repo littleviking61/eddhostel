@@ -39,6 +39,12 @@
 					  <?php while( have_rows('team') ): the_row();?>
 
   						<li class="member page-id-<?= get_sub_field('categorie') ?>">
+
+								<?php $link = get_sub_field('lien') ?>
+  							<?php if (!empty($link)): ?>
+  								<a href="<?= $link ?>">
+  							<?php endif ?>
+
 								<?php $photo = get_sub_field('photo'); 
 								if (!empty($photo)) : ?>
 									<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'small' )); ?>">
@@ -49,7 +55,11 @@
 								<h3><?= get_sub_field('appelation') ?></h3>
 								<p class="color"><i><?= get_sub_field('titre') ?></i></p>
 								<p><?= get_sub_field('presentation') ?></p>
-  								
+
+  							<?php if (!empty($link)): ?>
+  								</a>
+  							<?php endif ?>	
+  							
   						</li>
 
   					<?php endwhile; ?>
