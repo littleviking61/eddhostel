@@ -244,6 +244,9 @@
 			font-size: 1.6rem;
 			li{
 				margin-right: $gap;
+				&:last-child{
+					margin-right: 0;
+				}
 				a{ color: $grey; }
 			}
 		}

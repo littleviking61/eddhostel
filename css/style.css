@@ -757,6 +757,8 @@ article > section {
       font-size: 1.6rem; }
       .headroom.active .social-menu li {
         margin-right: 30px; }
+        .headroom.active .social-menu li:last-child {
+          margin-right: 0; }
         .headroom.active .social-menu li a {
           color: #9f9f9f; }
     .headroom.active .header-menu {
