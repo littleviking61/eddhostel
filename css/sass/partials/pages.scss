@@ -25,6 +25,7 @@
 		width: 100%;
 		min-height: 100%;
 	  object-fit: cover;
+	  object-position: left;
 	}
 
 	.intro-text{
@@ -39,6 +40,7 @@
 		letter-spacing: 18px;
 		line-height: 1.1;
 		padding: 0 $gap;
+
 
 		h2{
 			margin-bottom: $gap;
@@ -80,6 +82,7 @@ ul.pages-links{
 		margin-right: 0;
 		$this: &;	
 		width: span(4 wide);
+		max-width: 100%;
 
 		a{
 			@include bg-colors($this, 'a');

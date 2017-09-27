@@ -31,21 +31,21 @@ function initMap(){
 			"offset": el2h,	
 		  "tolerance": 5,
 		  "classes" : {
-		          // when element is initialised
-		          "initial" : "topbar",
-		          // when scrolling up
-		          "pinned" : "topbar--pinned",
-		          // when scrolling down
-		          "unpinned" : "topbar--unpinned",
-		          // when above offset
-		          "top" : "topbar--top",
-		          // when below offset
-		          "notTop" : "topbar--not-top",
-		          // when at bottom of scoll area
-		          "bottom" : "topbar--bottom",
-		          // when not at bottom of scroll area
-		          "notBottom" : "topbar--not-bottom"
-		      },
+        // when element is initialised
+        "initial" : "topbar",
+        // when scrolling up
+        "pinned" : "topbar--pinned",
+        // when scrolling down
+        "unpinned" : "topbar--unpinned",
+        // when above offset
+        "top" : "topbar--top",
+        // when below offset
+        "notTop" : "topbar--not-top",
+        // when at bottom of scoll area
+        "bottom" : "topbar--bottom",
+        // when not at bottom of scroll area
+        "notBottom" : "topbar--not-bottom"
+      },
 		});
 		// initialise
 		headroom2.init();
@@ -59,6 +59,12 @@ function initMap(){
 				controls: 'none',
 			}).auto(5000, 'right');
 		}
+
+		$(document).on( 'click', '.menu-mobile', function(e){
+			e.preventDefault();
+			$(this).toggleClass('active');
+			$('.header, body').toggleClass('active');
+		});
 
 		// google map
 		var geocoder;

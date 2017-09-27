@@ -34,6 +34,11 @@
 
 					<!-- logo -->
 					<div class="container">
+						<div class="menu-mobile">
+							<span class="close"><i class="eddicon-close"></i></span>
+							<span class="open"><i class="eddicon-bars"></i></span>
+						</div>
+
 						<div class="logo">
 							<a href="<?= home_url(); ?>">
 								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
@@ -54,6 +59,7 @@
 							</div>
 						</nav>
 						<!-- /nav -->
+
 					</div>
 
 					<?php //check if has background defined

@@ -4,11 +4,13 @@
 // media querie
 // 
 $screen: "only screen";
+$break-extra-small: 440px;
 $break-small: 675px;
 $break-medium: 950px;
 $break-large: 1170px;
 // $break-extra-large: 930rem;
 
+$extra-small-down: "#{$screen} and (max-width: #{$break-extra-small})";
 $small-down: "#{$screen} and (max-width: #{$break-small})";
 $medium-down: "#{$screen} and (max-width: #{$break-medium})";
 $medium-up: "#{$screen} and (min-width: #{$break-medium})";
@@ -29,6 +31,11 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			background-size: contain;
 		}
 
+		&:not(.headroom) .logo{
+			height: 60px;
+			margin-bottom: $gap;
+		}
+
 		.post-edit-link{
 			left: 135px;
 		}
@@ -39,8 +46,9 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 	}
 
 	.home{
-		.header .logo{
+		.header:not(.headroom) .logo{
 			width: 150px;
+			height: 120px;
 			margin-right: 20px;
 		}
 	}
@@ -95,6 +103,16 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
   		}
   	}
   }
+
+  .booking{
+  	.container{
+  		padding: 0;
+  	}
+  	a.book{
+  		left: 0;
+  		width: 50%;
+  	}
+  }
 }
 
 // entre 660 et 800
@@ -103,6 +121,11 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 // en dessous de 660
 @media #{$medium-down}{
+
+	.show-for-medium{
+		display: initial;
+	}
+
 	.row{
 		@include flex-wrap(wrap);
 		@include justify-content(center);
@@ -118,36 +141,74 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 	}
 
 	.header{
-		.logo{
-			width: 80px;
-		  margin-right: 20px;
+	  height: auto;
+	  margin-bottom: 0;
+
+		> *{
+	    @include flex-direction(column);
+	    @include flex-wrap(wrap);
+	    @include align-items(center);
+	    margin-right: 0;
 		}
+
+		.container{
+			@include flex-direction(row);
+			@include align-items(flex-start);
+			@include justify-content(space-between);
+
+			>*{
+				@include flex(1);
+			}
+		}
+
+		&:not(.headroom) .logo{
+			// height: 120px !important;
+			// width: 120px;
+		}
+
+		.logo{
+			background-position: center;
+		  margin-right: 20px;
+			background-size: contain;
+		}
+
 		.nav{
 			@include flex-wrap(wrap);
-	    @include justify-content(center);
-	    padding: 10px;
+		  @include justify-content(flex-end);
+		  padding: 0;
 
-	    >ul, .switcher{
-		    margin-top: $gutter;
+		  >ul{
+		  	display: none;
+		  }
+
+		  >ul, .switcher{
+		  	margin: 0;
+		  	text-align: center;
+		  	margin-top: $gutter;
 		  }
 		}
+
 		.header-menu{
 			width: 100%;
 			text-align: center;
 			@include flex-shrink(0);
 	    margin-bottom: 10px !important;
 		}
+
 		.post-edit-link{
 			display: none;
 		}
+
+		.menu-mobile{
+			display: initial;
+		}
 	}
 
-	.home{
-		.header .logo{
-			width: 80px;
-			height: auto !important;
-		}
+	.headroom{
+		height: $headroomHeight;
+	}
 
+	.home{	
 		.header:not(.headroom){
 			height: 550px;
 		}
@@ -163,6 +224,8 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 	.headroom{
 
+		padding: $gutter 0;
+
 		> .container{
 			padding-top: 0;
 			@include flex-direction(row);
@@ -170,10 +233,6 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 		.logo{
 			margin-right: $gutter;
-		}
-
-		.social-menu, .switcher{
-			display: none !important;
 		}
 	}
 
@@ -225,7 +284,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 	.page-id-10{
 		.accroche{
-			@include order(2);
+			// @include order(2);
 		}
 		.pages-links{
 			@include flex-direction(column);
@@ -238,12 +297,6 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 	.page-id-14{
 		.accroche{
-			@include order(2);
-		}
-	}
-
-	.page-id-16{
-		.accomodation{
 			@include order(2);
 		}
 	}
@@ -297,6 +350,11 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 }
 
 @media #{$small-down}{
+
+	.show-for-small{
+		display: initial;
+	}
+
 	.row{
 		> *{
 			margin-right: 0;
@@ -307,44 +365,20 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		padding-right: 15px;
 		padding-left: 15px;
 	}
-
-	.header{
-    height: auto;
-    margin-bottom: 15px;
-
-    .logo{
-    	width: 40px;
-    	background-size: contain;
-    }
-
-		> *{
-	    @include flex-direction(column);
-	    @include flex-wrap(wrap);
-	    @include align-items(center);
-	    margin-right: 0;
-		}
-		
-		.nav{
-			padding: 0;
-
-			>ul, .switcher{
-				width: 100%;
-				margin: 0;
-				text-align: center;
-				margin-top: $gutter;
-			}
-		}
-	}
-
-	.home .header:not(.headroom){
-		height: 370px;
-		margin-bottom: 0;
-	}
 	
 	.background-image{
-		height: 370px;
+		// height: 370px;
 		.intro-text{
-			display: none;
+
+			h2{
+				font-size: 3rem;
+				letter-spacing: 1.4rem;
+				margin-top: -40px;
+			}
+
+			i{
+				font-size: 3rem;
+			}
 		}
 	}
 
@@ -361,10 +395,110 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 	}
 
-	.accomodation , .quick-links{
+	.accomodations , .quick-links{
 		> div, > a{
 			width: 100%;
 			margin-right: 0;
+		}
+
+		.front, .back{
+			padding-left: $gutterMedium !important;
+			padding-right: $gutterMedium !important;
+		}
+
+		.bloc{
+			height: 45vw;
+		}
+
+		h4{
+			font-size: 1.4rem;
+		}
+
+		.big-icon{
+			font-size: 10rem;
+		}
+	}
+
+	ul.pages-links{
+		margin-left: 0;
+
+		.link{
+				margin-bottom: 0;
+		}
+	}
+
+	.footer{
+
+		.container{
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		.social{
+			display: none;
+		}
+
+		.quick-menu{
+			margin-bottom: $gap;
+			ul li{
+				padding-bottom: 10px !important;
+				width: 50%;
+				margin-right: 0;
+				text-align: center;
+				border-right: thin $lightGrey solid;
+
+				&:nth-child(2n){
+					border-right: none;
+				}
+			}
+		}
+		.detail{
+			width: 100%;
+			border-top: thin solid $facilitiesColor;
+			@include order(2);
+			padding: $gutter;
+			@include align-items(center);
+
+			.logo{
+				width: 60px;
+				margin: 0 $gutterMedium;
+				background-position: center center;
+			}
+	
+			.vcard{
+				width: auto;
+				margin-bottom: 0;
+				@include flex(1);
+				p{
+					margin: 0;
+				}
+				br{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media #{$extra-small-down}{
+
+	.accomodations , .quick-links{
+
+		.bloc{
+			height: 45vw;
+
+			.front, .back{
+				padding-left: $gutter !important;;
+				padding-right: $gutter !important;;
+			}
+		}
+
+		h4{
+			font-size: 1rem;
+		}
+
+		.big-icon{
+			font-size: 6rem;
 		}
 	}
 }

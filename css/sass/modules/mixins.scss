@@ -71,32 +71,32 @@
 
 // color by page
 
-@mixin colors($hover : false){
+@mixin colors($hover : false, $parent : ''){
   @if $hover == true{
     @include transition(color .3s ease);
   }
 
-  &{  
+  #{$parent} &{  
     color: darken($hostelColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($hostelColor, 15%); } }
   }
-  .blog &{  
+  #{$parent}.blog &{  
     color: darken($blogColor, 8%);
     @if $hover == true{ &:hover{ color: lighten($blogColor, 15%); } }
   }
-  .page-id-16 &{
+  #{$parent}.page-id-16 &{
     color: darken($facilitiesColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($facilitiesColor, 15%); } }
   }
-  .page-id-18 &{
+  #{$parent}.page-id-18 &{
     color: darken($aroundColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($aroundColor, 15%); } }
   }
-  .page-id-20 &{
+  #{$parent}.page-id-20 &{
     color: darken($howtoColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($howtoColor, 15%); } }
   }
-  .page-id-278 &{
+  #{$parent}.page-id-278 &{
     color: darken($policiesColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($policiesColor, 15%); } }
   }

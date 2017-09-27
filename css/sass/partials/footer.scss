@@ -94,7 +94,7 @@
 	background-color: rgba(black, 0.65);
 	margin-top: 60px;
 	overflow: hidden;
-	z-index: 99;
+	z-index: 30;
 	.container{
 		position: relative;
 		height: 100%;
@@ -113,6 +113,6 @@
 	&.topbar--top{
 		height: $bookingHeight;
 		position: fixed;
-		bottom: 0;
+		bottom: -1px;
 	}
 }

@@ -14,6 +14,10 @@
 	.home &:not(.headroom){
 		height: $homeHeight;
 		background-color: transparent;
+
+		.menu-mobile{
+			color: white;
+		}
 	}
 
 	.container{
@@ -100,6 +104,22 @@
   		float: right;
   	}
 	}
+
+	.menu-mobile{
+		display: none;
+		cursor: pointer;
+		font-size: 3.5rem;
+
+	}
+
+	&.active .open{
+		display: none;
+	}
+
+	&:not(.active) .close{
+		display: none;
+	}
+
 }
 
 // color header background
@@ -145,14 +165,18 @@
 
 .headroom{
 	position: fixed;
+	overflow: hidden;
 	height: $headroomHeight;	
 	top: 0;
-	z-index: 20;
+	z-index: 40;
 	will-change: transform;
-	@include transition(transform 200ms linear);
+	@include transition(transform 100ms linear, height 200ms linear);
 	@include transform(translateY(-100%));
+	@include flexbox();
+	@include align-items(flex-end);
 
 	.container{
+		width: 100%;
 		padding-top: $gutter;
 	}
 
@@ -167,12 +191,98 @@
 
 	.logo{
 		height: 50px;
-		width: span(2);
+		width: 80px;
+	}
+
+	&.active{
+		background-color: $dark;
+		height: $slideshowHeight;
+		
+		&{
+			color: $grey;
+		}
+
+		.header-menu, .social-menu{
+			display: initial;
+			width: 100%;
+		}
+
+		.switcher{
+			display: none;
+		}
+
+		.menu-mobile{
+			@include order(2);
+		}
+
+		.logo{
+			@include order(1);
+			width: 80px;
+			height: 80px;
+			@include background-image('logo-footer');
+
+			a{
+				color: $lightGrey;
+			}
+		}
+
+		.container{
+	
+			> *{
+				@include flex(initial);
+			}
+		}
+		
+		nav{
+			@include order(3);
+			width: 100%;
+			@include flex(initial);
+		}
+
+		.social-menu{
+			padding-bottom: $gap;
+			font-size: 1.6rem;
+			li{
+				margin-right: $gap;
+				a{ color: $grey; }
+			}
+		}
+
+		.header-menu{
+			padding: 50px 0 $gap;
+			li, a{
+				display: block;
+				width: 100%;
+			}
+
+			li:after{
+				display: none;
+			}
+
+			a{
+				font-size: 2.4rem;
+				border-top: thin solid lighten($dark, 20%);
+				padding: $gutter 0;
+				@at-root a{
+					@include colors(false, '.headroom.active .header-menu li');
+				}
+			}
+
+			li:last-child a{
+				border-bottom: thin solid lighten($dark, 20%);
+			}
+		}
+
+	  @include transform(translateY(0%));
 	}
 }
 
-.headroom--pinned {
-  @include transform(translateY(0%));
+.headroom--top{
+	background-color: $dark;
+}
+
+.headroom--pinned{
+  @include transform(translateY(-480px));
 }
 
 .headroom--unpinned, .headroom--top {
