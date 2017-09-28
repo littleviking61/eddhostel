@@ -21,10 +21,18 @@
 						<h2><?= get_field('titre_room') ?></h2>
 					</div>
 
+					<ul class="quick-menu">
+ 					  <?php while( have_rows('rooms') ): the_row();?>
+				      <li>
+				 				<a href="#<?= sanitize_title(get_sub_field('appelation')) ?>"><?= get_sub_field('appelation') ?></a></li>
+				 			</li>
+  				 	<?php endwhile; ?>
+				 	</ul>
+
 					<ul class="rooms row">
 					  <?php while( have_rows('rooms') ): the_row();?>
 
-  						<li class="room">
+  						<li class="room" id="<?= sanitize_title(get_sub_field('appelation')) ?>">
 								<a href="<?= get_sub_field('book_link') ?>">
 									<div class="detail">
 										<div class="thumbnail">

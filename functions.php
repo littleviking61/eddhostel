@@ -28,9 +28,10 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
+    add_image_size('large', 900, '', true); // Large Thumbnail
+    add_image_size('medium', 400, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
+    add_image_size('portrait', 675, 900, array('left', 'top')); // Portrait
     add_image_size('custom-size', 1200, '', true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use

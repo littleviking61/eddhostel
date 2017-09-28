@@ -66,11 +66,11 @@
 					$background_image = get_field('backgoound_image'); 
 					if(!empty($background_image)) :
 						$background_src = wp_get_attachment_image_url( $background_image, 'full' );
-						$background_srcset = wp_get_attachment_image_srcset( $background_image, 'full' );
+						$background_medium = wp_get_attachment_image_url( $background_image, 'portrait' );
 					?>
 						<div class="background-image">
 							<img src="<?= esc_url( $background_src ); ?>"
-					     srcset="<?= esc_attr( $background_srcset ); ?>">
+					     srcset="<?= esc_url($background_src) ?> 2000w, <?= esc_url($background_medium) ?> 675w">
 					     <div class="intro-text">
 					    	<h2><?= get_field('texte_image') ?></h2>
 					    	<i class="eddicon-croix-big"></i>

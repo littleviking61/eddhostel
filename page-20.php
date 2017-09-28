@@ -93,7 +93,7 @@
 									<img src="<?= esc_url( wp_get_attachment_image_url( get_sub_field('photo'), 'large' ) ); ?>">
 								</div>
 							<?php else: ?>
-								<a href="<?= get_sub_field('link') ?>">
+								<a class="bloc" href="<?= get_sub_field('link') ?>">
 									<i class="eddicon-<?= get_sub_field('icon') ?> big-icon"></i>
 									<h4><?= get_sub_field('titre') ?></h4>
 								</a>

@@ -699,6 +699,10 @@ article > section {
   .headroom.active {
     background-color: #313131;
     height: 550px;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
     -moz-transform: translateY(0%);
     -o-transform: translateY(0%);
     -ms-transform: translateY(0%);
@@ -895,6 +899,7 @@ h4 {
 .logo-color {
   height: 100%;
   background-position: center center;
+  background-size: 70% 70%;
   background-image: url(../img/logo-color.svg);
   background-repeat: no-repeat; }
   .no-svg .logo-color {
@@ -1258,7 +1263,7 @@ h4 {
     text-transform: initial;
     letter-spacing: initial;
     font-weight: normal;
-    font-size: 3rem;
+    font-size: 2.6rem;
     margin-bottom: 20px; }
   .sidebar .tagcloud a {
     font-size: 1.6rem !important; }
@@ -1280,11 +1285,31 @@ h4 {
       color: #b5a98a; }
   .sidebar > div {
     margin-bottom: 60px; }
+    .sidebar > div:last-child {
+      margin-bottom: 0; }
   .sidebar .button.circle {
     margin-top: 10px; }
     .sidebar .button.circle i {
       font-size: 6rem;
       color: white; }
+
+.quick-menu {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 30px; }
+  .quick-menu li {
+    list-style: none; }
+  .quick-menu a {
+    display: block;
+    width: 100%;
+    border-top: thin solid #f2f1e9;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 10px 0;
+    text-align: center; }
+  .quick-menu li:last-child a {
+    border-bottom: thin solid #f2f1e9; }
 
 /**
  * partials/pages
@@ -1723,6 +1748,8 @@ ul.pages-links {
   display: inline-block; }
 
 .blog .slideshow h2 {
+  padding-left: 30px;
+  padding-right: 30px;
   letter-spacing: 1rem; }
 .blog .slideshow header {
   -webkit-justify-content: space-between;
@@ -2259,6 +2286,11 @@ ul.pages-links {
     -ms-flex-pack: center; }
     .row > * {
       margin-bottom: 30px; }
+      .row > *:last-child {
+        margin-bottom: 0; }
+
+  section.row:last-child {
+    padding-bottom: 0; }
 
   .header {
     height: auto;
@@ -2341,6 +2373,8 @@ ul.pages-links {
     height: 550px; }
     .background-image .intro-text {
       font-size: 3rem; }
+      .background-image .intro-text br {
+        display: none; }
 
   .headroom {
     padding: 10px 0; }
@@ -2406,6 +2440,9 @@ ul.pages-links {
     -webkit-order: 2;
     order: 2; }
 
+  .quick-menu {
+    display: block; }
+
   .page-id-20 .quick-links {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
@@ -2415,6 +2452,8 @@ ul.pages-links {
 
   .sidebar {
     width: 100%; }
+    .sidebar h3 {
+      font-size: 2.2rem; }
 
   .stories .story .photo:before {
     display: none; }
@@ -2452,13 +2491,22 @@ ul.pages-links {
   .container {
     padding-right: 15px;
     padding-left: 15px; }
+    .container .texte {
+      padding-right: 10px;
+      padding-left: 10px;
+      font-size: 2rem; }
 
-  .background-image .intro-text h2 {
-    font-size: 3rem;
-    letter-spacing: 1.4rem;
-    margin-top: -40px; }
-  .background-image .intro-text i {
-    font-size: 3rem; }
+  .home .header:not(.headroom), .headroom.active {
+    height: 100vh; }
+
+  .background-image {
+    height: 100vh; }
+    .background-image .intro-text h2 {
+      font-size: 3rem;
+      letter-spacing: 1.4rem;
+      margin-top: -40px; }
+    .background-image .intro-text i {
+      font-size: 3rem; }
 
   .slideshow {
     height: auto; }
@@ -2467,6 +2515,14 @@ ul.pages-links {
       margin-top: 0; }
     .slideshow .slides, .slideshow .thumbnail {
       display: none !important; }
+
+  .blog .slideshow .thumbnail {
+    position: relative;
+    display: initial !important; }
+
+  .accroche {
+    font-size: 2.2rem;
+    padding-left: 20px; }
 
   .accomodations > div, .quick-links > div, .accomodations > a, .quick-links > a, .quick-links > div, .quick-links > a {
     width: 100%;
@@ -2486,6 +2542,12 @@ ul.pages-links {
     ul.pages-links .link {
       margin-bottom: 0; }
 
+  .location .information .adress {
+    font-size: 1.4rem;
+    padding: 15px; }
+  .location .information .logo-color {
+    background-size: 70%; }
+
   .footer .container {
     padding-right: 0;
     padding-left: 0; }
@@ -2498,12 +2560,12 @@ ul.pages-links {
       width: 50%;
       margin-right: 0;
       text-align: center;
-      border-right: thin #f2f1e9 solid; }
+      border-right: thin #9f9f9f solid; }
       .footer .quick-menu ul li:nth-child(2n) {
         border-right: none; }
   .footer .detail {
+    background-color: #242424;
     width: 100%;
-    border-top: thin solid #ff7459;
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     -ms-flex-order: 2;
@@ -2527,7 +2589,8 @@ ul.pages-links {
       -ms-flex: 1;
       flex: 1; }
       .footer .detail .vcard p {
-        margin: 0; }
+        margin: 0;
+        font-size: 1.4rem; }
       .footer .detail .vcard br {
         display: none; } }
 @media only screen and (max-width: 440px) {
@@ -2538,6 +2601,9 @@ ul.pages-links {
       padding-right: 10px !important; }
   .accomodations h4, .quick-links h4, .quick-links h4 {
     font-size: 1rem; }
+  .accomodations .big-icon, .quick-links .big-icon, .quick-links .big-icon {
+    font-size: 8rem; } }
+@media only screen and (max-width: 340px) {
   .accomodations .big-icon, .quick-links .big-icon, .quick-links .big-icon {
     font-size: 6rem; } }
 

@@ -6,9 +6,17 @@
 		// override $post
 		$post = $highlight;
 		setup_postdata( $post ); ?>
-		
-			<header>
+			
+			<div class="thumbnail">
+				<!-- post thumbnail -->
+				<?php if ( has_post_thumbnail()) : 
+					the_post_thumbnail('large');
+				endif; ?>
+				<!-- /post thumbnail -->
+			</div>
 
+			<header>
+				
 				<!-- categorie -->
 				<ul class="main-tags">
 					<?php $main_tags = get_field('main_tag'); ?>
@@ -41,14 +49,6 @@
 				</div>
 
 			</header>
-
-			<div class="thumbnail">
-				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail()) : 
-					the_post_thumbnail('medium');
-				endif; ?>
-				<!-- /post thumbnail -->
-			</div>
 
 		<?php wp_reset_postdata();  ?>
 	<?php endif; ?>

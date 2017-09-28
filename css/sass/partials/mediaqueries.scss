@@ -4,12 +4,14 @@
 // media querie
 // 
 $screen: "only screen";
+$break-extra-extra-small: 340px;
 $break-extra-small: 440px;
 $break-small: 675px;
 $break-medium: 950px;
 $break-large: 1170px;
 // $break-extra-large: 930rem;
 
+$extra-extra-small-down: "#{$screen} and (max-width: #{$break-extra-extra-small})";
 $extra-small-down: "#{$screen} and (max-width: #{$break-extra-small})";
 $small-down: "#{$screen} and (max-width: #{$break-small})";
 $medium-down: "#{$screen} and (max-width: #{$break-medium})";
@@ -135,9 +137,13 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			//width: 100% !important;
 			//
 			&:last-child{
-				//margin-right: $gap;
+				margin-bottom:0;
 			}
 		}
+	}
+
+	section.row:last-child{
+		padding-bottom: 0;
 	}
 
 	.header{
@@ -218,6 +224,9 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		height: 550px;
 
 		.intro-text{
+			br{
+				display: none;
+			}
 			font-size: 3rem;
 		}
 	}
@@ -301,6 +310,10 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 	}
 
+	.quick-menu{
+		display: block;
+	}
+
 	.page-id-20{
 		.quick-links{
 			@include order(2);
@@ -309,6 +322,10 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 	.sidebar{
 		width: 100%;
+
+		h3{
+			font-size: 2.2rem;
+		}
 	}
 
 	.stories .story{
@@ -364,10 +381,21 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 	.container{
 		padding-right: 15px;
 		padding-left: 15px;
+
+		.texte{
+			padding-right: 10px;
+			padding-left: 10px;
+			font-size: 2rem;
+		}
+
 	}
-	
+
+	.home .header:not(.headroom), .headroom.active{
+		height: 100vh;
+	}
+
 	.background-image{
-		// height: 370px;
+		height: 100vh;
 		.intro-text{
 
 			h2{
@@ -393,6 +421,18 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		.slides, .thumbnail{
 			display: none !important;
 		}
+	}
+
+	.blog .slideshow{
+		.thumbnail{
+			position: relative;
+			display: initial !important;
+		}
+	}
+
+	.accroche{
+		font-size: 2.2rem;
+		padding-left: $gutterLarge;
 	}
 
 	.accomodations , .quick-links{
@@ -427,6 +467,16 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 	}
 
+	.location .information{
+		.adress{
+			font-size: 1.4rem;
+			padding: $gutterMedium;
+		}
+		.logo-color{
+			background-size: 70%;
+		}
+	}
+
 	.footer{
 
 		.container{
@@ -445,7 +495,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 				width: 50%;
 				margin-right: 0;
 				text-align: center;
-				border-right: thin $lightGrey solid;
+				border-right: thin $grey solid;
 
 				&:nth-child(2n){
 					border-right: none;
@@ -453,8 +503,8 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			}
 		}
 		.detail{
+			background-color: $darker;
 			width: 100%;
-			border-top: thin solid $facilitiesColor;
 			@include order(2);
 			padding: $gutter;
 			@include align-items(center);
@@ -471,6 +521,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 				@include flex(1);
 				p{
 					margin: 0;
+					font-size: 1.4rem	
 				}
 				br{
 					display: none;
@@ -497,6 +548,14 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			font-size: 1rem;
 		}
 
+		.big-icon{
+			font-size: 8rem;
+		}
+	}
+}
+
+@media #{$extra-extra-small-down}{
+	.accomodations , .quick-links{
 		.big-icon{
 			font-size: 6rem;
 		}

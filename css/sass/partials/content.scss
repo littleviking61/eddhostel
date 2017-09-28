@@ -78,6 +78,7 @@ h4{
 
 	height: 100%;
 	background-position: center center;
+	background-size: 70% 70%;
 	@include background-image('logo-color');
 	img{
 		opacity:0;
@@ -412,7 +413,7 @@ h4{
 		text-transform: initial;
 		letter-spacing: initial;
 		font-weight: normal;
-		font-size: 3rem;
+		font-size: 2.6rem;
 		margin-bottom: $gutterLarge;
 	}
 
@@ -432,6 +433,10 @@ h4{
 
 	> div{
 		margin-bottom: 60px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
 
 	.button.circle{
@@ -440,5 +445,25 @@ h4{
 			font-size: 6rem;
 			color: white;
 		}
+	}
+}
+
+.quick-menu{
+	@include reset-box-ul();
+	width: 100%;
+	margin-bottom: $gap;
+
+	a{
+		display: block;
+		width: 100%;
+		border-top: thin solid $lightGrey;
+		text-transform: uppercase;
+		font-size: 2rem;
+		padding: $gutter 0;
+		text-align: center;
+	}
+
+	li:last-child a{
+		border-bottom: thin solid $lightGrey;
 	}
 }

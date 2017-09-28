@@ -197,6 +197,7 @@
 	&.active{
 		background-color: $dark;
 		height: $slideshowHeight;
+		@include align-items(flex-start);
 		
 		&{
 			color: $grey;
