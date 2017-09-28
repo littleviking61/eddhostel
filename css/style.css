@@ -2136,7 +2136,12 @@ ul.pages-links {
     -webkit-align-items: center;
     -moz-align-items: center;
     -ms-align-items: center;
-    align-items: center; }
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
   .booking.topbar--top {
     height: 80px;
     position: fixed;

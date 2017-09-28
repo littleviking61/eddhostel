@@ -108,6 +108,7 @@
 		width: span(2);
 		@include flexbox();
 		@include align-items(center);
+		@include justify-content(center);
 	}
 
 	&.topbar--top{
