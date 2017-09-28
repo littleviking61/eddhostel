@@ -34,7 +34,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 
 		&:not(.headroom) .logo{
-			height: 60px;
+			height: 100px;
 			margin-bottom: $gap;
 		}
 
@@ -233,8 +233,6 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 	.headroom{
 
-		padding: $gutter 0;
-
 		> .container{
 			padding-top: 0;
 			@include flex-direction(row);
@@ -395,9 +393,14 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		.texte{
 			padding-right: 10px;
 			padding-left: 10px;
-			font-size: 2rem;
 		}
 
+	}
+
+	.home{
+		.texte{
+			font-size: 2rem;
+		}
 	}
 
 	.home .header:not(.headroom), .headroom.active{

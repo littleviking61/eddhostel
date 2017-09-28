@@ -14,7 +14,6 @@
 							
 						<header class="single-header">
 
-							<p><a href="/blog"><i class="eddicon-reply"></i> <?= __('Back') ?></a></p>
 							<!-- categorie -->
 							<ul class="main-tags">
 								<?php $main_tags = get_field('main_tag'); ?>
@@ -51,13 +50,20 @@
 
 						<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 						<p><?php _e( 'In: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+
 						
 						<div class="social">
 							<?= show_share_buttons() ?>
 						</div>
+
+						<p><a href="/blog"><i class="eddicon-reply"></i> <?= __('Back') ?></a></p>
+
 						<?php comments_template(); ?>
+	
 
 					</article>
+
+
 					<!-- /article -->
 
 				<?php endwhile; ?>

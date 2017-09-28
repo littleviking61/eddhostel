@@ -687,7 +687,7 @@ article > section {
   align-items: flex-end; }
   .headroom .container {
     width: 100%;
-    padding-top: 10px; }
+    padding-bottom: 8px; }
   .headroom .nav {
     padding: 10px; }
   .headroom .post-edit-link {
@@ -1294,6 +1294,7 @@ h4 {
       color: white; }
 
 .menu-facilities {
+  display: none;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -1774,7 +1775,8 @@ ul.pages-links {
     width: 100%;
     text-align: right;
     text-transform: uppercase;
-    padding-top: 10px; }
+    padding-top: 20px;
+    font-size: 1.4rem; }
     .blog .slideshow .detail a:hover {
       color: #f7dc00; }
     .blog .slideshow .detail a:after {
@@ -2210,7 +2212,7 @@ ul.pages-links {
     width: 170px;
     background-size: contain; }
   .header:not(.headroom) .logo {
-    height: 60px;
+    height: 100px;
     margin-bottom: 30px; }
   .header .post-edit-link {
     left: 135px; }
@@ -2378,7 +2380,7 @@ ul.pages-links {
         display: none; }
 
   .headroom {
-    padding: 10px 0; }
+    padding: 10px 0 0; }
     .headroom > .container {
       padding-top: 0;
       -webkit-flex-direction: row;
@@ -2510,8 +2512,10 @@ ul.pages-links {
     padding-left: 15px; }
     .container .texte {
       padding-right: 10px;
-      padding-left: 10px;
-      font-size: 2rem; }
+      padding-left: 10px; }
+
+  .home .texte {
+    font-size: 2rem; }
 
   .home .header:not(.headroom), .headroom.active {
     height: 100vh; }

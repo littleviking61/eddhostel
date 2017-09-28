@@ -449,6 +449,7 @@ h4{
 }
 
 .menu-facilities{
+	display: none;
 	@include reset-box-ul();
 	width: 100%;
 	margin-bottom: $gap;
