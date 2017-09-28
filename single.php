@@ -13,6 +13,8 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							
 						<header class="single-header">
+
+							<p><a href="/blog"><i class="eddicon-reply"></i> <?= __('Back') ?></a></p>
 							<!-- categorie -->
 							<ul class="main-tags">
 								<?php $main_tags = get_field('main_tag'); ?>

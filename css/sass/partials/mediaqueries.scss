@@ -310,7 +310,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 	}
 
-	.quick-menu{
+	.menu-facilities{
 		display: block;
 	}
 
@@ -339,16 +339,26 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 	.location{
 		height: auto;
+
 		.information{
+
 			@include flex-direction(row);
 			width: 100%;
 			margin-right: 0;
+
+			.logo-color, .adress{
+  	  	width: 50%;
+  	  	@include flexbox();
+  	  	@include align-items(center);
+  	  	@include justify-content(center);
+  	  }	
 			.logo-color{
 				@include flex-grow(1);
 		    height: 100%;
-		    background-size: contain;
+		    background-size: 70%;
 			}
 		}
+
 		.map {
 	    width: 100%;
 	  }
@@ -432,7 +442,9 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 	.accroche{
 		font-size: 2.2rem;
-		padding-left: $gutterLarge;
+		h2{
+			padding-left: $gutterLarge;
+		}
 	}
 
 	.accomodations , .quick-links{
@@ -471,9 +483,6 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		.adress{
 			font-size: 1.4rem;
 			padding: $gutterMedium;
-		}
-		.logo-color{
-			background-size: 70%;
 		}
 	}
 

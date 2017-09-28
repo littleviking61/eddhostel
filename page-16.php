@@ -21,7 +21,7 @@
 						<h2><?= get_field('titre_room') ?></h2>
 					</div>
 
-					<ul class="quick-menu">
+					<ul class="menu-facilities">
  					  <?php while( have_rows('rooms') ): the_row();?>
 				      <li>
 				 				<a href="#<?= sanitize_title(get_sub_field('appelation')) ?>"><?= get_sub_field('appelation') ?></a></li>

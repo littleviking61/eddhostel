@@ -543,7 +543,8 @@ ul.pages-links{
 			text-align: right;
 			text-transform: uppercase;
 			padding-top: $gutter;
-			font-weight: bold;
+			// font-size: 1.6rem;
+			// font-weight: bold;
 
 			&:hover{
 				color: darken($blogColor, 8%);
@@ -748,6 +749,7 @@ ul.pages-links{
 
 	.post{
 		width: span(8);
+		background-color: white;
 
 		.single-header{
 			text-align: center;
