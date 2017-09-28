@@ -633,7 +633,7 @@ ul.pages-links{
 	article{
 		margin-bottom: $gap;
 		@include flexbox();
-		@include flex(1);
+		// @include flex(1);
 
 		a{
 			@include flexbox();
