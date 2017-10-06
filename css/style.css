@@ -308,7 +308,7 @@ body.active {
   /* hide back of pane during swap */
   /* front pane, placed above back */
   /* back, initially hidden pane */ }
-  .flip-container:hover .flipper {
+  .flip-container:hover .flipper, .flip-container:focus .flipper, .flip-container:active .flipper {
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
@@ -1394,7 +1394,8 @@ ul.pages-links {
       ul.pages-links li a p {
         line-height: 1.2; }
       ul.pages-links li a h3 {
-        letter-spacing: 12px; }
+        letter-spacing: 12px;
+        text-transform: initial; }
 
 /* Hostel */
 .history .accroche {
@@ -1420,7 +1421,8 @@ ul.pages-links {
   .team .member h3 {
     letter-spacing: 0.4rem;
     font-size: 2.2rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-transform: initial; }
     .team .member h3 + p {
       margin-top: 0; }
   .team .member [class*='eddicon-'] {
@@ -2332,6 +2334,8 @@ ul.pages-links {
         -webkit-flex: 1;
         -ms-flex: 1;
         flex: 1; }
+    .header:not(.headroom) .logo {
+      height: 100px; }
     .header .logo {
       background-position: center;
       margin-right: 20px;
@@ -2379,16 +2383,14 @@ ul.pages-links {
       .background-image .intro-text br {
         display: none; }
 
-  .headroom {
-    padding: 10px 0 0; }
-    .headroom > .container {
-      padding-top: 0;
-      -webkit-flex-direction: row;
-      -moz-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row; }
-    .headroom .logo {
-      margin-right: 10px; }
+  .headroom > .container {
+    padding-top: 0;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .headroom .logo {
+    margin-right: 10px; }
 
   .footer .row > * {
     margin-right: 0; }
@@ -2507,12 +2509,43 @@ ul.pages-links {
   .row > * {
     margin-right: 0; }
 
+  .header:not(.headroom) .logo {
+    height: 60px; }
+
   .container {
     padding-right: 15px;
     padding-left: 15px; }
     .container .texte {
       padding-right: 10px;
       padding-left: 10px; }
+
+  .slideshow {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    -moz-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+    .slideshow .slides {
+      height: 220px;
+      position: relative !important; }
+      .slideshow .slides .slide .titre {
+        width: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        padding-left: 20px;
+        padding-right: 10px; }
+        .slideshow .slides .slide .titre h3 {
+          font-size: 2.6rem;
+          letter-spacing: 10px; }
+      .slideshow .slides #slidr-top-breadcrumbs {
+        display: block; }
 
   .home .texte {
     font-size: 2rem; }
@@ -2534,8 +2567,6 @@ ul.pages-links {
     .slideshow header {
       width: 100%;
       margin-top: 0; }
-    .slideshow .slides, .slideshow .thumbnail {
-      display: none !important; }
 
   .blog .slideshow .thumbnail {
     position: relative;

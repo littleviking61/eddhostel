@@ -32,7 +32,7 @@ body.active{
 .flip-container {
 	perspective: 1000px;
 
-	&:hover{
+	&:hover, &:focus, &:active{
 		.flipper{
 			@include transform(rotateY(180deg));
 		}
