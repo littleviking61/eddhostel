@@ -411,6 +411,10 @@ ul.pages-links{
 		p{
 			padding-left: $gutter;
 			padding-right: $gutter;
+
+			a{
+				@include colors();
+			}
 		}
 
 		.eddicon-croix-big{

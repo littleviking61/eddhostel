@@ -35,9 +35,11 @@
   						<li class="room" id="<?= sanitize_title(get_sub_field('appelation')) ?>">
 								<a href="<?= get_sub_field('book_link') ?>">
 									<div class="detail">
-										<div class="thumbnail">
-											<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
-										</div>
+										<?php if (!get_field('hide_photo')): ?>
+											<div class="thumbnail">
+												<img src="<?= esc_url(wp_get_attachment_image_url( get_sub_field('photo'), 'large' )); ?>">
+											</div>
+										<?php endif ?>
 										<h4><?= get_sub_field('appelation') ?></h4>
 										<p><i class="eddicon-croix-big"></i></p>
 										<p><?= get_sub_field('description') ?></p>

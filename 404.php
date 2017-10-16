@@ -4,17 +4,14 @@
 		<!-- section -->
 		<div class="container ">
 
-			<section class="slideshow">
+			<section class="slideshow error">
 				<header>
-					<h4><?php __( 'Error 404', 'html5blank' ); ?></h4>
-					<h1><?php __( 'Page not found', 'html5blank' ); ?><br><br></h1>
-					<div class="detail">
-						<i class="eddicon-croix-big"></i>
-						<a href="<?php echo home_url(); ?>"><?php __( 'Return home?', 'html5blank' ); ?></a>
+					<div class="logo-color">
+						<img src="<?= get_template_directory_uri() ?>/img/logo-color.png" />
 					</div>
 				</header>
 				<div class="thumbnail">
-					<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( get_field('image_erreur_404','option'), 'medium' )); ?>" srcset="<?= esc_attr( wp_get_attachment_image_srcset( get_field('image_erreur_404','option'), 'small') ); ?>" />
+					<h1><?= __( '404 ERROR<br> Page', 'html5blank' ); ?></h1>
 				</div>
 
 			</section>
