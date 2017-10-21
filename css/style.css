@@ -27,48 +27,118 @@
  * ---
  * Declare fonts here
  */
-/*
 @font-face {
-  font-family: "Font-Name";
-  src: url("fonts/font-name.eot");
-  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"),
-    url("fonts/font-name.woff") format("woff"),
-    url("fonts/font-name.ttf") format("truetype"),
-    url("fonts/font-name.svg#font-name") format("svg");
+  font-family: "edd-hostel";
+  src: url("../fonts/edd-hostel.woff");
   font-weight: normal;
-  font-style: normal;
-}
-*/
+  font-style: normal; }
 @font-face {
   font-family: "Norwester";
-  src: url("../fonts/norwester-webfont.eot");
-  src: url("../fonts/norwester-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/norwester-webfont.woff") format("woff"), url("../fonts/norwester-webfont.ttf") format("truetype"), url("../fonts/norwester-webfont.svg#Norwester") format("svg");
+  src: url("../fonts/norwester-webfont.woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "Robotoo";
-  src: url("../fonts/RobotoCondensed-Regular-webfont.eot");
-  src: url("../fonts/RobotoCondensed-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Regular-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Regular-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Regular-webfont.svg#Robotoo") format("svg");
+  src: url("../fonts/RobotoCondensed-Regular-webfont.woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "Robotoo";
-  src: url("../fonts/RobotoCondensed-Italic-webfont.eot");
-  src: url("../fonts/RobotoCondensed-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Italic-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Italic-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Italic-webfont.svg#Robotoo") format("svg");
+  src: url("../fonts/RobotoCondensed-Italic-webfont.woff");
   font-weight: normal;
   font-style: italic; }
 @font-face {
   font-family: "Robotoo";
-  src: url("../fonts/RobotoCondensed-Bold-webfont.eot");
-  src: url("../fonts/RobotoCondensed-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Bold-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-Bold-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-Bold-webfont.svg#Robotoo") format("svg");
+  src: url("../fonts/RobotoCondensed-Bold-webfont.woff");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: "Robotoo";
-  src: url("../fonts/RobotoCondensed-BoldItalic-webfont.eot");
-  src: url("../fonts/RobotoCondensed-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-BoldItalic-webfont.woff") format("woff"), url("../fonts/RobotoCondensed-BoldItalic-webfont.ttf") format("truetype"), url("../fonts/RobotoCondensed-BoldItalic-webfont.svg#Robotoo") format("svg");
+  src: url("../fonts/RobotoCondensed-BoldItalic-webfont.woff");
   font-weight: bold;
   font-style: italic; }
+/* icons */
+[class^="eddicon-"]:before,
+[class*=" eddicon-"]:before {
+  font-family: "edd-hostel" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.eddicon-line:before {
+  content: "\61"; }
+
+.eddicon-croix:before {
+  content: "\62"; }
+
+.eddicon-croix-big:before {
+  content: "\64"; }
+
+.eddicon-bike:before {
+  content: "\65"; }
+
+.eddicon-wifi:before {
+  content: "\67"; }
+
+.eddicon-coffee:before {
+  content: "\66"; }
+
+.eddicon-laundry:before {
+  content: "\68"; }
+
+.eddicon-link:before {
+  content: "\69"; }
+
+.eddicon-map:before {
+  content: "\6a"; }
+
+.eddicon-blog:before {
+  content: "\6c"; }
+
+.eddicon-agenda:before {
+  content: "\6b"; }
+
+.eddicon-others:before {
+  content: "\6d"; }
+
+.eddicon-plane:before {
+  content: "\6e"; }
+
+.eddicon-train:before {
+  content: "\6f"; }
+
+.eddicon-reply:before {
+  content: "\70"; }
+
+.eddicon-arrow:before {
+  content: "\63"; }
+
+.eddicon-love:before {
+  content: "\71"; }
+
+.eddicon-full:before {
+  content: "\72"; }
+
+.eddicon-demi:before {
+  content: "\73"; }
+
+.eddicon-comment:before {
+  content: "\74"; }
+
+.eddicon-search:before {
+  content: "\75"; }
+
+.eddicon-close:before {
+  content: "\77"; }
+
+.eddicon-bars:before {
+  content: "\76"; }
+
 /**
  * partials/reset
  * ---
@@ -1345,6 +1415,18 @@ h4 {
   z-index: -1;
   height: 800px;
   overflow: hidden; }
+  .background-image {
+    background-color: #dcab25; }
+  .blog .background-image {
+    background-color: #ffe721; }
+  .page-id-16 .background-image {
+    background-color: #ff7459; }
+  .page-id-18 .background-image {
+    background-color: #4de8b3; }
+  .page-id-20 .background-image {
+    background-color: #8ae3f1; }
+  .page-id-278 .background-image {
+    background-color: #b9ae90; }
   .background-image img {
     width: 100%;
     min-height: 100%;
@@ -2125,6 +2207,11 @@ ul.pages-links {
       width: 50%; }
       .footer .quick-menu li:nth-child(even) {
         margin-bottom: 20px; }
+      .footer .quick-menu li.facebook i {
+        display: none; }
+      .footer .quick-menu li.facebook .fa-hidden {
+        position: relative;
+        left: 0; }
   .footer .social {
     width: 270px; }
     .footer .social .social-menu {

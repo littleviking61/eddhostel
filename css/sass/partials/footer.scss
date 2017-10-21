@@ -53,6 +53,16 @@
 			&:nth-child(even){
 				margin-bottom: 20px;
 			}
+
+			&.facebook{
+				i{
+					display: none;
+				}
+		    .fa-hidden{
+		    	position: relative;
+    			left: 0;
+				}
+			}
 		}
 	}
 	

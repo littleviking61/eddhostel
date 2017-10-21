@@ -32,6 +32,25 @@ module.exports = function(grunt) {
             // }
         },
 
+        uglify: {
+            options: {
+                compress: {
+                   drop_console: true
+                }
+            },
+            my_target: {
+                files: {
+                    'js/scripts.min.js': [
+                        'js/lib/jquery-3.2.1.min.js', 
+                        'js/lib/conditionizr.min.js', 
+                        'js/lib/modernizr-custom.js', 
+                        'js/lib/slidr.js', 
+                        'js/lib/headroom.js', 
+                        'js/scripts.js']
+                }
+            }
+        },
+
         jshint: {
             all: ['js/**/*.js', '!js/foundation/**/*.js', '!js/vendor/**/*.js']
         },

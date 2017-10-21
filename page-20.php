@@ -35,11 +35,9 @@
 							<div class="adress">
 								<?php get_template_part('adresse'); ?>
 
-								<div class="get-to" style="display:none;">
-									<a href="<?= get_sub_field('lien') ?>" target="new">
-										<i class="eddicon-link"></i>
-									</a>
-								</div>
+								<a href="<?= get_field('lien_googlemap') ?>" target="new">
+									<?= get_field('texte_lien_googlemap') ?> >
+								</a>
 							</div>
 
 						</div>

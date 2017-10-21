@@ -18,6 +18,10 @@ require_once "modules/post-like.php";
     Theme Support
 \*------------------------------------*/
 
+// add editor the privilege to edit theme
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );  
+
 if (!isset($content_width))
 {
     $content_width = 900;
@@ -168,10 +172,18 @@ function html5blank_styles()
         // Register CSS
         wp_enqueue_style('html5blank');
     } else {
+        // normalize-css
+        wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '3.0.1');
+
         // Custom CSS
-        wp_register_style('html5blankcssmin', get_template_directory_uri() . '/style.css', array(), '1.0');
+        wp_register_style('html5blank', get_template_directory_uri() . '/css/style.css', array('normalize'), '1.0');
+
         // Register CSS
-        wp_enqueue_style('html5blankcssmin');
+        wp_enqueue_style('html5blank');
+        // // Custom CSS
+        // wp_register_style('html5blankcssmin', get_template_directory_uri() . '/style.css', array(), '1.0');
+        // // Register CSS
+        // wp_enqueue_style('html5blankcssmin');
     }
 }
 
@@ -411,7 +423,7 @@ add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_hea
 add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
-add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
+// add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 // add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination

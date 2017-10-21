@@ -20,6 +20,7 @@
   z-index: -1;
 	height: $homeHeight;
 	overflow: hidden;
+	@include bg-colors();
 
 	img{
 		width: 100%;
