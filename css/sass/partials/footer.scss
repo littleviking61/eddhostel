@@ -103,27 +103,115 @@
 	width: 100%;
 	background-color: rgba(black, 0.65);
 	margin-top: 60px;
-	overflow: hidden;
+	// overflow: hidden;
 	z-index: 30;
+
 	.container{
 		position: relative;
 		height: 100%;
+		@include flex-wrap(wrap);
 	}
 
 	a.book{
-		position: absolute;
-		left: span(8);
-		top: 0;
 		height: 100%;
-		width: span(2);
-		@include flexbox();
-		@include align-items(center);
-		@include justify-content(center);
+		background: none !important;
+		text-align: center;
+		padding: 0;
+
+		i{
+			font-size: 6rem;
+			height: 30px;
+			display: block;
+			margin-top: -10px;
+		}
 	}
 
 	&.topbar--top{
 		height: $bookingHeight;
 		position: fixed;
 		bottom: -1px;
+	}
+}
+
+.CloudBedsWidget{
+	height: 100%;
+	@include flex(1);
+
+	>div{
+		height: 100%;
+	}
+
+	.horizontal-widget {
+		height: 100%;
+		@include flexbox();
+		@include align-items(stretch);
+
+		> input[type="button"]{
+			cursor: pointer;
+			margin-top: 0;
+			border: none;
+			border-radius: 0;
+			text-transform: uppercase;
+			color: white;
+			padding: 0 20px;
+			font-family: $font-family-title;
+			letter-spacing: 4px;
+			@include bg-colors(false,&,true);
+		}
+	}
+
+	div.acessa_widget_block{
+		margin-top: $gutterMedium;
+		margin-bottom: $gutterMedium;
+		margin-right: 30px !important;
+		background-color: white;
+		@include colors();
+		@include border-radius($gutter);
+		@include flex(1);
+		font-size: 1.4rem;
+		position: relative;
+
+		input[type="date"]{
+			display: none;
+		}
+		
+		p{
+			position: relative;
+			padding-top: 5px;
+			margin-left: $gutterMedium;
+			margin-bottom: -25px;
+
+			&:after{
+				@include icon('k');
+				@include colors();
+				position: absolute;
+				right: 20px;
+				font-size: 3rem;
+			}
+		}
+
+		.pika-single{
+			position: absolute !important;
+			bottom: 100%;
+			left: 0;
+		}
+
+		input.widgetHotelsInputText{
+			min-width: 170px;
+			position: relative;
+			z-index: 1;
+			@include box-sizing(border-box);
+			font-size: 1.8rem;
+			width: 100%;
+			height: 100%;
+			border: none;
+			background: transparent;
+			padding-top: $gutterLarge;
+			padding-left: $gutterMedium;
+			padding-right: $gutterMedium;
+			background: url('images/calendar3.png') no-repeat scroll 95% center #FFFFFF;
+
+			
+		}
 	}
 }

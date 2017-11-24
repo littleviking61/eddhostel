@@ -9,7 +9,7 @@
 			<nav class="categories">
 				<ul class="row">
 				  <?php wp_list_categories( array(
-				      'orderby' => 'name',
+				      'orderby' => 'slug',
 				      'title_li' => '',
 				      'show_option_all' => 'All'
 				  ) ); ?> 

@@ -20,7 +20,19 @@ require_once "modules/post-like.php";
 
 // add editor the privilege to edit theme
 $role_object = get_role( 'editor' );
-$role_object->add_cap( 'edit_theme_options' );  
+$role_object->add_cap( 'edit_theme_options' ); 
+
+function hide_update_notice_to_all_but_admin_users()
+{
+    if (!current_user_can('update_core')) {
+        remove_action( 'admin_notices', 'update_nag', 3 );
+    }
+}
+add_action( 'admin_head', 'hide_update_notice_to_all_but_admin_users', 1); 
+
+define( 'WP_AUTO_UPDATE_CORE', false );
+add_filter( 'auto_update_plugin', '__return_false' );
+add_filter( 'auto_update_theme', '__return_false' );
 
 if (!isset($content_width))
 {

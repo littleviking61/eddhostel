@@ -18,6 +18,12 @@
   }
 }
 
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -102,59 +108,59 @@
   }
 }
 
-@mixin bg-colors($colorselec : false, $element : &, $hover : false){
+@mixin bg-colors($colorselec : false, $element : &, $hover : false, $important: ""){
   @if $hover == true{
     @include transition(background-color .3s ease);
   }
 
   @if $colorselec == false {
     &{  
-      background-color: $hostelColor;
+      background-color: $hostelColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 15%); } }
     }
     .blog &{  
-      background-color: $blogColor;
+      background-color: $blogColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($blogColor, 15%); } }
     }
     .page-id-16 &{
-      background-color: $facilitiesColor;
+      background-color: $facilitiesColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 15%); } }
     }
     .page-id-18 &{
-      background-color: $aroundColor;
+      background-color: $aroundColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($aroundColor, 15%); } }
     }
     .page-id-20 &{
-      background-color: $howtoColor;
+      background-color: $howtoColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 15%); } }
     }
     .page-id-278 &{
-      background-color: $policiesColor;
+      background-color: $policiesColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($policiesColor, 15%); } }
     }
   } @else {
     &{  
-      background-color: $hostelColor;
+      background-color: $hostelColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($hostelColor, 15%); } }
     }
     @at-root #{$colorselec}.blog #{$element}{
-      background-color: $blogColor;
+      background-color: $blogColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($blogColor, 15%); } }
     }
     @at-root #{$colorselec}.page-id-16 #{$element}{
-      background-color: $facilitiesColor;
+      background-color: $facilitiesColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($facilitiesColor, 15%); } }
     }
     @at-root #{$colorselec}.page-id-18 #{$element}{
-      background-color: $aroundColor;
+      background-color: $aroundColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($aroundColor, 15%); } }
     }
     @at-root #{$colorselec}.page-id-20 #{$element}{
-      background-color: $howtoColor;
+      background-color: $howtoColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 15%); } }
     }
     @at-root #{$colorselec}.page-id-278 #{$element}{
-      background-color: $policiesColor;
+      background-color: $policiesColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($policiesColor, 15%); } }
     }
   }

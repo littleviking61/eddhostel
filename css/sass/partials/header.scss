@@ -92,6 +92,12 @@
     	color : $text-color;
     	font-size: 1.6rem;
     	float: left;
+    	position: relative;
+    	z-index: 2;
+
+    	option{
+    		color: black;
+    	}
 		}
 
 		.qtranxs_widget_end{
@@ -168,9 +174,10 @@
 	overflow: hidden;
 	height: $headroomHeight;	
 	top: 0;
+	opacity:0;
 	z-index: 40;
 	will-change: transform;
-	@include transition(transform 100ms linear, height 200ms linear);
+	@include transition(transform 100ms linear, height 200ms linear, opacity 200ms linear);
 	@include transform(translateY(-100%));
 	@include flexbox();
 	@include align-items(flex-end);
@@ -288,8 +295,10 @@
 
 .headroom--pinned{
   @include transform(translateY(-480px));
+  opacity:1;
 }
 
 .headroom--unpinned, .headroom--top {
   @include transform(translateY(-100%));
+  opacity:0;
 }

@@ -320,6 +320,9 @@ h4{
 	background-repeat: no-repeat;
 	background-position: center;
 
+	&.miss-id-normal{
+		@include background-image('emilie');
+	}
 	&.miss-id-18{
 		@include background-image('around');
 	}

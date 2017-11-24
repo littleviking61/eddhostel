@@ -107,13 +107,6 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
   }
 
   .booking{
-  	.container{
-  		padding: 0;
-  	}
-  	a.book{
-  		left: 0;
-  		width: 50%;
-  	}
   }
 }
 
@@ -572,9 +565,32 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			}
 		}
 	}
+
+	.booking{
+		
+		.CloudBedsWidget .horizontal-widget > input[type="button"]{
+			max-width: 70px;
+			padding: 0 10px;
+		}
+	}
 }
 
 @media #{$extra-small-down}{
+
+	.booking{
+		a.book{
+			display: none;
+		}
+		.CloudBedsWidget div.acessa_widget_block{
+			p{
+				display: none;
+			}
+			input.widgetHotelsInputText{
+				padding-top: 0;
+				min-width: auto;
+			}
+		}
+	}
 
 	.accomodations , .quick-links{
 

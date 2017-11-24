@@ -54,17 +54,12 @@
 					  <?php while( have_rows('parcours') ): the_row();?>
 							<?php if (get_sub_field('circle')): ?>
 								<li class="circles">
-									<p>
-										<div class="button circle nohover">
-											<?= get_sub_field('first_circle') ?>
-										</div>
-									</p>
-									<p>
-										<div class="button circle nohover">
-											<?= get_sub_field('second_circle') ?>
-										</div>
-									</p>
-
+									<div class="button circle nohover">
+										<?= get_sub_field('first_circle') ?>
+									</div>
+									<div class="button circle nohover">
+										<?= get_sub_field('second_circle') ?>
+									</div>
 								</li>
 							<?php else: ?>
 	  						<li class="type">

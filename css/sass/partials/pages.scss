@@ -400,10 +400,15 @@ ul.pages-links{
 }
 
 .parcours{
+	@include flex-wrap(wrap);
 
 	.type{
 		width: span(3);
 		text-align: center;
+
+		&:last-child{
+			width: span(6);
+		}
 
 		h3{
 			letter-spacing: 1rem;
@@ -412,6 +417,17 @@ ul.pages-links{
 		p{
 			padding-left: $gutter;
 			padding-right: $gutter;
+			text-align: left;
+
+			strong, b{
+				@include colors();
+				text-transform: uppercase;
+			}
+
+
+			&:first-of-type{
+				text-align: center;
+			}
 
 			a{
 				@include colors();
@@ -430,11 +446,15 @@ ul.pages-links{
 	}
 
 	.circles{
-		width: span(3);
-		text-align: center;
+		width: 100%;
+		text-align: right;
+		margin-top: -120px;
+		margin-bottom: 40px;
+		padding-right: $gap;
 	}
 
 	.circle{
+		margin-left: $gutterLarge;
 		padding-top: 45px;
 	}
 }
@@ -497,7 +517,7 @@ ul.pages-links{
 	}
 }
 
-.category-full-day-trip{
+.category-2-full-day-trip{
 	.main-tags:after{
 		float: right;
 		@include icon('r');
@@ -511,10 +531,17 @@ ul.pages-links{
 	}
 }
 
-.category-very-favorite{
+.category-3-very-favorite{
 	.main-tags:after{
 		float: right;
 		@include icon('q');
+	}
+}
+
+.category-4-adress{
+	.main-tags:after{
+		float: right;
+		@include icon('j');
 	}
 }
 
@@ -616,6 +643,12 @@ ul.pages-links{
 	.cat-item-17 a{ /* 16 et 17*/
 		&:before{
 			@include icon('q');
+		}
+	}
+
+	.cat-item-26 a{ /* 16 et 17*/
+		&:before{
+			@include icon('j');
 		}
 	}
 
