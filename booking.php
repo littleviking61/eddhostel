@@ -421,7 +421,7 @@ Nd.millisecond=Nd.milliseconds=Md,Nd.utcOffset=Na,Nd.utc=Pa,Nd.local=Qa,Nd.parse
     }
 (new CloudBeds_widget()).init(data, 'write');//moment().subtract(10, 'days').calendar();
 	</script>
-	<a href="#book" class="button book">
+	<a href="mailto:booking@eddhostel.com" target="new" class="button book">
         <i class="eddicon-booked"></i><br>
 		<?= __('Goup Booking', 'html5blank') ?><br>
 	</a>
