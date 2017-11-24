@@ -2962,6 +2962,8 @@ ul.pages-links {
   .booking .CloudBedsWidget div.acessa_widget_block input.widgetHotelsInputText {
     padding-top: 0;
     min-width: auto; }
+  .booking #checkout .pika-single {
+    right: 0; }
 
   .accomodations .bloc, .quick-links .bloc, .quick-links .bloc {
     height: 45vw; }

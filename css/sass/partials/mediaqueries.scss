@@ -567,7 +567,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 	}
 
 	.booking{
-		
+
 		.CloudBedsWidget .horizontal-widget > input[type="button"]{
 			max-width: 70px;
 			padding: 0 10px;
@@ -589,6 +589,9 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 				padding-top: 0;
 				min-width: auto;
 			}
+		}
+		#checkout .pika-single{
+			right: 0;
 		}
 	}
 
