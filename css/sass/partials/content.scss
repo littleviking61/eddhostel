@@ -332,7 +332,7 @@ h4{
 	&.miss-id-20{
 		@include background-image('howto');
 	}
-	&.miss-id-278{
+	&.miss-id-278, &.miss-id-768{
 		@include background-image('all');
 		height: 230px !important;
 	}
@@ -363,7 +363,7 @@ h4{
 .policies{
 
 	.texte{
-		margin-left: span(2);
+		//margin-left: span(2);
 
 		> ol, > ul{
 			padding-left:0 ;

@@ -8,8 +8,52 @@
 				"padding-left"
 			],
 			[
+				"co",
+				"column"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
 				"mar",
-				"margin-bottom"
+				"margin-right"
+			],
+			[
+				"op",
+				"opacity\topacity()"
+			],
+			[
+				"zi",
+				"z-index"
 			],
 			[
 				"a",
@@ -38,10 +82,6 @@
 			[
 				"marn",
 				"margin-bottom"
-			],
-			[
-				"flex",
-				"flexbox"
 			],
 			[
 				"hea",
@@ -92,10 +132,6 @@
 				"length"
 			],
 			[
-				"cur",
-				"current"
-			],
-			[
 				"tex",
 				"text-transform"
 			],
@@ -118,10 +154,6 @@
 			[
 				"ipo",
 				"important"
-			],
-			[
-				"max",
-				"max-height"
 			],
 			[
 				"bord",
@@ -148,16 +180,8 @@
 				"lighterGrey"
 			],
 			[
-				"bac",
-				"background-color"
-			],
-			[
 				"blo",
 				"block"
-			],
-			[
-				"text",
-				"text-transform"
 			],
 			[
 				"nth",
@@ -218,10 +242,6 @@
 			[
 				"r",
 				"rgba\trgba()"
-			],
-			[
-				"min",
-				"min-height"
 			],
 			[
 				"border",
@@ -345,10 +365,6 @@
 			],
 			[
 				"bakc",
-				"background-color"
-			],
-			[
-				"back",
 				"background-color"
 			],
 			[
@@ -498,22 +514,6 @@
 			[
 				"togl",
 				"toggleClass〔function〕"
-			],
-			[
-				"tr",
-				"transparent"
-			],
-			[
-				"wi",
-				"width"
-			],
-			[
-				"template",
-				"template_directory"
-			],
-			[
-				"op",
-				"opacity"
 			]
 		]
 	},
@@ -529,84 +529,28 @@
 			}
 		},
 		{
-			"file": "css/sass/partials/pages.scss",
+			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 10493,
+				"buffer_size": 85218,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/sass/partials/header.scss",
+			"file": "css/sass/partials/footer.scss",
 			"settings":
 			{
-				"buffer_size": 4312,
+				"buffer_size": 3308,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php\n/**\n * La configuration de base de votre installation WordPress.\n *\n * Ce fichier contient les réglages de configuration suivants : réglages MySQL,\n * préfixe de table, clés secrètes, langue utilisée, et ABSPATH.\n * Vous pouvez en savoir plus à leur sujet en allant sur\n * {@link http://codex.wordpress.org/fr:Modifier_wp-config.php Modifier\n * wp-config.php}. C’est votre hébergeur qui doit vous donner vos\n * codes MySQL.\n *\n * Ce fichier est utilisé par le script de création de wp-config.php pendant\n * le processus d’installation. Vous n’avez pas à utiliser le site web, vous\n * pouvez simplement renommer ce fichier en \"wp-config.php\" et remplir les\n * valeurs.\n *\n * @package WordPress\n */\n\n// ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //\n/** Nom de la base de données de WordPress. */\ndefine('DB_NAME', 'eddhostel');\n\n/** Utilisateur de la base de données MySQL. */\ndefine('DB_USER', 'eddHOStel');\n\n/** Mot de passe de la base de données MySQL. */\ndefine('DB_PASSWORD', 'pouET?61');\n\n/** Adresse de l’hébergement MySQL. */\ndefine('DB_HOST', 'localhost');\n\n/** Jeu de caractères à utiliser par la base de données lors de la création des tables. */\ndefine('DB_CHARSET', 'utf8mb4');\n\n/** Type de collation de la base de données.\n  * N’y touchez que si vous savez ce que vous faites.\n  */\ndefine('DB_COLLATE', '');\n\n/**#@+\n * Clés uniques d’authentification et salage.\n *\n * Remplacez les valeurs par défaut par des phrases uniques !\n * Vous pouvez générer des phrases aléatoires en utilisant\n * {@link https://api.wordpress.org/secret-key/1.1/salt/ le service de clefs secrètes de WordPress.org}.\n * Vous pouvez modifier ces phrases à n’importe quel moment, afin d’invalider tous les cookies existants.\n * Cela forcera également tous les utilisateurs à se reconnecter.\n *\n * @since 2.6.0\n */\ndefine('AUTH_KEY',         '[R]ek2R-1$U1lx=sL6mpQ$-pRVId(uE:[}=}?BCwwK]y>LrG{z6[,?On,|<v y]0');\ndefine('SECURE_AUTH_KEY',  '-E*@kW2jiVaE-O##ly?nFPP</g{O9sY(+2W0x-<~6xWk~@Riv9!)&c5V/PD@R/sL');\ndefine('LOGGED_IN_KEY',    '):XA5`hrAh[).d8gE;{AhvG`Ad5v:;Fb]~ga {&M<ZcTBD]S2nO[=fyR!KMZ>5L>');\ndefine('NONCE_KEY',        'N;2P[&2JU[P`YI$XpON4w{U:apv#dsT7g%=NL2{|M81D?zHx)sb0 ONHBj*q-hU_');\ndefine('AUTH_SALT',        'md3T<ES0M;?i*OMV={YnR?hnw.~QGv>.+d9M+O-Z41Ro%Df<hCAqmYi4UN3E#Eg^');\ndefine('SECURE_AUTH_SALT', 'lR1b_Bqfv;Ur:X[gsP)CVjg_a%Q6&ZbG8?pfiW0?eyf7;)ld(;gs8N9[Ak.dFRbq');\ndefine('LOGGED_IN_SALT',   'mgdO+~CWiAALa9y{</Tqed>{)=J+hMyP3^Y4e)h5b}aWts6D9wbCBkB#>zs/kfIA');\ndefine('NONCE_SALT',       '*{LhJop#a6~{%&_21P@ZW#<v%@wc0@=pcg/aYZ-?xwZ@zfbFv=/=C)=dz|)M1p/Z');\n/**#@-*/\n\n/**\n * Préfixe de base de données pour les tables de WordPress.\n *\n * Vous pouvez installer plusieurs WordPress sur une seule base de données\n * si vous leur donnez chacune un préfixe unique.\n * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !\n */\n$table_prefix  = 'wp_';\n\n/**\n * Pour les développeurs : le mode déboguage de WordPress.\n *\n * En passant la valeur suivante à \"true\", vous activez l’affichage des\n * notifications d’erreurs pendant vos essais.\n * Il est fortemment recommandé que les développeurs d’extensions et\n * de thèmes se servent de WP_DEBUG dans leur environnement de\n * développement.\n *\n * Pour plus d’information sur les autres constantes qui peuvent être utilisées\n * pour le déboguage, rendez-vous sur le Codex.\n *\n * @link https://codex.wordpress.org/Debugging_in_WordPress\n */\ndefine('WP_DEBUG', false);\n\n/* C’est tout, ne touchez pas à ce qui suit ! */\n\n/** Chemin absolu vers le dossier de WordPress. */\nif ( !defined('ABSPATH') )\n\tdefine('ABSPATH', dirname(__FILE__) . '/');\n\n/** Réglage des variables de WordPress et de ses fichiers inclus. */\nrequire_once(ABSPATH . 'wp-settings.php');\n\n",
-			"file": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508511154/mapped/var/www/html/client/eddhostel/wp-config.php",
-			"file_size": 0,
-			"file_write_time": 131529847640000000,
-			"settings":
-			{
-				"buffer_size": 3773,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508522092/mapped/var/www/html/client/eddhostel/wp-config.php",
-			"settings":
-			{
-				"buffer_size": 3772,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php\n/**\n * La configuration de base de votre installation WordPress.\n *\n * Ce fichier contient les réglages de configuration suivants : réglages MySQL,\n * préfixe de table, clés secrètes, langue utilisée, et ABSPATH.\n * Vous pouvez en savoir plus à leur sujet en allant sur\n * {@link http://codex.wordpress.org/fr:Modifier_wp-config.php Modifier\n * wp-config.php}. C’est votre hébergeur qui doit vous donner vos\n * codes MySQL.\n *\n * Ce fichier est utilisé par le script de création de wp-config.php pendant\n * le processus d’installation. Vous n’avez pas à utiliser le site web, vous\n * pouvez simplement renommer ce fichier en \"wp-config.php\" et remplir les\n * valeurs.\n *\n * @package WordPress\n */\n\n// ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //\n/** Nom de la base de données de WordPress. */\ndefine('DB_NAME', 'eddhostel');\n\n/** Utilisateur de la base de données MySQL. */\ndefine('DB_USER', 'eddHOStel');\n\n/** Mot de passe de la base de données MySQL. */\ndefine('DB_PASSWORD', 'pouET?61');\n\n/** Adresse de l’hébergement MySQL. */\ndefine('DB_HOST', 'localhost');\n\n/** Jeu de caractères à utiliser par la base de données lors de la création des tables. */\ndefine('DB_CHARSET', 'utf8mb4');\n\n/** Type de collation de la base de données.\n  * N’y touchez que si vous savez ce que vous faites.\n  */\ndefine('DB_COLLATE', '');\n\n/**#@+\n * Clés uniques d’authentification et salage.\n *\n * Remplacez les valeurs par défaut par des phrases uniques !\n * Vous pouvez générer des phrases aléatoires en utilisant\n * {@link https://api.wordpress.org/secret-key/1.1/salt/ le service de clefs secrètes de WordPress.org}.\n * Vous pouvez modifier ces phrases à n’importe quel moment, afin d’invalider tous les cookies existants.\n * Cela forcera également tous les utilisateurs à se reconnecter.\n *\n * @since 2.6.0\n */\ndefine('AUTH_KEY',         '[R]ek2R-1$U1lx=sL6mpQ$-pRVId(uE:[}=}?BCwwK]y>LrG{z6[,?On,|<v y]0');\ndefine('SECURE_AUTH_KEY',  '-E*@kW2jiVaE-O##ly?nFPP</g{O9sY(+2W0x-<~6xWk~@Riv9!)&c5V/PD@R/sL');\ndefine('LOGGED_IN_KEY',    '):XA5`hrAh[).d8gE;{AhvG`Ad5v:;Fb]~ga {&M<ZcTBD]S2nO[=fyR!KMZ>5L>');\ndefine('NONCE_KEY',        'N;2P[&2JU[P`YI$XpON4w{U:apv#dsT7g%=NL2{|M81D?zHx)sb0 ONHBj*q-hU_');\ndefine('AUTH_SALT',        'md3T<ES0M;?i*OMV={YnR?hnw.~QGv>.+d9M+O-Z41Ro%Df<hCAqmYi4UN3E#Eg^');\ndefine('SECURE_AUTH_SALT', 'lR1b_Bqfv;Ur:X[gsP)CVjg_a%Q6&ZbG8?pfiW0?eyf7;)ld(;gs8N9[Ak.dFRbq');\ndefine('LOGGED_IN_SALT',   'mgdO+~CWiAALa9y{</Tqed>{)=J+hMyP3^Y4e)h5b}aWts6D9wbCBkB#>zs/kfIA');\ndefine('NONCE_SALT',       '*{LhJop#a6~{%&_21P@ZW#<v%@wc0@=pcg/aYZ-?xwZ@zfbFv=/=C)=dz|)M1p/Z');\n/**#@-*/\n\n/**\n * Préfixe de base de données pour les tables de WordPress.\n *\n * Vous pouvez installer plusieurs WordPress sur une seule base de données\n * si vous leur donnez chacune un préfixe unique.\n * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !\n */\n$table_prefix  = 'wp_';\n\n/**\n * Pour les développeurs : le mode déboguage de WordPress.\n *\n * En passant la valeur suivante à \"true\", vous activez l’affichage des\n * notifications d’erreurs pendant vos essais.\n * Il est fortemment recommandé que les développeurs d’extensions et\n * de thèmes se servent de WP_DEBUG dans leur environnement de\n * développement.\n *\n * Pour plus d’information sur les autres constantes qui peuvent être utilisées\n * pour le déboguage, rendez-vous sur le Codex.\n *\n * @link https://codex.wordpress.org/Debugging_in_WordPress\n */\ndefine('WP_DEBUG', false);\n\n/* C’est tout, ne touchez pas à ce qui suit ! */\n\n/** Chemin absolu vers le dossier de WordPress. */\nif ( !defined('ABSPATH') )\n\tdefine('ABSPATH', dirname(__FILE__) . '/');\n\n/** Réglage des variables de WordPress et de ses fichiers inclus. */\nrequire_once(ABSPATH . 'wp-settings.php');\n\n",
-			"settings":
-			{
-				"buffer_size": 3773,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "404.php",
-			"settings":
-			{
-				"buffer_size": 473,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "css/sass/partials/content.scss",
 			"settings":
 			{
-				"buffer_size": 6715,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "page-16.php",
-			"settings":
-			{
-				"buffer_size": 3241,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "page-20.php",
-			"settings":
-			{
-				"buffer_size": 3327,
+				"buffer_size": 6793,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -615,17 +559,69 @@
 			"file": "css/sass/partials/mediaqueries.scss",
 			"settings":
 			{
-				"buffer_size": 8324,
+				"buffer_size": 8817,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "slideshow-blog.php",
+			"file": "page-278.php",
 			"settings":
 			{
-				"buffer_size": 1374,
+				"buffer_size": 862,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "page-768.php",
+			"settings":
+			{
+				"buffer_size": 1317,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "booking.php",
+			"settings":
+			{
+				"buffer_size": 70202,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/sass/partials/header.scss",
+			"settings":
+			{
+				"buffer_size": 4469,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/sass/modules/fonts.scss",
+			"settings":
+			{
+				"buffer_size": 2020,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/sass/modules/mixins.scss",
+			"settings":
+			{
+				"buffer_size": 9627,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/style.css.map",
+			"settings":
+			{
+				"buffer_size": 52458,
 				"line_ending": "Unix"
 			}
 		}
@@ -723,23 +719,43 @@
 	},
 	"expanded_folders":
 	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js"
 	],
 	"file_history":
 	[
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/utils.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/footer.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/single.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow-blog.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/content.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/mixins.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-16.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/scripts.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/mediaqueries.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/pages.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/booking.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/header.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/functions.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/header.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-20.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/adresse.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/content.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/style.css.map",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/footer.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/mixins.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/Gruntfile.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Downloads/baseareticle.csv",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/header.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/index.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/modules/post-like.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/modules/is-debug.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/footer.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/scripts.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow-blog.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-16.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/404.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/adresse.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/fonts.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/sftp-config.json",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508511154/mapped/var/www/html/client/eddhostel/wp-config.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508522092/mapped/var/www/html/client/eddhostel/wp-config.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/utils.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/scripts.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-14.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/comments.php",
@@ -749,19 +765,13 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/style.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-278.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/layout.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/mediaqueries.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/booking.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/404.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/search.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/searchform.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/author.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/style.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/variables.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/pages.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/likes.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/modules/post-like.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/index.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow-single.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/reset.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/.sass-cache/464f839651947841b348cf56d5dcd1158a6fae79/layout.scssc",
@@ -772,14 +782,11 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/pagination.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-18.php",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1504856818/mapped/var/www/html/client/eddhostel/wp-config.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/fonts.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/Gruntfile.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/.sass-cache/c88e58df36ee98653ef1e750c722469ff5a9b68a/mixins.scssc",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/lib/jQuery.headroom.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/lib/Headroom.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/nav.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/wrapper.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/sftp-config.json",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/package.json",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/style.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/single.php",
@@ -847,17 +854,11 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/lodash.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-util/node_modules/lodash/lodash.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-util/node_modules/lodash/lodash.min.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/lodash/lodash.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/lodash/lodash.min.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
-		"/private/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/fz3temp-1/wysiwyg.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/page.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.po",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/lodash/lodash.js"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 54.0
 	},
 	"find_in_files":
 	{
@@ -883,6 +884,33 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"278",
+			"miss",
+			"!important",
+			"checkinPicker",
+			"adjustPosition",
+			"click",
+			"/y",
+			"y",
+			"'10'",
+			"11",
+			"Check In",
+			"check",
+			"!important",
+			"button",
+			" $important;",
+			"Color;",
+			"booking",
+			".cat-item-17 a{ /* 16 et 17*/\n\t\t&:before{\n\t\t\t@include icon('q');\n\t\t}\n\t}",
+			"miss",
+			"hostel",
+			"create_post_type_html5",
+			"custom",
+			".background",
+			"background",
+			"footer",
+			"scripts",
+			"// Headeroom\n            wp_register_script('headroom', get_template_directory_uri() . '/js/lib/headroom.js', array(), '0.9.4');\n",
 			"h2",
 			"h4",
 			"map",
@@ -983,34 +1011,7 @@
 			"scroller",
 			"http://oniris.nuagegraphik.fr",
 			"http://www.galerie-oniris.fr",
-			"logo-color",
-			"bower_components",
-			"^",
-			"Oniris",
-			"oniris",
-			"create_post_type_html5",
-			"actus",
-			"autre",
-			"$presentation",
-			"http://oniris.nuagegraphik.fr",
-			"http://dev.viedemotard.fr",
-			"http://www.galerie-oniris.fr",
-			"'Presentation'",
-			"update",
-			"switch",
-			"<?= $cat->name; ?>",
-			"cat->name",
-			"$cat->name;",
-			"map",
-			"eurasie",
-			"_e(",
-			"_e",
-			"normalize-css",
-			"h2",
-			"h3",
-			".circle",
-			"<p>",
-			"li"
+			"logo-color"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1058,8 +1059,8 @@
 						"selection":
 						[
 							[
-								361,
-								351
+								139,
+								121
 							]
 						],
 						"settings":
@@ -1070,27 +1071,27 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 501.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "css/sass/partials/pages.scss",
+					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10493,
+						"buffer_size": 85218,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5595,
-								5595
+								18,
+								18
 							]
 						],
 						"settings":
@@ -1098,11 +1099,12 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7651.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
@@ -1110,188 +1112,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "css/sass/partials/header.scss",
+					"file": "css/sass/partials/footer.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4312,
+						"buffer_size": 3308,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								801,
-								801
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1292.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508511154/mapped/var/www/html/client/eddhostel/wp-config.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3773,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								3773
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"is_remote": true,
-							"local_path": "/var/www/html/client/eddhostel/wp-config.php",
-							"remote_loading": false,
-							"synced": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tmp_dir": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508511154/mapped/"
-						},
-						"translation.x": 0.0,
-						"translation.y": 4324.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508522092/mapped/var/www/html/client/eddhostel/wp-config.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3772,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								3772
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"is_remote": true,
-							"local_path": "/var/www/html/client/eddhostel/wp-config.php",
-							"remote_loading": false,
-							"synced": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tmp_dir": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508522092/mapped/"
-						},
-						"translation.x": 0.0,
-						"translation.y": 539.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3773,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3773,
-								3773
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"default_dir": "/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel",
-							"incomplete_sync": null,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2588.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "404.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 473,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								329,
-								329
-							],
-							[
-								382,
-								382
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "css/sass/partials/content.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6715,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3792,
-								3792
+								182,
+								182
 							]
 						],
 						"settings":
@@ -1310,58 +1143,88 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "page-16.php",
+					"buffer": 3,
+					"file": "css/sass/partials/content.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3241,
+						"buffer_size": 6793,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1093,
-								1093
+								4714,
+								4717
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9893.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "page-20.php",
+					"buffer": 4,
+					"file": "css/sass/partials/mediaqueries.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3327,
+						"buffer_size": 8817,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1275,
-								1275
+								1768,
+								1768
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2913.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "page-278.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 862,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
@@ -1376,20 +1239,88 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "css/sass/partials/mediaqueries.scss",
+					"buffer": 6,
+					"file": "page-768.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8324,
+						"buffer_size": 1317,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5741,
-								5741
+								940,
+								940
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 992.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "booking.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 70202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								70155,
+								70155
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 49944.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "css/sass/partials/header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3157,
+								3157
 							]
 						],
 						"settings":
@@ -1401,43 +1332,107 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6452.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "slideshow-blog.php",
+					"buffer": 9,
+					"file": "css/sass/modules/fonts.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1374,
+						"buffer_size": 2020,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1311,
-								1311
+								1991,
+								1977
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 828.0,
+						"translation.y": 2630.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "css/sass/modules/mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4574,
+								4574
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 719.0,
+						"translation.y": 4530.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "css/style.css.map",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 52458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1449,7 +1444,7 @@
 	},
 	"input":
 	{
-		"height": 40.0
+		"height": 53.0
 	},
 	"layout":
 	{
@@ -1500,12 +1495,44 @@
 		"selected_items":
 		[
 			[
-				"content",
-				"css/sass/partials/content.scss"
+				"mixi",
+				"css/sass/modules/mixins.scss"
+			],
+			[
+				"font",
+				"css/sass/modules/fonts.scss"
 			],
 			[
 				"footer",
 				"css/sass/partials/footer.scss"
+			],
+			[
+				"head",
+				"header.php"
+			],
+			[
+				"mixin",
+				"css/sass/modules/mixins.scss"
+			],
+			[
+				"pages",
+				"css/sass/partials/pages.scss"
+			],
+			[
+				"conten",
+				"css/sass/partials/content.scss"
+			],
+			[
+				"heade",
+				"header.php"
+			],
+			[
+				"foot",
+				"css/sass/partials/footer.scss"
+			],
+			[
+				"content",
+				"css/sass/partials/content.scss"
 			],
 			[
 				"headr",
@@ -1528,10 +1555,6 @@
 				"header.php"
 			],
 			[
-				"foot",
-				"css/sass/partials/footer.scss"
-			],
-			[
 				"foo",
 				"css/sass/partials/footer.scss"
 			],
@@ -1552,20 +1575,12 @@
 				"css/sass/modules/mixins.scss"
 			],
 			[
-				"head",
-				"css/sass/partials/header.scss"
-			],
-			[
 				"medi",
 				"css/sass/partials/mediaqueries.scss"
 			],
 			[
 				"scrip",
 				"js/scripts.js"
-			],
-			[
-				"mixi",
-				"css/sass/modules/mixins.scss"
 			],
 			[
 				"uti",
@@ -1600,16 +1615,8 @@
 				"slideshow.php"
 			],
 			[
-				"pages",
-				"css/sass/partials/pages.scss"
-			],
-			[
 				"media",
 				"css/sass/partials/mediaqueries.scss"
-			],
-			[
-				"heade",
-				"css/sass/partials/header.scss"
 			],
 			[
 				"lay",
@@ -1676,10 +1683,6 @@
 				"page-14.php"
 			],
 			[
-				"font",
-				"css/sass/modules/fonts.scss"
-			],
-			[
 				"grunt",
 				"Gruntfile.js"
 			],
@@ -1718,10 +1721,6 @@
 			[
 				"commen",
 				"modules/comments.php"
-			],
-			[
-				"conten",
-				"content-tools.php"
 			],
 			[
 				"comment",
@@ -1920,10 +1919,6 @@
 				"oniris/scss/_layout.scss"
 			],
 			[
-				"mixin",
-				"oniris/scss/_mixins.scss"
-			],
-			[
 				"singleact",
 				"oniris/elements/single-actu.php"
 			],
@@ -2040,7 +2035,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 318.0,
+	"side_bar_width": 304.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -102,7 +102,7 @@
     color: darken($howtoColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($howtoColor, 15%); } }
   }
-  #{$parent}.page-id-278 &{
+  #{$parent}.page-id-278 &, #{$parent}.page-id-768 &{
     color: darken($policiesColor, 2%);
     @if $hover == true{ &:hover{ color: lighten($policiesColor, 15%); } }
   }
@@ -134,7 +134,7 @@
       background-color: $howtoColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($howtoColor, 15%); } }
     }
-    .page-id-278 &{
+    .page-id-278 &, .page-id-768 &{
       background-color: $policiesColor #{$important};
       @if $hover == true{ &:hover{ background-color: lighten($policiesColor, 15%); } }
     }

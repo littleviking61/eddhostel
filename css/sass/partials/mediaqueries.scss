@@ -105,9 +105,6 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
   		}
   	}
   }
-
-  .booking{
-  }
 }
 
 // entre 660 et 800
@@ -216,11 +213,19 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 	.background-image{
 		height: 550px;
 
+		img{
+			object-position: right;
+		}
+
 		.intro-text{
+			font-size: 3rem;
+			
 			br{
 				display: none;
 			}
-			font-size: 3rem;
+			h2{
+				letter-spacing: 0.6rem;
+			}
 		}
 	}
 
@@ -342,6 +347,8 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
   	  	@include flexbox();
   	  	@include align-items(center);
   	  	@include justify-content(center);
+  	  	@include flex-direction(column);
+  	  	text-align: center;
   	  }	
 			.logo-color{
 				@include flex-grow(1);
@@ -437,7 +444,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 
 			h2{
 				font-size: 3rem;
-				letter-spacing: 1.4rem;
+				letter-spacing: 0.6rem;
 				margin-top: -40px;
 			}
 
@@ -569,7 +576,7 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 	.booking{
 
 		.CloudBedsWidget .horizontal-widget > input[type="button"]{
-			max-width: 70px;
+			//max-width: 70px;
 			padding: 0 10px;
 		}
 	}
@@ -578,10 +585,17 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 @media #{$extra-small-down}{
 
 	.booking{
+
+		.container{
+			padding: 0 5px;
+		}
+
 		a.book{
 			display: none;
 		}
+
 		.CloudBedsWidget div.acessa_widget_block{
+			margin-right: 5px !important;
 			p{
 				display: none;
 			}

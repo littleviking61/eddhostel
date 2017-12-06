@@ -206,6 +206,7 @@
 		background-color: $dark;
 		height: $slideshowHeight;
 		@include align-items(flex-start);
+		opacity: 1;
 		
 		&{
 			color: $grey;

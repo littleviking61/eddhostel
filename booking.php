@@ -423,6 +423,6 @@ Nd.millisecond=Nd.milliseconds=Md,Nd.utcOffset=Na,Nd.utc=Pa,Nd.local=Qa,Nd.parse
 	</script>
 	<a href="mailto:booking@eddhostel.com" target="new" class="button book">
         <i class="eddicon-booked"></i><br>
-		<?= __('Goup Booking', 'html5blank') ?><br>
+		<?= __('Group Booking', 'html5blank') ?><br>
 	</a>
 </div>

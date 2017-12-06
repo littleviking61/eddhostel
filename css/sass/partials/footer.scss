@@ -10,7 +10,9 @@
 	font-size: 1.8rem;
 	overflow: hidden;
 	width: 100%;
-
+	position: relative;
+  z-index: 35;
+	
 	a{
 		color: $grey;
     @include transition(color .3s ease);
